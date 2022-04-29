@@ -1,0 +1,21 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: red;
+
+  .sections {
+    width: 100vw;
+    height: 100vh;
+    background-color: green;
+
+    section {
+      flex: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+
+      background: linear-gradient(#fff 0%, #0ed 100%);
+    }
+  }
+}
