@@ -1,3 +1,59 @@
-h2 {
-  color: darken(#fff, $amount: 30);
+@media only screen and (min-width: 1020px) {
+  .navbar {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-bottom: 1rem;
+
+    font-family: "Sora", sans-serif;
+    background-color: $navbar-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 2rem;
+
+    color: white;
+    width: 600px;
+
+    i {
+      cursor: pointer;
+      color: white;
+      text-align: center;
+      padding: 0.5rem;
+      width: 1rem;
+      height: 1rem;
+      background-color: darken($color: $navbar-color, $amount: 20);
+      border-radius: 2rem;
+
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: darken($color: $navbar-color, $amount: 30);
+      }
+    }
+
+    .navbar-title {
+      font-size: 1.5rem;
+    }
+
+    ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      list-style-type: none;
+
+      li:not(:last-child) {
+        margin-right: 20px;
+      }
+
+      li {
+        a {
+          color: white;
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }
