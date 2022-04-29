@@ -19,14 +19,14 @@ class Navbar extends Component {
   render() {
     return (
       <nav className="navbar">
-        <h1 className="navbar-title">Artur Pietrzak</h1>
-        <div>
+        <div className="navbar-main">
+          <h1 className="navbar-title">Artur Pietrzak</h1>
           <i
             onClick={this.hadnleClick}
             className={this.state.expanded ? "fas fa-bars" : "fas fa-times"}
           ></i>
         </div>
-        <ul>
+        <ul className="navbar-options">
           {MenuItems.map((l, index) => {
             return (
               <li key={index}>
