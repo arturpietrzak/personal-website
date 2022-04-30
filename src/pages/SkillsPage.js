@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-class MainPage extends Component {
+class SkillsPage extends Component {
   render() {
     return (
       <div className="page main-page">
@@ -23,4 +23,4 @@ class MainPage extends Component {
   }
 }
 
-export default MainPage;
+export default SkillsPage;

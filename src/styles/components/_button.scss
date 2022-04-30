@@ -1,0 +1,27 @@
+.btn-forward {
+  background-color: $primary-color;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  box-sizing: border-box;
+  padding: 0.5rem 2.5rem;
+  display: inline-block;
+  transition: 0.1s ease-out;
+  font-size: 1.25rem;
+
+  border-radius: 1rem;
+
+  &::after {
+    content: " ˃";
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px gray;
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 5px gray;
+  }
+}
