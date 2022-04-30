@@ -1,28 +1,15 @@
 import React, { Component } from "react";
 
-import Navbar from "../components/navbar/Navbar";
-
 class MainPage extends Component {
   render() {
     return (
-      <div className="main-page">
-        <Navbar />
-        <div className="sections" onWheel={(e) => this.handleWheel(e)}>
-          <section>
-            <h1>Short intro</h1>
-          </section>
-          <section>
-            <h1>Skills</h1>
-          </section>
-          <section>
-            <h1>Projects</h1>
-          </section>
-          <section>
-            <h1>More about me</h1>
-          </section>
-          <section>
-            <h1>Contact</h1>
-          </section>
+      <div className="page main-page">
+        <img src="imgs/profile.png" />
+        <div className="info">
+          <h2 className="subheader">
+            Hello, I'm <span className="bold primary">Artur</span>.
+          </h2>
+          <p className="par">I'm IT student and web developer.</p>
         </div>
       </div>
     );

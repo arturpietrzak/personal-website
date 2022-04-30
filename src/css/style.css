@@ -125,14 +125,25 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+.bold {
+  font-weight: 700; }
+
+.primary {
+  color: #7328d6; }
+
+.subheader {
+  font-size: 1.25rem; }
+
+.par {
+  margin: 0.5rem 0; }
+
 @media only screen and (max-width: 1019px) {
   .navbar {
     position: fixed;
     width: 100%;
-    font-family: "Sora", sans-serif;
-    color: white;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    color: white; }
     .navbar .navbar-main {
       display: flex;
       flex-direction: row;
@@ -154,8 +165,6 @@ table {
         background-color: #501c96;
         border-radius: 2rem;
         transition: background-color 0.2s; }
-        .navbar .navbar-main i:hover {
-          background-color: #39146b; }
     .navbar .navbar-options {
       display: flex;
       flex-direction: column;
@@ -173,6 +182,7 @@ table {
         .navbar .navbar-options li:not(:last-child) {
           border-bottom: 1px solid #2e1055; }
         .navbar .navbar-options li a {
+          display: block;
           color: white;
           text-decoration: none; } }
 
@@ -207,15 +217,22 @@ table {
         color: white;
         text-decoration: none; } }
 
+.App {
+  min-height: 100vh;
+  display: flex; }
+
 body {
-  height: 100vh;
-  background-color: red; }
-  body .sections {
-    height: 100vh; }
-    body .sections section {
-      flex: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: linear-gradient(#2c003a 0%, #040018 100%); }
+  background-color: #fff;
+  min-height: 100vh;
+  font-family: "Sora", sans-serif; }
+
+.page {
+  padding: 3.5rem 0.5rem 0;
+  max-width: 100vw; }
+  .page img {
+    max-width: 100%; }
+
+.main-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }

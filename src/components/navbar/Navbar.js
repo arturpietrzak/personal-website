@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { MenuItems } from "./MenuItems";
+import { Link } from "react-router-dom";
 
 class Navbar extends Component {
   constructor(props) {
@@ -15,8 +16,6 @@ class Navbar extends Component {
       expanded: !this.state.expanded,
     });
   }
-
-  handleExpand() {}
 
   render() {
     return (
@@ -36,9 +35,9 @@ class Navbar extends Component {
           {MenuItems.map((l, index) => {
             return (
               <li key={index}>
-                <a className={l.className} href={l.url}>
+                <Link to={l.url} onClick={this.handleClick}>
                   {l.title}
-                </a>
+                </Link>
               </li>
             );
           })}

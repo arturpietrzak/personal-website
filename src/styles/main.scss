@@ -2,9 +2,13 @@
 
 @import "abstracts/_variables.scss";
 
+@import "base/_typography.scss";
+
 @import "components/_button.scss";
 
 @import "layout/_navbar.scss";
 @import "layout/_sideScrollSections.scss";
 
+@import "pages/_app.scss";
+@import "pages/_page.scss";
 @import "pages/_mainPage.scss";

@@ -1,18 +1,5 @@
-body {
-  height: 100vh;
-  background-color: red;
-
-  .sections {
-    height: 100vh;
-
-    section {
-      flex: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-
-      background: linear-gradient(rgb(44, 0, 58) 0%, rgb(4, 0, 24) 100%);
-    }
-  }
+.main-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
