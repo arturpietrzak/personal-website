@@ -127,6 +127,8 @@ table {
 
 @media only screen and (max-width: 1019px) {
   .navbar {
+    position: fixed;
+    width: 100%;
     font-family: "Sora", sans-serif;
     color: white;
     display: flex;
@@ -136,7 +138,8 @@ table {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      background-color: #7328d6; }
+      background-color: #7328d6;
+      z-index: 1; }
       .navbar .navbar-main * {
         margin: 0.5rem; }
       .navbar .navbar-main .navbar-title {
@@ -153,19 +156,23 @@ table {
         transition: background-color 0.2s; }
         .navbar .navbar-main i:hover {
           background-color: #39146b; }
-    .navbar ul {
+    .navbar .navbar-options {
       display: flex;
       flex-direction: column;
       align-items: center;
       flex-wrap: wrap;
       list-style-type: none;
+      transition: transform 0.2s ease-in-out;
+      transform: translateY(-100%);
       background-color: #501c96; }
-      .navbar ul li {
+      .navbar .navbar-options-expand {
+        transform: translateY(0%); }
+      .navbar .navbar-options li {
         padding: 0.3rem 0;
         width: 80%; }
-        .navbar ul li:not(:last-child) {
+        .navbar .navbar-options li:not(:last-child) {
           border-bottom: 1px solid #2e1055; }
-        .navbar ul li a {
+        .navbar .navbar-options li a {
           color: white;
           text-decoration: none; } }
 

@@ -7,14 +7,16 @@ class Navbar extends Component {
     this.state = {
       expanded: false,
     };
-    this.hadnleClick = this.hadnleClick.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  hadnleClick() {
+  handleClick() {
     this.setState({
       expanded: !this.state.expanded,
     });
   }
+
+  handleExpand() {}
 
   render() {
     return (
@@ -22,11 +24,15 @@ class Navbar extends Component {
         <div className="navbar-main">
           <h1 className="navbar-title">Artur Pietrzak</h1>
           <i
-            onClick={this.hadnleClick}
-            className={this.state.expanded ? "fas fa-bars" : "fas fa-times"}
+            onClick={this.handleClick}
+            className={this.state.expanded ? "fas fa-times" : " fas fa-bars"}
           ></i>
         </div>
-        <ul className="navbar-options">
+        <ul
+          className={`navbar-options ${
+            this.state.expanded ? "navbar-options-expand" : ""
+          }`}
+        >
           {MenuItems.map((l, index) => {
             return (
               <li key={index}>

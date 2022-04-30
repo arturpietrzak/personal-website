@@ -1,5 +1,8 @@
 @media only screen and (max-width: 1019px) {
   .navbar {
+    position: fixed;
+    width: 100%;
+
     font-family: "Sora", sans-serif;
     color: white;
     display: flex;
@@ -11,6 +14,7 @@
       justify-content: space-between;
       align-items: center;
       background-color: $navbar-color;
+      z-index: 1;
 
       * {
         margin: 0.5rem;
@@ -38,14 +42,21 @@
       }
     }
 
-    ul {
+    .navbar-options {
       display: flex;
       flex-direction: column;
       align-items: center;
       flex-wrap: wrap;
       list-style-type: none;
+      transition: transform 0.2s ease-in-out;
+
+      transform: translateY(-100%);
 
       background-color: darken($color: $navbar-color, $amount: 15);
+
+      &-expand {
+        transform: translateY(0%);
+      }
 
       li {
         padding: 0.3rem 0;
