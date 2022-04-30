@@ -12,11 +12,26 @@ function App() {
     <div className="App">
       <Navbar handleClick={() => setExpanded(!expanded)} expanded={expanded} />
       <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/skills" element={<SkillsPage />} />
-        <Route path="/portfolio" element={<MainPage />} />
-        <Route path="/more" element={<MainPage />} />
-        <Route path="/contact" element={<MainPage />} />
+        <Route
+          path="/"
+          element={<MainPage handleClick={() => setExpanded(false)} />}
+        />
+        <Route
+          path="/skills"
+          element={<SkillsPage handleClick={() => setExpanded(false)} />}
+        />
+        <Route
+          path="/portfolio"
+          element={<MainPage handleClick={() => setExpanded(false)} />}
+        />
+        <Route
+          path="/more"
+          element={<MainPage handleClick={() => setExpanded(false)} />}
+        />
+        <Route
+          path="/contact"
+          element={<MainPage handleClick={() => setExpanded(false)} />}
+        />
       </Routes>
     </div>
   );

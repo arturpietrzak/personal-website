@@ -1,21 +1,51 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { Technologies } from "../utils/Technologies";
 
 class SkillsPage extends Component {
   render() {
     return (
-      <div className="page main-page">
+      <div className="page skills-page">
+        <div className="info">
+          <h2 className="subheader center">
+            Technologies that I've worked with:
+          </h2>
+        </div>
+
+        <div className="technologies">
+          {Technologies.map((t) => {
+            return (
+              <div className="technology">
+                <div className="image-container">
+                  <img className="technology-img" src={t.img} alt={t.name} />
+                </div>
+                <p className="technology-name">{t.name}</p>
+              </div>
+            );
+          })}
+        </div>
+
         <div className="info">
           <h2 className="subheader">
-            Hello, I'm <span className="bold primary">Artur</span>.
+            While studying at university I've also obtained many{" "}
+            <span className="primary bold">soft skills</span>, such as:
           </h2>
-          <p className="par">IT student and web developer.</p>
+          <ul className="soft-skills-list">
+            <li>Problem solving</li>
+            <li>Teamwork</li>
+            <li>Project planning</li>
+            <li>Presenting</li>
+          </ul>
         </div>
-        <img src="imgs/profile.png" />
+
         <div className="learn-more">
-          <p className="par">Learn more about my skills here:</p>
-          <Link to="/skills" className="btn-forward" onClick={this.handleClick}>
-            skills
+          <p className="par">Check my projects here:</p>
+          <Link
+            to="/portfolio"
+            className="btn-forward"
+            onClick={this.props.handleClick}
+          >
+            portfolio
           </Link>
         </div>
       </div>

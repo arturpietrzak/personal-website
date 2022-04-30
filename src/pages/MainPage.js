@@ -11,10 +11,16 @@ class MainPage extends Component {
           </h2>
           <p className="par">IT student and web developer.</p>
         </div>
-        <img src="imgs/profile.png" />
+        <div className="image-container">
+          <img src="imgs/profile.png" />
+        </div>
         <div className="learn-more">
           <p className="par">Learn more about my skills here:</p>
-          <Link to="/skills" className="btn-forward" onClick={this.handleClick}>
+          <Link
+            to="/skills"
+            className="btn-forward"
+            onClick={this.props.handleClick}
+          >
             skills
           </Link>
         </div>
