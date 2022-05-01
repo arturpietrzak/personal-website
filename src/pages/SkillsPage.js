@@ -39,13 +39,13 @@ class SkillsPage extends Component {
         </div>
 
         <div className="learn-more">
-          <p className="par">Check my projects here:</p>
+          <p className="par">Contact me here:</p>
           <Link
-            to="/portfolio"
+            to="/contact"
             className="btn-forward"
             onClick={this.props.handleClick}
           >
-            portfolio
+            contact
           </Link>
         </div>
       </div>

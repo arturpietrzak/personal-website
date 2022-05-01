@@ -3,7 +3,6 @@ import { useState } from "react";
 
 import MainPage from "../pages/MainPage";
 import SkillsPage from "../pages/SkillsPage";
-import PortfolioPage from "../pages/PortfolioPage";
 import ContactPage from "../pages/ContactPage";
 import MorePage from "../pages/MorePage";
 
@@ -27,10 +26,6 @@ function App() {
         <Route
           path="/skills"
           element={<SkillsPage handleClick={() => setExpanded(false)} />}
-        />
-        <Route
-          path="/portfolio"
-          element={<PortfolioPage handleClick={() => setExpanded(false)} />}
         />
         <Route
           path="/contact"
