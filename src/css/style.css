@@ -376,3 +376,18 @@ body {
             flex-direction: column; }
             .portfolio-page .projects .project .info-container .project-options .website {
               margin-bottom: 0.5rem; } }
+
+.contact-page .contact-methods li {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+  .contact-page .contact-methods li:not(:last-child) {
+    margin-bottom: 1rem; }
+  .contact-page .contact-methods li i {
+    margin-right: 0.25rem; }
+  .contact-page .contact-methods li .method {
+    margin-right: 0.5rem; }
+  .contact-page .contact-methods li a {
+    text-decoration: none;
+    color: #7328d6;
+    font-weight: 600; }

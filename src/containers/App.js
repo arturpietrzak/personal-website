@@ -1,6 +1,7 @@
 import MainPage from "../pages/MainPage";
 import SkillsPage from "../pages/SkillsPage";
 import PortfolioPage from "../pages/PortfolioPage";
+import ContactPage from "../pages/ContactPage";
 import "../css/style.css";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "../components/navbar/Navbar";
@@ -26,11 +27,11 @@ function App() {
           element={<PortfolioPage handleClick={() => setExpanded(false)} />}
         />
         <Route
-          path="/more"
-          element={<MainPage handleClick={() => setExpanded(false)} />}
+          path="/contact"
+          element={<ContactPage handleClick={() => setExpanded(false)} />}
         />
         <Route
-          path="/contact"
+          path="/more"
           element={<MainPage handleClick={() => setExpanded(false)} />}
         />
       </Routes>

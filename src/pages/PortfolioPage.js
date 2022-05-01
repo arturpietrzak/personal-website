@@ -6,7 +6,7 @@ class PortfolioPage extends Component {
     return (
       <div className="page portfolio-page">
         <div className="info">
-          <h2 className="subheader">
+          <h2 className="subheader center">
             Here are some <span className="bold primary">projects</span> I've
             created:
           </h2>
