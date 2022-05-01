@@ -30,6 +30,11 @@ class ContactPage extends Component {
               Artur Pietrzak
             </a>
           </li>
+          <li>
+            <i className="primary fab fa-github"></i>
+            <span className="method">github: </span>
+            <a href="https://github.com/ArtJSON">@ArtJSON</a>
+          </li>
         </ul>
 
         <div className="learn-more">
