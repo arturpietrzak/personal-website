@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { ProfilePics } from "../utils/ProfiePics";
 
 class MainPage extends Component {
   render() {

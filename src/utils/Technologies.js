@@ -25,7 +25,7 @@ export const Technologies = [
   },
   {
     name: "React",
-    img: "logo192.png",
+    img: "imgs/technologies/react.png",
   },
   {
     name: "Bootstrap",

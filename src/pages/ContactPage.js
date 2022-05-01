@@ -18,15 +18,17 @@ class ContactPage extends Component {
               artur.pietrzak1@outlook.com
             </a>
           </li>
-          <li>
+          {/* <li>
             <i className="primary fab fa-twitter"></i>
             <span className="method">twitter: </span>
             <a href="https://twitter.com/">twitter</a>
-          </li>
+          </li> */}
           <li>
             <i className="primary fab fa-linkedin"></i>
             <span className="method">linkedin: </span>
-            <a href="https://www.linkedin.com/">linked in</a>
+            <a href="https://www.linkedin.com/in/artur-pietrzak-7b53a5239/">
+              Artur Pietrzak
+            </a>
           </li>
         </ul>
 
