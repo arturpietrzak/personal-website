@@ -33,7 +33,7 @@ class ContactPage extends Component {
         <div className="learn-more">
           <p className="par">Still interested?</p>
           <Link
-            to="/contact"
+            to="/more"
             className="btn-forward"
             onClick={this.props.handleClick}
           >

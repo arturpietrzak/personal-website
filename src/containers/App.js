@@ -2,6 +2,7 @@ import MainPage from "../pages/MainPage";
 import SkillsPage from "../pages/SkillsPage";
 import PortfolioPage from "../pages/PortfolioPage";
 import ContactPage from "../pages/ContactPage";
+import MorePage from "../pages/MorePage";
 import "../css/style.css";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "../components/navbar/Navbar";
@@ -32,7 +33,7 @@ function App() {
         />
         <Route
           path="/more"
-          element={<MainPage handleClick={() => setExpanded(false)} />}
+          element={<MorePage handleClick={() => setExpanded(false)} />}
         />
       </Routes>
     </div>
