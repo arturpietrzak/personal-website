@@ -10,7 +10,12 @@
   font-size: 1.25rem;
   cursor: pointer;
 
-  border-radius: 1rem;
+  border-radius: 10rem;
+
+  @media screen and (min-width: $mobile-breakpoint) {
+    font-size: 2rem;
+    padding: 0.5rem 3.5rem;
+  }
 
   &::after {
     font-family: "Font Awesome 5 Free";
@@ -38,6 +43,10 @@
   padding: 0.25rem 0.5rem;
   border-radius: 1rem;
   transition: background-color 0.2s;
+
+  @media screen and (min-width: $mobile-breakpoint) {
+    padding: 0.5rem 0.5rem;
+  }
 
   &:hover,
   &:active {

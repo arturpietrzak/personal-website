@@ -174,7 +174,11 @@ table {
   transition: 0.2s ease-out;
   font-size: 1.25rem;
   cursor: pointer;
-  border-radius: 1rem; }
+  border-radius: 10rem; }
+  @media screen and (min-width: 720px) {
+    .btn-forward {
+      font-size: 2rem;
+      padding: 0.5rem 3.5rem; } }
   .btn-forward::after {
     font-family: "Font Awesome 5 Free";
     font-weight: 600;
@@ -195,6 +199,9 @@ table {
   padding: 0.25rem 0.5rem;
   border-radius: 1rem;
   transition: background-color 0.2s; }
+  @media screen and (min-width: 720px) {
+    .btn-link {
+      padding: 0.5rem 0.5rem; } }
   .btn-link:hover, .btn-link:active {
     background-color: #501c96; }
 
@@ -302,7 +309,7 @@ body {
 
 @media only screen and (min-width: 720px) {
   .page {
-    padding-bottom: 5.5rem; }
+    padding: 0 1rem 5.5rem; }
     .page .learn-more {
       text-align: center;
       font-size: 1.75rem;
@@ -388,6 +395,15 @@ body {
 @media screen and (min-width: 720px) {
   .main-page {
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 40%, #9d68e3 100%), url("../../public/imgs/background.jpg"); }
+    .main-page .info {
+      margin: 8rem 0; }
+      .main-page .info .subheader {
+        font-size: 4.5rem;
+        font-weight: 900; }
+      .main-page .info .par {
+        font-size: 2.36rem; }
+    .main-page .subheader {
+      font-size: 2rem; }
     .main-page .projects {
       width: 100%;
       max-width: 1600px;

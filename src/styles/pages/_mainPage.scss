@@ -128,6 +128,25 @@
         rgba(lighten($primary-color, 15), 1) 100%
       ),
       url("../../public/imgs/background.jpg");
+
+    .info {
+      margin: 8rem 0;
+
+      .subheader {
+        font-size: 4.5rem;
+
+        font-weight: 900;
+      }
+
+      .par {
+        font-size: 2.36rem;
+      }
+    }
+
+    .subheader {
+      font-size: 2rem;
+    }
+
     .projects {
       width: 100%;
       max-width: 1600px;
