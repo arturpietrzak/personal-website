@@ -119,3 +119,29 @@
     }
   }
 }
+
+@media screen and (min-width: 670px) {
+  .main-page {
+    padding: 0 1rem 3.5rem;
+
+    .projects {
+      width: 100%;
+      max-width: 1600px;
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+
+      .project {
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+
+        &:not(:last-child) {
+          margin-bottom: 0rem;
+        }
+      }
+    }
+  }
+}

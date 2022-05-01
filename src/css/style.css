@@ -300,6 +300,10 @@ body {
     font-size: 1.25rem;
     margin: 2rem 0; }
 
+@media screen and (min-width: 670px) {
+  .page {
+    padding: 0 1rem 3.5rem; } }
+
 .main-page {
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 40%, rgba(115, 40, 214, 0.65) 100%), url("../../public/imgs/background.jpg");
   background-repeat: no-repeat;
@@ -376,6 +380,22 @@ body {
               flex-direction: column; }
               .main-page .projects .project .info-container .project-options .website {
                 margin-bottom: 0.5rem; } }
+
+@media screen and (min-width: 670px) {
+  .main-page {
+    padding: 0 1rem 3.5rem; }
+    .main-page .projects {
+      width: 100%;
+      max-width: 1600px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem; }
+      .main-page .projects .project {
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch; }
+        .main-page .projects .project:not(:last-child) {
+          margin-bottom: 0rem; } }
 
 .skills-page .technologies {
   width: 100%;
