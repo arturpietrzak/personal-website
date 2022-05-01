@@ -12,19 +12,19 @@ class ContactPage extends Component {
         </div>
         <ul className="contact-methods">
           <li>
-            <i class="primary fas fa-envelope"></i>
+            <i className="primary fas fa-envelope"></i>
             <span className="method">email: </span>
             <a href="mailto:artur.pietrzak1@outlook.com">
               artur.pietrzak1@outlook.com
             </a>
           </li>
           <li>
-            <i class="primary fab fa-twitter"></i>
+            <i className="primary fab fa-twitter"></i>
             <span className="method">twitter: </span>
             <a href="https://twitter.com/">twitter</a>
           </li>
           <li>
-            <i class="primary fab fa-linkedin"></i>
+            <i className="primary fab fa-linkedin"></i>
             <span className="method">linkedin: </span>
             <a href="https://www.linkedin.com/">linked in</a>
           </li>

@@ -15,7 +15,7 @@ class SkillsPage extends Component {
         <div className="technologies">
           {Technologies.map((t) => {
             return (
-              <div className="technology">
+              <div key={t.name} className="technology">
                 <div className="image-container">
                   <img className="technology-img" src={t.img} alt={t.name} />
                 </div>
