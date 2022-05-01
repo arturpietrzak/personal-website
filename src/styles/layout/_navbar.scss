@@ -1,4 +1,4 @@
-@media only screen and (max-width: $mobile-breakpoint - 1px) {
+@media only screen and (max-width: ($mobile-breakpoint - 1)) {
   .navbar {
     position: fixed;
     width: 100%;
@@ -92,7 +92,9 @@
     border-radius: 2rem;
 
     color: white;
-    width: 600px;
+    width: 500px;
+
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.8);
 
     i {
       display: none;

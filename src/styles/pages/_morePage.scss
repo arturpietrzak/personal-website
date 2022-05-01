@@ -1,4 +1,40 @@
 .more-page {
+  @media screen and (min-width: $mobile-breakpoint) {
+    margin: 1rem auto 0;
+    width: 100%;
+    max-width: 1500px;
+
+    flex-direction: column;
+
+    .subheader {
+      font-size: 2rem;
+      margin: 2rem 0;
+    }
+
+    .image-container {
+      width: 100%;
+      max-height: 70vh;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      margin: 0 auto;
+
+      img {
+        overflow: hidden;
+        border-radius: 0.5rem;
+        object-fit: cover;
+      }
+
+      .image-sub {
+        text-align: center;
+        margin-top: 0.25rem;
+        font-size: 0.75rem;
+      }
+    }
+  }
+
   .section {
     &-header {
       font-size: 1.25rem;

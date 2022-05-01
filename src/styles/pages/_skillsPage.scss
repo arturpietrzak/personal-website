@@ -1,8 +1,22 @@
 .skills-page {
+  @media screen and (min-width: $mobile-breakpoint) {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1500px;
+
+    .subheader {
+      font-size: 2rem;
+    }
+  }
   .technologies {
     width: 100%;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+    @media screen and (min-width: $mobile-breakpoint) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 
     .technology {
       height: 120px;
@@ -14,11 +28,6 @@
       border-radius: 1rem;
       box-shadow: 8px 8px 18px -5px rgba(66, 68, 90, 1),
         inset 0px 0px 26px -5px $primary-color;
-      margin-bottom: 1rem;
-
-      &:nth-child(odd) {
-        margin-right: 1rem;
-      }
 
       .image-container {
         height: 60%;
@@ -45,11 +54,14 @@
     margin-left: 0.5rem;
     li {
       margin-top: 0.25rem;
+      @media screen and (min-width: $mobile-breakpoint) {
+        font-size: 1.5rem;
+      }
 
       &::before {
         font-family: "Font Awesome 5 Free";
         font-weight: 600;
-        font-size: 1rem;
+
         content: "\f192  ";
         color: $primary-color;
       }
