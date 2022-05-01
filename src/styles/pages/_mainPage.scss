@@ -120,10 +120,14 @@
   }
 }
 
-@media screen and (min-width: 670px) {
+@media screen and (min-width: $mobile-breakpoint) {
   .main-page {
-    padding: 0 1rem 3.5rem;
-
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.7) 40%,
+        rgba(lighten($primary-color, 15), 1) 100%
+      ),
+      url("../../public/imgs/background.jpg");
     .projects {
       width: 100%;
       max-width: 1600px;

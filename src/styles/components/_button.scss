@@ -20,13 +20,13 @@
 
   &:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 15px gray;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.8);
     background-color: darken($primary-color, $darken-btn-amount);
   }
 
   &:active {
     transform: translateY(-1px);
-    box-shadow: 0 5px 5px gray;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.8);
     background-color: darken($primary-color, $darken-btn-amount);
   }
 }
