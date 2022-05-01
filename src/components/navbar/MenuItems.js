@@ -14,9 +14,4 @@ export const MenuItems = [
     url: "contact",
     className: "nav-links",
   },
-  {
-    title: "About me",
-    url: "more",
-    className: "nav-links",
-  },
 ];

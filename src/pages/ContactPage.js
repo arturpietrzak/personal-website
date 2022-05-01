@@ -31,13 +31,9 @@ class ContactPage extends Component {
         </ul>
 
         <div className="learn-more">
-          <p className="par">Still interested?</p>
-          <Link
-            to="/more"
-            className="btn-forward"
-            onClick={this.props.handleClick}
-          >
-            more about me
+          <p className="par">Missed something?</p>
+          <Link to="/" className="btn-forward" onClick={this.props.handleClick}>
+            main page
           </Link>
         </div>
       </div>

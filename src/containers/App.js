@@ -31,10 +31,6 @@ function App() {
           path="/contact"
           element={<ContactPage handleClick={() => setExpanded(false)} />}
         />
-        <Route
-          path="/more"
-          element={<MorePage handleClick={() => setExpanded(false)} />}
-        />
       </Routes>
     </div>
   );
