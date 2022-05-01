@@ -12,7 +12,8 @@
       align-items: center;
       overflow: hidden;
       border-radius: 1rem;
-      box-shadow: inset 0px 0px 26px -5px $primary-color;
+      box-shadow: 8px 8px 18px -5px rgba(66, 68, 90, 1),
+        inset 0px 0px 26px -5px $primary-color;
       margin-bottom: 1rem;
 
       &:nth-child(odd) {

@@ -1,18 +1,23 @@
+import { Route, Routes } from "react-router-dom";
+import { useState } from "react";
+
 import MainPage from "../pages/MainPage";
 import SkillsPage from "../pages/SkillsPage";
 import PortfolioPage from "../pages/PortfolioPage";
 import ContactPage from "../pages/ContactPage";
 import MorePage from "../pages/MorePage";
-import "../css/style.css";
-import { Route, Routes } from "react-router-dom";
+
 import Navbar from "../components/navbar/Navbar";
-import { useState } from "react";
+import ScrollToTop from "../components/ScrollToTop";
+
+import "../css/style.css";
 
 function App() {
   const [expanded, setExpanded] = useState(false);
 
   return (
     <div className="App">
+      <ScrollToTop />
       <Navbar handleClick={() => setExpanded(!expanded)} expanded={expanded} />
       <Routes>
         <Route

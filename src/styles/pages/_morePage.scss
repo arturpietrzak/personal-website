@@ -1,2 +1,37 @@
 .more-page {
+  .section {
+    &-header {
+      font-size: 1.25rem;
+      color: $primary-color;
+      border-bottom: 1px solid $primary-color;
+      margin-bottom: 0.25rem;
+    }
+
+    &-paragraph:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+
+    .image-container {
+      height: 60%;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      img {
+        max-width: 100%;
+        border-radius: 0.5rem;
+      }
+
+      .image-sub {
+        text-align: center;
+        margin-top: 0.25rem;
+        font-size: 0.75rem;
+      }
+    }
+  }
+
+  .section:not(:last-child) {
+    margin-bottom: 1rem;
+  }
 }
