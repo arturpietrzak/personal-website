@@ -1,6 +1,6 @@
 export const Technologies = [
   {
-    name: "Javascript",
+    name: "JavaScript",
     img: "imgs/technologies/js.png",
   },
   {

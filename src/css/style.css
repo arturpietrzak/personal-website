@@ -148,7 +148,7 @@ table {
   box-sizing: padding-box;
   padding: 0.5rem 2.5rem;
   display: inline-block;
-  transition: 0.1s ease-out;
+  transition: 0.2s ease-out;
   font-size: 1.25rem;
   cursor: pointer;
   border-radius: 1rem; }
@@ -158,10 +158,22 @@ table {
     content: " \f054"; }
   .btn-forward:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 15px gray; }
+    box-shadow: 0 10px 15px gray;
+    background-color: #501c96; }
   .btn-forward:active {
     transform: translateY(-1px);
-    box-shadow: 0 5px 5px gray; }
+    box-shadow: 0 5px 5px gray;
+    background-color: #501c96; }
+
+.btn-link {
+  text-decoration: none;
+  color: white;
+  background-color: #7328d6;
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+  transition: background-color 0.2s; }
+  .btn-link:hover, .btn-link:active {
+    background-color: #501c96; }
 
 @media only screen and (max-width: 669px) {
   .navbar {
@@ -189,9 +201,11 @@ table {
         padding: 0.5rem;
         width: 1rem;
         height: 1rem;
-        background-color: #501c96;
+        background-color: #5c20ab;
         border-radius: 2rem;
         transition: background-color 0.2s; }
+        .navbar .navbar-main i:hover {
+          background-color: #501c96; }
     .navbar .navbar-options {
       display: flex;
       flex-direction: column;
@@ -252,6 +266,8 @@ body {
 .page {
   padding: 3.5rem 1rem 0;
   max-width: 100vw; }
+  .page .info {
+    margin: 1.5rem 0; }
   .page .learn-more {
     text-align: center;
     font-size: 1.25rem;
@@ -267,9 +283,6 @@ body {
     max-width: 100%;
     height: 500px;
     object-fit: cover; }
-
-.skills-page .info {
-  margin: 1.5rem 0; }
 
 .skills-page .technologies {
   width: 100%;
@@ -315,3 +328,51 @@ body {
       content: ","; }
     .skills-page .soft-skills-list li:last-child::after {
       content: "."; }
+
+.portfolio-page .projects {
+  width: 100%; }
+  .portfolio-page .projects .project {
+    width: 100%;
+    box-shadow: inset 0px 0px 26px -5px #7328d6;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .portfolio-page .projects .project:not(:last-child) {
+      margin-bottom: 1rem; }
+    .portfolio-page .projects .project .image-container {
+      padding: 1rem 1rem 0.5rem;
+      box-sizing: border-box;
+      width: 100%; }
+      .portfolio-page .projects .project .image-container img {
+        width: 100%;
+        border-radius: 0.5rem;
+        background-color: red; }
+    .portfolio-page .projects .project .info-container {
+      padding: 0 1rem 0.75rem;
+      box-sizing: border-box;
+      width: 100%; }
+      .portfolio-page .projects .project .info-container .project-name {
+        color: #7328d6;
+        font-size: 1.5rem;
+        margin-bottom: 0.25rem;
+        border-bottom: 2px solid #7328d6; }
+      .portfolio-page .projects .project .info-container .project-description {
+        width: 100%;
+        padding-bottom: 0.25rem;
+        border-bottom: 1px solid #7328d6; }
+      .portfolio-page .projects .project .info-container .project-technologies {
+        margin-top: 0.25rem;
+        padding-bottom: 0.25rem;
+        border-bottom: 1px solid #7328d6; }
+      .portfolio-page .projects .project .info-container .project-options {
+        padding-top: 0.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start; }
+        @media only screen and (max-width: 385px) {
+          .portfolio-page .projects .project .info-container .project-options {
+            flex-direction: column; }
+            .portfolio-page .projects .project .info-container .project-options .website {
+              margin-bottom: 0.5rem; } }

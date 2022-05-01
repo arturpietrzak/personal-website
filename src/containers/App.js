@@ -1,5 +1,6 @@
 import MainPage from "../pages/MainPage";
 import SkillsPage from "../pages/SkillsPage";
+import PortfolioPage from "../pages/PortfolioPage";
 import "../css/style.css";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "../components/navbar/Navbar";
@@ -22,7 +23,7 @@ function App() {
         />
         <Route
           path="/portfolio"
-          element={<MainPage handleClick={() => setExpanded(false)} />}
+          element={<PortfolioPage handleClick={() => setExpanded(false)} />}
         />
         <Route
           path="/more"

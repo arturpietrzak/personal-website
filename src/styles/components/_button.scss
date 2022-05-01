@@ -6,7 +6,7 @@
   box-sizing: padding-box;
   padding: 0.5rem 2.5rem;
   display: inline-block;
-  transition: 0.1s ease-out;
+  transition: 0.2s ease-out;
   font-size: 1.25rem;
   cursor: pointer;
 
@@ -21,10 +21,26 @@
   &:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 15px gray;
+    background-color: darken($primary-color, $darken-btn-amount);
   }
 
   &:active {
     transform: translateY(-1px);
     box-shadow: 0 5px 5px gray;
+    background-color: darken($primary-color, $darken-btn-amount);
+  }
+}
+
+.btn-link {
+  text-decoration: none;
+  color: white;
+  background-color: $primary-color;
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+  transition: background-color 0.2s;
+
+  &:hover,
+  &:active {
+    background-color: darken($primary-color, $darken-btn-amount);
   }
 }

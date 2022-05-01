@@ -15,13 +15,13 @@ export const MenuItems = [
     className: "nav-links",
   },
   {
-    title: "About me",
-    url: "more",
+    title: "Contact",
+    url: "contact",
     className: "nav-links",
   },
   {
-    title: "Contact",
-    url: "contact",
+    title: "About me",
+    url: "more",
     className: "nav-links",
   },
 ];
