@@ -12,7 +12,7 @@ class MainPage extends Component {
           <p className="par">IT student and web developer.</p>
         </div>
         <div className="image-container">
-          <img src="imgs/profile.png" />
+          <img src="imgs/profiles/1.png" />
         </div>
         <div className="learn-more">
           <p className="par">Learn more about my skills here:</p>
