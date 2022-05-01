@@ -1,0 +1,33 @@
+@keyframes carousel {
+  0% {
+    background-image: url("../../public/imgs/profiles/1.png");
+  }
+  20% {
+    background-image: url("../../public/imgs/profiles/1.png");
+  }
+
+  25% {
+    background-image: url("../../public/imgs/profiles/2.png");
+  }
+  45% {
+    background-image: url("../../public/imgs/profiles/2.png");
+  }
+
+  50% {
+    background-image: url("../../public/imgs/profiles/3.png");
+  }
+  70% {
+    background-image: url("../../public/imgs/profiles/3.png");
+  }
+
+  75% {
+    background-image: url("../../public/imgs/profiles/4.png");
+  }
+  95% {
+    background-image: url("../../public/imgs/profiles/4.png");
+  }
+
+  100% {
+    background-image: url("../../public/imgs/profiles/1.png");
+  }
+}

@@ -125,6 +125,26 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+@keyframes carousel {
+  0% {
+    background-image: url("../../public/imgs/profiles/1.png"); }
+  20% {
+    background-image: url("../../public/imgs/profiles/1.png"); }
+  25% {
+    background-image: url("../../public/imgs/profiles/2.png"); }
+  45% {
+    background-image: url("../../public/imgs/profiles/2.png"); }
+  50% {
+    background-image: url("../../public/imgs/profiles/3.png"); }
+  70% {
+    background-image: url("../../public/imgs/profiles/3.png"); }
+  75% {
+    background-image: url("../../public/imgs/profiles/4.png"); }
+  95% {
+    background-image: url("../../public/imgs/profiles/4.png"); }
+  100% {
+    background-image: url("../../public/imgs/profiles/1.png"); } }
+
 .bold {
   font-weight: 700; }
 
@@ -288,10 +308,17 @@ body {
   align-items: center; }
   .main-page .info {
     margin: 1rem 0; }
-  .main-page img {
-    max-width: 100%;
-    height: 500px;
-    object-fit: cover; }
+  .main-page .picture-container {
+    width: 100%;
+    max-width: 500px;
+    height: 400px;
+    border-radius: 1rem;
+    box-shadow: 8px 8px 18px -5px #42445a, inset 0px 0px 26px -5px #7328d6;
+    background-image: url("../../public/imgs/profiles/1.png");
+    background-size: cover;
+    background-position: center;
+    animation: carousel 20s linear 0s infinite;
+    animation-timing-function: linear; }
 
 .skills-page .technologies {
   width: 100%;

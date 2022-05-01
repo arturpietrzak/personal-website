@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { ProfilePics } from "../utils/ProfiePics";
 
 class MainPage extends Component {
   render() {
@@ -11,9 +12,7 @@ class MainPage extends Component {
           </h2>
           <p className="par">IT student and web developer.</p>
         </div>
-        <div className="image-container">
-          <img src="imgs/profiles/1.png" />
-        </div>
+        <div className="picture-container"></div>
         <div className="learn-more">
           <p className="par">Learn more about my skills here:</p>
           <Link
