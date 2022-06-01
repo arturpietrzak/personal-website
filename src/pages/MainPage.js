@@ -69,7 +69,7 @@ class MainPage extends Component {
               </div>
               <div className="project-options">
                 <a
-                  href="https://race-track-ranking.vercel.app/"
+                  href="https://racetrackranking.herokuapp.com//"
                   className="btn-link website"
                 >
                   Try it here <i className="fas fa-link"></i>
