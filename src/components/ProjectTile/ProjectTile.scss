@@ -1,0 +1,47 @@
+.project-tile {
+  position: relative;
+  height: 400px;
+
+  img {
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 700px;
+  }
+
+  &--left {
+    img {
+      right: 0;
+      left: auto;
+    }
+
+    .project-tile__info {
+      left: 0;
+      align-items: flex-start;
+    }
+  }
+
+  &__info {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 0.5rem;
+
+    position: absolute;
+    right: 0;
+
+    &__technologies {
+      display: flex;
+      gap: 1rem;
+    }
+
+    &__description {
+      background-color: darkgray;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+    }
+  }
+}

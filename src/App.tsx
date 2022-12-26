@@ -1,4 +1,5 @@
 import "./App.scss";
+import ProjectTile from "./components/ProjectTile/ProjectTile";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
       <section className="about-me mw">
         <img className="about-me__image" src="/profilepic.jpg" />
         <div className="about-me__text-container">
-          <p className="about-me__text-container__heading">About me</p>
+          <h2 className="about-me__text-container__heading">About me</h2>
           <p className="about-me__text-container__content">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
             inventore nisi minima? Eligendi, error et. Nemo rem blanditiis
@@ -28,7 +29,42 @@ function App() {
           </p>
         </div>
       </section>
-      <section className="technologies"></section>
+      <section className="porftolio mw">
+        <ProjectTile
+          description="Having struggled with understanding how the Spotify OAuth flow works, I made the course I wish I could have had.
+            Unlike tutorials that only cover a few concepts and leave you with half-baked GitHub repositories, this course covers everything from explaining the principles of REST APIs to implementing Spotify's OAuth flow and fetching API data in a React app. By the end of the course, you’ll have an app deployed to the internet you can add to your portfolio.
+            "
+          githubUrl="dasdsa"
+          imgUrl="/weather.png"
+          name="Weather app"
+          deploymentUrl=""
+          technologies={["dsadsa", "dsadsa", "dsadsa"]}
+        />
+        <ProjectTile
+          description="Having struggled with understanding how the Spotify OAuth flow works, I made the course I wish I could have had.
+            Unlike tutorials that only cover a few concepts and leave you with half-baked GitHub repositories, this course covers everything from explaining the principles of REST APIs to implementing Spotify's OAuth flow and fetching API data in a React app. By the end of the course, you’ll have an app deployed to the internet you can add to your portfolio.
+            "
+          githubUrl="dasdsa"
+          imgUrl="/weather.png"
+          name="Weather app"
+          deploymentUrl=""
+          technologies={["dsadsa", "dsadsa", "dsadsa"]}
+          inverted
+        />
+        <ProjectTile
+          description="Having struggled with understanding how the Spotify OAuth flow works, I made the course I wish I could have had.
+            Unlike tutorials that only cover a few concepts and leave you with half-baked GitHub repositories, this course covers everything from explaining the principles of REST APIs to implementing Spotify's OAuth flow and fetching API data in a React app. By the end of the course, you’ll have an app deployed to the internet you can add to your portfolio.
+            "
+          githubUrl="dasdsa"
+          imgUrl="/weather.png"
+          name="Weather app"
+          deploymentUrl=""
+          technologies={["dsadsa", "dsadsa", "dsadsa"]}
+        />
+      </section>
+      <section className="contact">
+        <button>Get in touch</button>
+      </section>
     </div>
   );
 }
