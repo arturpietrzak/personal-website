@@ -16,7 +16,7 @@
       height: 100%;
       width: 100%;
       clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
-      background: url("background.svg") blue;
+      background: url("/background.svg") $blue-300;
       background-size: cover;
       transform: translateZ(0);
     }
