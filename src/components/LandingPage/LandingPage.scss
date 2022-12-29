@@ -95,7 +95,7 @@
           position: absolute;
           top: 50%;
           left: 50%;
-          transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%) rotate3d(1, 1, 1, 45deg); // rotate3d(4, -4, -2, -0.1turn);
         }
 
         &__desktop-preview {
