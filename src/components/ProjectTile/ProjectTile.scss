@@ -27,7 +27,7 @@
       background-color: $gray-100;
       content: "";
       border-radius: 0.5rem;
-      opacity: 0.9;
+      opacity: 0.8;
       mix-blend-mode: saturation;
       transition-duration: 0.2s;
       transition-property: opacity;
@@ -78,7 +78,8 @@
       border-radius: 0.5rem;
       z-index: 1;
       line-height: 1.5rem;
-      font-weight: 400;
+      letter-spacing: 1.375px;
+      font-weight: 300;
 
       -webkit-box-shadow: $drop-shadow-m;
       -moz-box-shadow: $drop-shadow-m;

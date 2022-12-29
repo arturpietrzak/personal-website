@@ -21,9 +21,11 @@ function ProjectTile({
 }: ProjectTileProps) {
   return (
     <div className={`project-tile ${inverted ? "" : "project-tile--left"}`}>
-      <div className="project-tile__image-section">
-        <img src={imgUrl} />
-      </div>
+      <a href={deploymentUrl ? deploymentUrl : githubUrl}>
+        <div className="project-tile__image-section">
+          <img src={imgUrl} />
+        </div>
+      </a>
       <div className="project-tile__info">
         <h3 className="project-tile__info__name">{name}</h3>
         <p className="project-tile__info__description">{description}</p>
