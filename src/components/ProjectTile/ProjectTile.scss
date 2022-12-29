@@ -8,14 +8,30 @@
     left: 0;
     position: absolute;
     height: 100%;
-    width: 700px;
+    width: 620px;
+    overflow: hidden;
+    border-radius: 0.5rem;
 
     img {
-      border-radius: 0.5rem;
+      flex-shrink: 0;
+      min-width: 100%;
+      min-height: 100%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      width: 100%;
     }
 
     &:hover::after {
       opacity: 0;
+
+      @media screen and (max-width: $breakpoint-mobile) {
+        opacity: 0.95;
+      }
     }
 
     &::after {
@@ -33,6 +49,12 @@
       transition-property: opacity;
       cursor: pointer;
       z-index: 1;
+
+      @media screen and (max-width: $breakpoint-mobile) {
+        mix-blend-mode: initial;
+        background-color: $gray-100;
+        opacity: 0.95;
+      }
     }
   }
 
@@ -50,6 +72,12 @@
         -webkit-box-shadow: $drop-shadow-m2;
         -moz-box-shadow: $drop-shadow-m2;
         box-shadow: $drop-shadow-m2;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none;
+        }
       }
     }
   }
@@ -62,14 +90,41 @@
     align-items: flex-end;
     justify-content: center;
     gap: 0.5rem;
-
+    box-sizing: border-box;
     position: absolute;
     right: 0;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      width: 100%;
+      padding: 1rem;
+    }
 
     &__name {
       font-size: 1.5rem;
       font-weight: 300;
       margin-bottom: 0.5rem;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+
+      &__wip {
+        display: inline-block;
+        margin-right: 0.5rem;
+        font-size: 0.75rem;
+        line-height: 1.5rem;
+        max-height: 1.5rem;
+        padding: 0 0.675rem;
+        background-color: $gray-700;
+        color: $blue-400;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        border-radius: 0.25rem;
+      }
+
+      @media screen and (max-width: $breakpoint-mobile) {
+        color: $blue-700;
+        font-weight: 500;
+      }
     }
 
     &__description {
@@ -81,11 +136,12 @@
       letter-spacing: 1.375px;
       font-weight: 300;
 
-      -webkit-box-shadow: $drop-shadow-m;
-      -moz-box-shadow: $drop-shadow-m;
-      box-shadow: $drop-shadow-m;
-
       margin-bottom: 0.5rem;
+
+      @media screen and (max-width: $breakpoint-mobile) {
+        background-color: transparent;
+        padding: 0;
+      }
     }
 
     &__technologies {
@@ -97,6 +153,11 @@
       font-weight: 700;
       letter-spacing: 1.5px;
       color: $blue-800;
+
+      @media screen and (max-width: $breakpoint-mobile) {
+        font-size: 0.75rem;
+        flex-wrap: wrap;
+      }
     }
   }
 }

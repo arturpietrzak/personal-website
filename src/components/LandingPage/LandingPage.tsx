@@ -67,7 +67,7 @@ export default function LandingPage() {
               SCSS
             </span>
             <span className="about-me__text-container__tech-stack__element">
-              Monorepo (Nx)
+              T3 Stack
             </span>
           </div>
         </div>
@@ -75,38 +75,13 @@ export default function LandingPage() {
       <section className="porftolio mw">
         <FadeIn>
           <ProjectTile
-            description="Having struggled with understanding how the Spotify OAuth flow works, I made the course I wish I could have had.
-            Unlike tutorials that only cover a few concepts and leave you with half-baked GitHub repositories, this course covers everything from explaining the principles of REST APIs to implementing Spotify's OAuth flow and fetching API data in a React app. By the end of the course, you’ll have an app deployed to the internet you can add to your portfolio.
+            description=" Spotify's OAuth flow and fetching API data in a React app. By the end of the course, you’ll have an app deployed to the internet you can add to your portfolio.
             "
             githubUrl="https://github.com/ArtJSON"
             imgUrl="/weather.png"
             name="Weather app"
             technologies={["dsadsa", "dsadsa", "dsadsa"]}
-          />
-        </FadeIn>
-        <FadeIn>
-          <ProjectTile
-            description="Having struggled with understanding how the Spotify OAuth flow works, I made the course I wish I could have had.
-            Unlike tutorials that only cover a few concepts and leave you with half-baked GitHub repositories, this course covers everything from explaining the principles of REST APIs to implementing Spotify's OAuth flow and fetching API data in a React app. By the end of the course, you’ll have an app deployed to the internet you can add to your portfolio.
-            "
-            githubUrl="dasdsa"
-            imgUrl="/weather.png"
-            name="Weather app"
-            deploymentUrl=""
-            technologies={["dsadsa", "dsadsa", "dsadsa"]}
-            inverted
-          />
-        </FadeIn>
-        <FadeIn>
-          <ProjectTile
-            description="Having struggled with understanding how the Spotify OAuth flow works, I made the course I wish I could have had.
-            Unlike tutorials that only cover a few concepts and leave you with half-baked GitHub repositories, this course covers everything from explaining the principles of REST APIs to implementing Spotify's OAuth flow and fetching API data in a React app. By the end of the course, you’ll have an app deployed to the internet you can add to your portfolio.
-            "
-            githubUrl="dasdsa"
-            imgUrl="/weather.png"
-            name="Weather app"
-            deploymentUrl=""
-            technologies={["dsadsa", "dsadsa", "dsadsa"]}
+            wip
           />
         </FadeIn>
       </section>

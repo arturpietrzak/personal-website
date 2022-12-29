@@ -8,6 +8,7 @@ interface ProjectTileProps {
   deploymentUrl?: string;
   technologies?: string[];
   inverted?: boolean;
+  wip?: boolean;
 }
 
 function ProjectTile({
@@ -18,6 +19,7 @@ function ProjectTile({
   deploymentUrl,
   technologies,
   inverted,
+  wip,
 }: ProjectTileProps) {
   return (
     <div className={`project-tile ${inverted ? "" : "project-tile--left"}`}>
@@ -32,7 +34,10 @@ function ProjectTile({
         </div>
       </a>
       <div className="project-tile__info">
-        <h3 className="project-tile__info__name">{name}</h3>
+        <h3 className="project-tile__info__name">
+          <span className="project-tile__info__name__wip">WIP</span>
+          {name}
+        </h3>
         <p className="project-tile__info__description">{description}</p>
         {technologies && technologies.length > 0 && (
           <div className="project-tile__info__technologies">

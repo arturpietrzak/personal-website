@@ -11,6 +11,11 @@
     justify-content: center;
     margin-bottom: 4rem;
 
+    @media screen and (max-width: $breakpoint-mobile) {
+      overflow: hidden;
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    }
+
     &__background {
       position: absolute;
       height: 100%;
@@ -19,6 +24,21 @@
       background: url("/background.svg") $blue-300;
       background-size: cover;
       transform: translateZ(0);
+
+      @media screen and (max-width: $breakpoint-mobile) {
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+
+        &::after {
+          content: " ";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-color: $blue-300;
+          opacity: 0.8;
+        }
+      }
     }
 
     &__content {
@@ -28,6 +48,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 1rem;
+      box-sizing: border-box;
 
       &__text {
         display: flex;
@@ -35,10 +56,19 @@
         gap: 0.5rem;
         z-index: 1;
 
+        @media screen and (max-width: $breakpoint-mobile) {
+          width: 100%;
+          align-items: center;
+        }
+
         h1 {
           font-size: 2rem;
           font-weight: 600;
           margin-bottom: 0.5rem;
+
+          @media screen and (max-width: $breakpoint-mobile) {
+            font-size: 2.25rem;
+          }
         }
 
         p {
@@ -46,22 +76,34 @@
           font-weight: 300;
           font-size: 1.25rem;
           font-style: italic;
+
+          @media screen and (max-width: $breakpoint-mobile) {
+            font-size: 1.5rem;
+          }
         }
       }
 
       &__preview-container {
         position: relative;
-        max-width: 760px;
+        max-width: 680px;
         max-height: 450px;
         width: 100%;
         height: 100%;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+          opacity: 0.2;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate3d(4, -4, -2, -0.1turn);
+        }
 
         &__desktop-preview {
           position: absolute;
           top: 0;
           left: 0;
           max-height: 405px;
-          width: 680px;
+          width: 650px;
           border-radius: 0.5rem;
           overflow: hidden;
 
@@ -92,6 +134,11 @@
     gap: 2rem;
     margin-bottom: 10rem;
 
+    @media screen and (max-width: $breakpoint-mobile) {
+      flex-direction: column;
+      margin-bottom: 2rem;
+    }
+
     &__image {
       width: 348px;
       height: 348px;
@@ -99,14 +146,22 @@
       position: relative;
       z-index: 1;
 
+      @media screen and (max-width: $breakpoint-mobile) {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+      }
+
       img {
         width: 348px;
         height: 348px;
-        min-width: 348px;
-        min-height: 348px;
-        max-width: 348px;
-        max-height: 348px;
         border-radius: 0.5rem;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+          margin: 0;
+          width: 100%;
+          height: 100%;
+        }
       }
 
       &::after {
@@ -124,6 +179,10 @@
         pointer-events: none;
 
         transform: translate(-2rem, 2rem);
+
+        @media screen and (max-width: $breakpoint-mobile) {
+          display: none;
+        }
       }
 
       &:hover::after {
@@ -157,6 +216,12 @@
         font-size: 1.125rem;
         color: $gray-700;
 
+        @media screen and (max-width: $breakpoint-mobile) {
+          gap: 1rem;
+          width: 100%;
+          grid-template-columns: 1fr;
+        }
+
         &__element::before {
           content: "";
           width: 0.75rem;
@@ -175,6 +240,10 @@
     gap: 6rem;
     flex-direction: column;
     margin-bottom: 6rem;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      margin-bottom: 2rem;
+    }
   }
 
   .contact {
