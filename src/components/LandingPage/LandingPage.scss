@@ -21,7 +21,6 @@
       width: 100%;
       background: url("/background.svg") $blue-300;
       background-size: cover;
-      transform: translateZ(0);
       clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
 
       @media screen and (max-width: $breakpoint-mobile) {
@@ -95,7 +94,7 @@
           position: absolute;
           top: 50%;
           left: 50%;
-          transform: translate(-50%, -50%) rotate3d(1, 1, 1, 45deg); // rotate3d(4, -4, -2, -0.1turn);
+          transform: translate(-50%, -50%) rotate3d(4, -4, -2, -0.1turn);
         }
 
         &__desktop-preview {
