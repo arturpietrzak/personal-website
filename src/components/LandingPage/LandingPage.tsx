@@ -6,6 +6,8 @@ import { ReactComponent as EmailLogo } from "../../assets/icons/email.svg";
 import "./LandingPage.scss";
 import { useRef } from "react";
 import FadeIn from "../FadeIn/FadeIn";
+import MobileDisplayApp from "../DisplayApps/MobileDisplayApp/MobileDisplayApp";
+import DesktopDisplayApp from "../DisplayApps/DesktopDisplayApp/DesktopDisplayApp";
 
 export default function LandingPage() {
   useRef();
@@ -23,8 +25,12 @@ export default function LandingPage() {
               <p>Frontend developer</p>
             </div>
             <div className="header__content__preview-container">
-              <div className="header__content__preview-container__desktop-preview" />
-              <div className="header__content__preview-container__mobile-preview" />
+              <div className="header__content__preview-container__desktop-preview">
+                <DesktopDisplayApp />
+              </div>
+              <div className="header__content__preview-container__mobile-preview">
+                <MobileDisplayApp />
+              </div>
             </div>
           </div>
         </FadeIn>

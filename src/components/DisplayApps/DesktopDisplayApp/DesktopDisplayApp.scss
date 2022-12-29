@@ -1,0 +1,53 @@
+@import "/src/App.scss";
+
+.desktop-display-app {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 8rem auto;
+
+  &__navbar {
+    background-color: $blue-600;
+    padding: 0.5rem;
+
+    &__options-container {
+      &__element {
+        height: 2rem;
+        padding: 0 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $blue-500;
+        }
+
+        &:hover {
+          background-color: $blue-700;
+        }
+      }
+    }
+
+    &__profile {
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 2rem;
+      background-color: $blue-400;
+      transition-duration: 0.2s;
+      margin-bottom: 0.5rem;
+
+      &:hover {
+        background-color: $blue-300;
+      }
+    }
+  }
+
+  &__options-container {
+    &__element {
+      height: 2rem;
+      background-color: $gray-900;
+      border-bottom: 1px solid $gray-800;
+      padding: 0 1rem;
+
+      &:hover {
+        background-color: $blue-900;
+      }
+    }
+  }
+}

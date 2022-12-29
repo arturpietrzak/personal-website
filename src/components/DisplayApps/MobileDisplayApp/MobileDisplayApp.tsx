@@ -8,7 +8,18 @@ export default function MobileDisplayApp() {
         <div className="mobile-display-app__navbar__profile" />
       </div>
       <div className="mobile-display-app__options-container">
-        <div className="mobile-display-app__options-container" />
+        <div className="mobile-display-app__options-container__element" />
+        <div className="mobile-display-app__options-container__element" />
+        <div className="mobile-display-app__options-container__element" />
+        <div className="mobile-display-app__options-container__element" />
+        <div className="mobile-display-app__options-container__element" />
+        <div className="mobile-display-app__options-container__element" />
+        <div className="mobile-display-app__options-container__element" />
+        <div className="mobile-display-app__options-container__element" />
+        <div className="mobile-display-app__options-container__element" />
+        <div className="mobile-display-app__options-container__element" />
+        <div className="mobile-display-app__options-container__element" />
+        <div className="mobile-display-app__options-container__element" />
       </div>
     </div>
   );
