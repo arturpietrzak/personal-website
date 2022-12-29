@@ -15,8 +15,8 @@ $blue-700: hsl(230, 61%, 70%);
 $blue-800: hsl(230, 61%, 80%);
 $blue-900: hsl(230, 61%, 95%);
 
-$gray-000: hsl(177, 0%, 10%);
-$gray-100: hsl(177, 0%, 20%);
+$gray-000: hsl(177, 0%, 5%);
+$gray-100: hsl(177, 0%, 15%);
 $gray-200: hsl(177, 0%, 30%);
 $gray-300: hsl(177, 0%, 40%);
 $gray-400: hsl(177, 0%, 50%);
@@ -27,3 +27,4 @@ $gray-800: hsl(177, 0%, 90%);
 $gray-900: hsl(177, 0%, 100%);
 
 $drop-shadow-m: -8px 10px 24px 0px $gray-000;
+$drop-shadow-m2: 8px 10px 24px 0px $gray-000;
