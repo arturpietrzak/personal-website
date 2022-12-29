@@ -5,6 +5,8 @@
 
   .header {
     height: 700px;
+    min-height: 700px;
+    max-height: 700px;
     position: relative;
     display: flex;
     align-items: center;
@@ -14,6 +16,7 @@
     @media screen and (max-width: $breakpoint-mobile) {
       overflow: hidden;
       clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
     }
 
     &__background {
