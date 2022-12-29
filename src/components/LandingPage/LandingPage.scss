@@ -25,9 +25,6 @@
       clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
       outline: 1px solid transparent;
       -webkit-backface-visibility: hidden;
-      -webkit-perspective: 1000;
-      transform: translateZ(0);
-      will-change: transform;
 
       @media screen and (max-width: $breakpoint-mobile) {
         clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
