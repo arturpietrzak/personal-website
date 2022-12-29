@@ -11,10 +11,6 @@
     justify-content: center;
     margin-bottom: 4rem;
 
-    @media screen and (max-width: $breakpoint-mobile) {
-      clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-    }
-
     &__background {
       position: absolute;
       height: 700px;
@@ -24,7 +20,6 @@
       transform: translateZ(0);
 
       @media screen and (max-width: $breakpoint-mobile) {
-        clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
         overflow: hidden;
 
         &::after {
