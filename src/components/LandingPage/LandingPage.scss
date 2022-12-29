@@ -96,6 +96,7 @@
     &__image {
       width: 348px;
       height: 348px;
+      margin: 0 0 0 2rem;
       position: relative;
       z-index: 1;
 
@@ -119,11 +120,11 @@
         transition-duration: 0.1s;
         pointer-events: none;
 
-        transform: translate(-30px, 30px);
+        transform: translate(-2rem, 2rem);
       }
 
       &:hover::after {
-        transform: translate(-20px, 20px);
+        transform: translate(-1.25rem, 1.25rem);
       }
     }
 
