@@ -33,7 +33,7 @@ export default function LandingPage() {
       </header>
       <section className="about-me mw">
         <div className="about-me__image">
-          <img src="/profilepic.jpg" />
+          <img alt="Picture of me" src="/profilepic.jpg" />
         </div>
         <div className="about-me__text-container">
           <h2 className="about-me__text-container__heading">About me</h2>
@@ -67,7 +67,7 @@ export default function LandingPage() {
               SCSS
             </span>
             <span className="about-me__text-container__tech-stack__element">
-              T3 Stack
+              Monorepo (Nx)
             </span>
           </div>
         </div>
@@ -120,8 +120,16 @@ export default function LandingPage() {
       <section className="social-info mw">
         <p className="social-info__signature">Artur Pietrzak</p>
         <div className="social-info__buttons">
-          <SocialButton icon={<LinkedinLogo />} url="dsadas" />
-          <SocialButton icon={<GithubLogo />} url="dsadas" />
+          <SocialButton
+            icon={<LinkedinLogo />}
+            url="dsadas"
+            ariaLabel="Check my Linked in"
+          />
+          <SocialButton
+            icon={<GithubLogo />}
+            url="dsadas"
+            ariaLabel="Check my Github"
+          />
         </div>
       </section>
     </div>

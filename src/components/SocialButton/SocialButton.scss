@@ -1,9 +1,17 @@
+@import "/src/App.scss";
+
 .social-button {
   border-radius: 10rem;
-  background-color: red;
+  background-color: $blue-400;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  fill: $blue-900;
+  transition-duration: 0.3s;
+
+  &:hover {
+    background-color: $blue-300;
+  }
 }

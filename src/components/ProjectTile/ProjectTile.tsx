@@ -21,7 +21,12 @@ function ProjectTile({
 }: ProjectTileProps) {
   return (
     <div className={`project-tile ${inverted ? "" : "project-tile--left"}`}>
-      <a href={deploymentUrl ? deploymentUrl : githubUrl}>
+      <a
+        aria-label={`Check the ${name} project ${
+          deploymentUrl ? "deployment." : "on github."
+        }`}
+        href={deploymentUrl ? deploymentUrl : githubUrl}
+      >
         <div className="project-tile__image-section">
           <img src={imgUrl} />
         </div>
