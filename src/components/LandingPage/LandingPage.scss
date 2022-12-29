@@ -13,7 +13,7 @@
 
     &__background {
       position: absolute;
-      height: 700px;
+      height: 100%;
       width: 100%;
       clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
       background: url("/background.svg") $blue-300;
@@ -22,7 +22,6 @@
 
       @media screen and (max-width: $breakpoint-mobile) {
         clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-        overflow: hidden;
 
         &::after {
           content: " ";
