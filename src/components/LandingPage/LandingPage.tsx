@@ -20,8 +20,6 @@ export default function LandingPage() {
           <div className="header__content mw">
             <div className="header__content__text">
               <h1>Artur Pietrzak</h1>
-              <p>Change maker</p>
-              <p>Future thinker</p>
               <p>Frontend developer</p>
             </div>
             <div className="header__content__preview-container">
@@ -36,15 +34,44 @@ export default function LandingPage() {
         </FadeIn>
       </header>
       <section className="about-me mw">
-        <img className="about-me__image" src="/profilepic.jpg" />
+        <div className="about-me__image">
+          <img src="/profilepic.jpg" />
+        </div>
         <div className="about-me__text-container">
           <h2 className="about-me__text-container__heading">About me</h2>
           <p className="about-me__text-container__content">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-            inventore nisi minima? Eligendi, error et. Nemo rem blanditiis
-            voluptate adipisci nulla sapiente tempore voluptatibus beatae minus,
-            vero perspiciatis autem dolorem?
+            Hi! My name is Artur and I love creating cool things for the web.
+            Front end developement was supposed to be just another task for a
+            subject at the university, but it turned out to be a great fit for
+            me.
           </p>
+          <p className="about-me__text-container__content">
+            As of now, I have been working on my front end skills for over a
+            year.
+          </p>
+          <p className="about-me__text-container__content">
+            Here are a few technologies I’ve been working with recently:
+          </p>
+          <div className="about-me__text-container__tech-stack">
+            <span className="about-me__text-container__tech-stack__element">
+              TypeScript
+            </span>
+            <span className="about-me__text-container__tech-stack__element">
+              React
+            </span>
+            <span className="about-me__text-container__tech-stack__element">
+              Next.js
+            </span>
+            <span className="about-me__text-container__tech-stack__element">
+              Mantine
+            </span>
+            <span className="about-me__text-container__tech-stack__element">
+              SCSS
+            </span>
+            <span className="about-me__text-container__tech-stack__element">
+              T3 Stack
+            </span>
+          </div>
         </div>
       </section>
       <section className="porftolio mw">
