@@ -77,8 +77,8 @@ export default function LandingPage() {
           <h2 className="about-me__text-container__heading">About me</h2>
           <p className="about-me__text-container__content">
             Hi! My name is Artur and I love creating cool things for the web.
-            Front end developement was supposed to be jdasdsust another task for
-            a subject at the university, but it turned out to be a great fit for
+            Front end developement was supposed to be just another task for a
+            subject at the university, but it turned out to be a great fit for
             me.
           </p>
           <p className="about-me__text-container__content">
