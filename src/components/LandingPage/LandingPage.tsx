@@ -71,7 +71,7 @@ export default function LandingPage() {
       </header>
       <section className="about-me mw">
         <div className="about-me__image">
-          <img alt="Picture of me" src="/profilepic.jpg" />
+          <img alt="Picture of me" src="/profilepic.webp" />
         </div>
         <div className="about-me__text-container">
           <h2 className="about-me__text-container__heading">About me</h2>
