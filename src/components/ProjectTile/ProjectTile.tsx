@@ -1,6 +1,6 @@
 import "./ProjectTile.scss";
 
-interface ProjectTileProps {
+export interface ProjectTileProps {
   name: string;
   description: string;
   imgUrl: string;
@@ -11,7 +11,7 @@ interface ProjectTileProps {
   wip?: boolean;
 }
 
-function ProjectTile({
+export default function ProjectTile({
   name,
   imgUrl,
   description,
@@ -22,7 +22,7 @@ function ProjectTile({
   wip,
 }: ProjectTileProps) {
   return (
-    <div className={`project-tile ${inverted ? "" : "project-tile--left"}`}>
+    <div className={`project-tile ${inverted ? "" : "project-tile--inverted"}`}>
       <a
         aria-label={`Check the ${name} project ${
           deploymentUrl ? "deployment." : "on github."
@@ -35,7 +35,7 @@ function ProjectTile({
       </a>
       <div className="project-tile__info">
         <h3 className="project-tile__info__name">
-          <span className="project-tile__info__name__wip">WIP</span>
+          {wip && <span className="project-tile__info__name__wip">WIP</span>}
           {name}
         </h3>
         <p className="project-tile__info__description">{description}</p>
@@ -52,5 +52,3 @@ function ProjectTile({
     </div>
   );
 }
-
-export default ProjectTile;

@@ -1,13 +1,51 @@
-import ProjectTile from "../ProjectTile/ProjectTile";
+import ProjectTile, { ProjectTileProps } from "../ProjectTile/ProjectTile";
 import SocialButton from "../SocialButton/SocialButton";
 import { ReactComponent as LinkedinLogo } from "../../assets/icons/linkedin.svg";
 import { ReactComponent as GithubLogo } from "../../assets/icons/github.svg";
 import { ReactComponent as EmailLogo } from "../../assets/icons/email.svg";
 import "./LandingPage.scss";
-import { useRef } from "react";
 import FadeIn from "../FadeIn/FadeIn";
 import MobileDisplayApp from "../DisplayApps/MobileDisplayApp/MobileDisplayApp";
 import DesktopDisplayApp from "../DisplayApps/DesktopDisplayApp/DesktopDisplayApp";
+
+const projects: ProjectTileProps[] = [
+  {
+    name: "Diet app",
+    description:
+      "A platform for creating diets and monitoring progress for individuals.",
+    imgUrl: "/dietapp.webp",
+    technologies: ["Next.js", "Scss"],
+    deploymentUrl: "https://diet-app-three.vercel.app/",
+    githubUrl: "https://github.com/ArtJSON/diet-app",
+    wip: true,
+  },
+  {
+    name: "Racetrack Ranking",
+    description:
+      "A web app for viewing, commenting and rating race tracks all over the world.",
+    imgUrl: "/racetrackranking.webp",
+    technologies: ["Express", "React"],
+    githubUrl: "https://github.com/ArtJSON/react-weather-app",
+  },
+  {
+    name: "Weather app",
+    description:
+      "A web app for showing current and future weather in a place entered by the user. Utilizes visualcrossing.com weather API.",
+    imgUrl: "/weather.webp",
+    technologies: ["React", "Axios"],
+    deploymentUrl: "https://react-weather-app-artjson.vercel.app/",
+    githubUrl: "https://github.com/ArtJSON/react-weather-app",
+  },
+  {
+    name: "Commutely",
+    description:
+      "A project created with mission to educate people on true costs of car transport, both economic and enviromental.",
+    imgUrl: "/commutely.webp",
+    technologies: ["HTML", "CSS", "JS"],
+    deploymentUrl: "https://commutely-webpage.vercel.app/",
+    githubUrl: "https://github.com/ArtJSON/commutely-webpage",
+  },
+];
 
 export default function LandingPage() {
   return (
@@ -73,17 +111,14 @@ export default function LandingPage() {
         </div>
       </section>
       <section className="porftolio mw">
-        <FadeIn>
-          <ProjectTile
-            description=" Spotify's OAuth flow and fetching API data in a React app. By the end of the course, you’ll have an app deployed to the internet you can add to your portfolio.
-            "
-            githubUrl="https://github.com/ArtJSON"
-            imgUrl="/weather.png"
-            name="Weather app"
-            technologies={["dsadsa", "dsadsa", "dsadsa"]}
-            wip
-          />
-        </FadeIn>
+        <h2 className="porftolio__heading">My portfolio</h2>
+        <div className="porftolio__projects">
+          {projects.map((props, idx) => (
+            <FadeIn key={props.name}>
+              <ProjectTile {...props} inverted={Boolean(idx % 2)} />
+            </FadeIn>
+          ))}
+        </div>
       </section>
       <section className="contact">
         <p className="contact__prompt">Let's work together!</p>
@@ -93,19 +128,19 @@ export default function LandingPage() {
         </button>
       </section>
       <section className="social-info mw">
-        <p className="social-info__signature">Artur Pietrzak</p>
         <div className="social-info__buttons">
           <SocialButton
             icon={<LinkedinLogo />}
-            url="dsadas"
+            url="https://www.linkedin.com/in/artur-pietrzak-7b53a5239/"
             ariaLabel="Check my Linked in"
           />
           <SocialButton
             icon={<GithubLogo />}
-            url="dsadas"
+            url="https://github.com/ArtJSON"
             ariaLabel="Check my Github"
           />
         </div>
+        <p className="social-info__signature">Artur Pietrzak</p>
       </section>
     </div>
   );

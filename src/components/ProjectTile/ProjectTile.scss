@@ -5,12 +5,24 @@
   height: 400px;
 
   &__image-section {
-    left: 0;
+    right: 0;
     position: absolute;
     height: 100%;
     width: 620px;
     overflow: hidden;
     border-radius: 0.5rem;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      width: 100%;
+    }
+
+    @media screen and (min-width: $breakpoint-mobile) {
+      border: 2px solid $gray-100;
+
+      &:hover {
+        border: 2px solid $blue-200;
+      }
+    }
 
     img {
       flex-shrink: 0;
@@ -20,10 +32,6 @@
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-    }
-
-    @media screen and (max-width: $breakpoint-mobile) {
-      width: 100%;
     }
 
     &:hover::after {
@@ -58,25 +66,28 @@
     }
   }
 
-  &--left {
-    .project-tile__image-section {
-      right: 0;
-      left: auto;
-    }
+  &--inverted {
+    @media screen and (min-width: $breakpoint-mobile) {
+      .project-tile__image-section {
+        left: 0;
+        right: auto;
+      }
 
-    .project-tile__info {
-      left: 0;
-      align-items: flex-start;
+      .project-tile__info {
+        right: 0;
+        align-items: flex-end;
+        text-align: end;
 
-      &__description {
-        -webkit-box-shadow: $drop-shadow-m2;
-        -moz-box-shadow: $drop-shadow-m2;
-        box-shadow: $drop-shadow-m2;
+        &__description {
+          -webkit-box-shadow: $drop-shadow-m2;
+          -moz-box-shadow: $drop-shadow-m2;
+          box-shadow: $drop-shadow-m2;
 
-        @media screen and (max-width: $breakpoint-mobile) {
-          -webkit-box-shadow: none;
-          -moz-box-shadow: none;
-          box-shadow: none;
+          @media screen and (max-width: $breakpoint-mobile) {
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+          }
         }
       }
     }
@@ -87,12 +98,11 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: center;
     gap: 0.5rem;
     box-sizing: border-box;
     position: absolute;
-    right: 0;
 
     @media screen and (max-width: $breakpoint-mobile) {
       width: 100%;
