@@ -169,5 +169,20 @@
         flex-wrap: wrap;
       }
     }
+
+    &__links {
+      display: flex;
+      gap: 1.25rem;
+      z-index: 1;
+      margin-top: 0.5rem;
+
+      svg {
+        fill: $blue-800;
+      }
+
+      @media screen and (max-width: $breakpoint-mobile) {
+        display: none;
+      }
+    }
   }
 }

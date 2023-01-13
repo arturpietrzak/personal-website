@@ -1,4 +1,6 @@
 import "./ProjectTile.scss";
+import { ReactComponent as GithubLogo } from "../../assets/icons/github.svg";
+import { ReactComponent as LinkIcon } from "../../assets/icons/link.svg";
 
 export interface ProjectTileProps {
   name: string;
@@ -48,6 +50,18 @@ export default function ProjectTile({
             ))}
           </div>
         )}
+        <div className="project-tile__info__links">
+          {githubUrl && (
+            <a href={githubUrl}>
+              <GithubLogo />
+            </a>
+          )}
+          {deploymentUrl && (
+            <a href={deploymentUrl}>
+              <LinkIcon />
+            </a>
+          )}
+        </div>
       </div>
     </div>
   );
