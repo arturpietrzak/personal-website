@@ -122,10 +122,13 @@ export default function LandingPage() {
       </section>
       <section className="contact">
         <p className="contact__prompt">Let's work together!</p>
-        <button className="contact__get-in-touch-btn">
+        <a
+          href="mailto: artur.pietrzak1@outlook.com"
+          className="contact__get-in-touch-btn"
+        >
           <EmailLogo />
           Get in touch
-        </button>
+        </a>
       </section>
       <section className="social-info mw">
         <div className="social-info__buttons">
