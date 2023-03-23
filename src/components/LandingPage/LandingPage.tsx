@@ -56,7 +56,7 @@ export default function LandingPage() {
           <div className="header__content mw">
             <div className="header__content__text">
               <h1>Artur Pietrzak</h1>
-              <p>Frontend developer</p>
+              <p>Web developer</p>
             </div>
             <div className="header__content__preview-container">
               <div className="header__content__preview-container__desktop-preview">
