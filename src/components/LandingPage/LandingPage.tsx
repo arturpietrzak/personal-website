@@ -10,13 +10,13 @@ import DesktopDisplayApp from "../DisplayApps/DesktopDisplayApp/DesktopDisplayAp
 
 const projects: ProjectTileProps[] = [
   {
-    name: "Diet app",
+    name: "Grumbler",
     description:
-      "A platform for creating diets and monitoring progress for individuals.",
-    imgUrl: "/dietapp.webp",
-    technologies: ["Next.js", "Scss"],
+      "A twitter-inspired social networking site with focus on longer, formattable posts and discussion.",
+    imgUrl: "/grumbler.webp",
+    technologies: ["tRPC", "Prisma", "NextJS", "Nextauth", "SCSS"],
     deploymentUrl: "https://diet-app-three.vercel.app/",
-    githubUrl: "https://github.com/ArtJSON/diet-app",
+    githubUrl: "https://github.com/arturpietrzak/Grumbler",
     wip: true,
   },
   {
@@ -25,7 +25,7 @@ const projects: ProjectTileProps[] = [
       "A web app for viewing, commenting and rating race tracks all over the world.",
     imgUrl: "/racetrackranking.webp",
     technologies: ["Express", "React"],
-    githubUrl: "https://github.com/ArtJSON/react-weather-app",
+    githubUrl: "https://github.com/arturpietrzak/react-weather-app",
   },
   {
     name: "Weather app",
@@ -34,7 +34,7 @@ const projects: ProjectTileProps[] = [
     imgUrl: "/weather.webp",
     technologies: ["React", "Axios"],
     deploymentUrl: "https://react-weather-app-artjson.vercel.app/",
-    githubUrl: "https://github.com/ArtJSON/react-weather-app",
+    githubUrl: "https://github.com/arturpietrzak/react-weather-app",
   },
   {
     name: "Commutely",
@@ -43,7 +43,7 @@ const projects: ProjectTileProps[] = [
     imgUrl: "/commutely.webp",
     technologies: ["HTML", "CSS", "JS"],
     deploymentUrl: "https://commutely-webpage.vercel.app/",
-    githubUrl: "https://github.com/ArtJSON/commutely-webpage",
+    githubUrl: "https://github.com/arturpietrzak/commutely-webpage",
   },
 ];
 
