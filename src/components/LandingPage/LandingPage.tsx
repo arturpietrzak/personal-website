@@ -139,7 +139,7 @@ export default function LandingPage() {
           />
           <SocialButton
             icon={<GithubLogo />}
-            url="https://github.com/ArtJSON"
+            url="https://github.com/arturpietrzak"
             ariaLabel="Check my Github"
           />
         </div>
