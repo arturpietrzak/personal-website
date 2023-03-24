@@ -15,7 +15,6 @@ const projects: ProjectTileProps[] = [
       "A twitter-inspired social networking site with focus on longer, formattable posts and discussion.",
     imgUrl: "/grumbler.webp",
     technologies: ["tRPC", "Prisma", "NextJS", "Nextauth", "SCSS"],
-    deploymentUrl: "https://diet-app-three.vercel.app/",
     githubUrl: "https://github.com/arturpietrzak/Grumbler",
     wip: true,
   },
