@@ -16,6 +16,7 @@ const projects: ProjectTileProps[] = [
     imgUrl: "/grumbler.webp",
     technologies: ["tRPC", "Prisma", "NextJS", "Nextauth", "SCSS"],
     githubUrl: "https://github.com/arturpietrzak/Grumbler",
+    deploymentUrl: "https://grumblerdev.vercel.app//",
     wip: true,
   },
   {
