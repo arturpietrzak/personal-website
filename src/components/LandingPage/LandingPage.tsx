@@ -25,7 +25,7 @@ const projects: ProjectTileProps[] = [
       "A web app for viewing, commenting and rating race tracks all over the world.",
     imgUrl: "/racetrackranking.webp",
     technologies: ["Express", "React"],
-    githubUrl: "https://github.com/arturpietrzak/react-weather-app",
+    githubUrl: "https://github.com/arturpietrzak/RaceTrackRanking",
   },
   {
     name: "Weather app",
