@@ -10,13 +10,13 @@ import DesktopDisplayApp from "../DisplayApps/DesktopDisplayApp/DesktopDisplayAp
 
 const projects: ProjectTileProps[] = [
   {
-    name: "Grumbler",
+    name: "Knowhow",
     description:
-      "A twitter-inspired social networking site with focus on longer, formattable posts and discussion.",
+      "A twitter-inspired social networking site with focus on longer, formattable posts and sharing knowledge.",
     imgUrl: "/grumbler.webp",
     technologies: ["tRPC", "Prisma", "NextJS", "Nextauth", "SCSS"],
-    githubUrl: "https://github.com/arturpietrzak/Grumbler",
-    deploymentUrl: "https://grumblerdev.vercel.app//",
+    githubUrl: "https://github.com/arturpietrzak/EngineeringThesis",
+    deploymentUrl: "https://knowhow-eta.vercel.app/",
     wip: true,
   },
   {
