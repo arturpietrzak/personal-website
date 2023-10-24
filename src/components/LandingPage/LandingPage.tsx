@@ -10,6 +10,15 @@ import DesktopDisplayApp from "../DisplayApps/DesktopDisplayApp/DesktopDisplayAp
 
 const projects: ProjectTileProps[] = [
   {
+    name: "Digit Recognition",
+    description:
+      "Digit recognition system trained using MNIST database. Model uses Convolutional Neural Network with an accuracy of approximately 98.84%. The application server needs around 20 seconds to start after long periods of inactivity.",
+    imgUrl: "/digit.webp",
+    technologies: ["Tensotflow 2.0", "Keras", "Jupyter notebook", "Flask", "ReactJS"],
+    githubUrl: "https://github.com/arturpietrzak/DigitRecognition",
+    deploymentUrl: "https://digit-recognition-zauj.onrender.com/",
+  },
+  {
     name: "Knowhow",
     description:
       "A twitter-inspired social networking site with focus on longer, formattable posts and sharing knowledge.",
