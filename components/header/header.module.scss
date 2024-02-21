@@ -1,0 +1,65 @@
+.header {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  background-color: rgba(3, 7, 18, 0.65);
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+  border-radius: 10rem;
+  transform: translateX(-50%);
+  backdrop-filter: blur(0.5rem);
+
+  .navOptions {
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+
+    .logoLink {
+      font-size: 1.125rem;
+      font-weight: 600;
+      padding: 0.5rem;
+      border-radius: 10rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid rgb(235, 235, 235);
+      color: rgb(235, 235, 235);
+    }
+
+    .linkList {
+      display: flex;
+      gap: 0.5rem;
+
+      .headerLink {
+        position: relative;
+        display: flex;
+        padding: 0.5rem 1rem;
+        color: rgb(165, 165, 165);
+
+        transition-duration: 0.2s;
+
+        &:hover {
+          color: rgb(235, 235, 235);
+        }
+
+        .headerLinkBackdrop {
+          background-color: rgba(255, 255, 255, 0.15);
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          z-index: -1;
+          border-radius: 10rem;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .headerLinkActive {
+        color: rgb(235, 235, 235);
+      }
+    }
+  }
+}
