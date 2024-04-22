@@ -1,10 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import styles from "./navbar.module.scss";
 import { motion } from "framer-motion";
 import { usePathname, useSelectedLayoutSegment } from "next/navigation";
 import { Nunito } from "next/font/google";
+import { Link } from "@/navigation";
 
 const titillium = Nunito({
   weight: "700",

@@ -1,3 +1,4 @@
+import { useMessages, useTranslations } from "next-intl";
 import styles from "./experience.module.scss";
 import Image from "next/image";
 import Link from "next/link";
@@ -50,12 +51,37 @@ const experiences = [
 ];
 
 export default function Experience() {
+  const t = useTranslations("Index");
+  const messages = useMessages();
+
+  /* @ts-ignore */
+  const experienceKeys = Object.keys(messages["Index"]["experience"]["items"]);
+
   return (
     <section className={styles.experience}>
-      <h2 className={styles.header}>Experience</h2>
-      {experiences.map((e) => (
-        <ExperienceItem {...e} key={e.title + e.company} />
-      ))}
+      <h2 className={styles.header}>{t(`experience.header`)}</h2>
+      {experienceKeys.map((ek) => {
+        const achievementKeys = Object.keys(
+          /* @ts-ignore */
+          messages["Index"]["experience"]["items"][ek]["achievements"]
+        );
+
+        return (
+          <ExperienceItem
+            key={ek}
+            company={t(`experience.items.${ek}.company`)}
+            title={t(`experience.items.${ek}.title`)}
+            companyUrl={t(`experience.items.${ek}.companyUrl`)}
+            companyImg={t(`experience.items.${ek}.companyImg`)}
+            location={t(`experience.items.${ek}.location`)}
+            achievements={achievementKeys.map((ak) =>
+              t(`experience.items.${ek}.achievements.${ak}`)
+            )}
+            startingDate={t(`experience.items.${ek}.startingDate`)}
+            endingDate={t(`experience.items.${ek}.endingDate`)}
+          />
+        );
+      })}
     </section>
   );
 }
