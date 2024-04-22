@@ -1,5 +1,68 @@
+@import "app/variables";
+
 .intro {
-  .profilePicture {
-    border-radius: 10000px;
+  display: flex;
+  gap: 1.5rem;
+
+  @media only screen and (max-width: $mobile-breakpoint) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profilePictureContainer {
+    position: relative;
+    min-width: 256px;
+    overflow: hidden;
+
+    @media only screen and (max-width: $mobile-breakpoint) {
+      width: 128px;
+      height: 128px;
+      min-width: unset;
+    }
+
+    .picture {
+      object-fit: cover;
+      border-radius: 1rem;
+
+      @media only screen and (max-width: $mobile-breakpoint) {
+        border-radius: 1000rem;
+      }
+    }
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    @media only screen and (max-width: $mobile-breakpoint) {
+      .name,
+      .title {
+        text-align: center;
+        line-height: 2rem;
+      }
+    }
+
+    .name {
+      font-size: 2rem;
+      font-weight: 700;
+      color: $text-emphasis;
+    }
+
+    .title {
+      font-size: 1.5rem;
+    }
+
+    .text {
+      padding-top: 0.5rem;
+      text-align: justify;
+      font-weight: 300;
+
+      .tech {
+        font-style: italic;
+        font-weight: 400;
+        color: $text-emphasis;
+      }
+    }
   }
 }

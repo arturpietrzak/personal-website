@@ -1,0 +1,45 @@
+@import "app/variables";
+
+.contact {
+  .header {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: $text-emphasis;
+    margin-bottom: 2rem;
+  }
+
+  .links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    @media only screen and (max-width: $mobile-breakpoint) {
+      flex-direction: column;
+    }
+
+    .link {
+      background-color: $block-background-color;
+      padding: 1rem 1.5rem;
+      border-radius: 0.5rem;
+      border: $block-border;
+      display: inline;
+      transition-duration: 0.2s;
+      transition-property: background-color;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: space-between;
+      gap: 0.75rem;
+
+      &:hover {
+        background-color: hsl(233, 35%, 25%);
+      }
+
+      .icon {
+        filter: invert(96%) sepia(100%) saturate(0%) hue-rotate(208deg)
+          brightness(103%) contrast(101%);
+      }
+    }
+  }
+}
