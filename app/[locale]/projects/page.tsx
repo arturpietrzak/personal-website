@@ -1,4 +1,4 @@
-import styles from "../page.module.scss";
+import styles from "@/app/page.module.scss";
 import ProjectList from "@/components/projectList/projectList";
 
 export default function Home() {

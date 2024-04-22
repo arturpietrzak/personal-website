@@ -3,7 +3,7 @@
 import Link from "next/link";
 import styles from "./navbar.module.scss";
 import { motion } from "framer-motion";
-import { usePathname } from "next/navigation";
+import { usePathname, useSelectedLayoutSegment } from "next/navigation";
 import { Nunito } from "next/font/google";
 
 const titillium = Nunito({
@@ -25,12 +25,8 @@ export default function Header() {
           <div className={styles.logoLink}>AP</div>
         </Link>
         <ul className={styles.linkList}>
-          <NavbarLink href="/" isActive={pathname === "/"}>
-            Home
-          </NavbarLink>
-          <NavbarLink href="/projects" isActive={pathname === "/projects"}>
-            Projects
-          </NavbarLink>
+          <NavbarLink href="/">Home</NavbarLink>
+          <NavbarLink href="/projects">Projects</NavbarLink>
         </ul>
       </motion.nav>
     </motion.nav>
@@ -40,12 +36,14 @@ export default function Header() {
 function NavbarLink({
   children,
   href,
-  isActive,
 }: {
   children: React.ReactNode;
   href: string;
-  isActive?: boolean;
 }) {
+  const selectedLayoutSegment = useSelectedLayoutSegment();
+  const pathname = selectedLayoutSegment ? `/${selectedLayoutSegment}` : "/";
+  const isActive = pathname === href;
+
   return (
     <Link
       className={`${styles.navbarLink} ${
