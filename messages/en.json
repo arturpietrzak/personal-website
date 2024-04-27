@@ -1,6 +1,7 @@
 {
   "Navigation": {
-    "test": ""
+    "home": "Home",
+    "projects": "Projects"
   },
   "Index": {
     "title": "IT engineer and developer",
@@ -44,8 +45,7 @@
           "location": "Łódź, Poland",
           "achievements": [
             "Assisted the engineering team in maintaining and developing a web catalog project.",
-            "Ensured code clarity, consistency, and correctness by regularly performing code review of pull requests created by other team members.",
-            "Provided on-call technical support, helping with issues that occurred after standard office hours."
+            "Ensured code clarity, consistency, and correctness by regularly performing code review of pull requests created by other team members."
           ],
           "startingDate": "June 2022",
           "endingDate": "September 2022"
@@ -81,8 +81,8 @@
     },
     {
       "title": "This personal website",
-      "description": "",
-      "id": "this-personal",
+      "description": "Personal website was created as a portfolio to showcase my works and experience.",
+      "id": "personal-website",
       "imageUrl": "https://arturpietrzak.com/grumbler.webp",
       "tags": ["React.js", "Next.js", "Framer Motion"]
     },
@@ -102,10 +102,62 @@
     },
     {
       "title": "Commutely",
-      "description": "A project created with mission to educate people on true costs of car transport, both economic and enviromental.",
+      "description": "A project created with a mission to educate people on the true costs of car transport, both economic and environmental.",
       "id": "commutely",
       "imageUrl": "https://arturpietrzak.com/grumbler.webp",
       "tags": ["Bootstrap", "HTML", "CSS", "JS"]
     }
-  ]
+  ],
+  "ProjectPage": {
+    "knowhow": {
+      "tags": ["React.js", "Next.js", "tRPC", "Prisma"],
+      "youtube-id": "hA0Wp3KQYGU",
+      "title": "Knowledge-sharing social media platform",
+      "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
+      "description": "<p>Fully functional social media platform built using <e>T3 Stack</e> (<e>React.js</e>, <e>Next.js</e>, <e>tRPC</e>, <e>NextAuth.js</e> and <e>Prisma</e>). The database component was created using <e>MySQL</e> and hosted on <e>PlanetScale</e>. The UI was created with <e>MantineUI</e>. The platform is split into two main parts - the user application and administative panel.</p><p>The user application allows anyone to view post created by others using different content exploration methods - main page (with recent posts), trending page, topic page and search page. User can also create an account and customize it by changing the profile description, setting profile picture and more. This website was created with <e>Responsive web design</e> approach, which ensures that the platform is displayed properly across all screen sizes.</p><p>The admin panel allows the administrator to manage the content on the platform. Only user with specific permissions can access it, and such an account can perform a wide variety of different actions. For example, administrator can view user reports and decide, wether reported content is against platform’s terms of service. Additionally, the administrator can manage users, apply penalties, or fully remove them from the platform.</p>"
+    },
+    "digit-recognition": {
+      "tags": ["TensorFlow 2.0", "Keras", "Flask", "React.js"],
+      "youtube-id": "hA0Wp3KQYGU",
+      "title": "Digit recognition",
+      "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
+      "description": "<p>Digit recognition system trained using MNIST database. The machine learning was built with <e>TensorFlow 2.0</e> and <e>Keras</e> libraries and it uses <e>Convolutional Neural Network</e>. The model has achieved an accuracy of 98.84%.</p><p>Additionally, the model has been attached to simple <e>Flask</e> backend, which in combination with interactive <e>React.js</e> canvas allows anyone to test out the model with their own writing.</p>"
+    },
+    "personal-website": {
+      "tags": [],
+      "youtube-id": "hA0Wp3KQYGU",
+      "title": "This personal website",
+      "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
+      "description": "<p>This personal website was created as a portfolio to showcase my works. The backbone of this project is <e>Next.js</e>, which offers many useful features, such as <e>Search Engine Optimization</e> and <e>Server Side Rendering</e>. This website was styled using <e>SCSS modules</e> and the animations were implemented with <e>Framer Motion</e>. Additionally, this project utilizes <e>Next-intl</e> library, which enabled me to implement internationalization of the website.</p>"
+    },
+    "racetrack-ranking": {
+      "tags": [
+        "Express.js",
+        "REST API",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "EJS",
+        "MongoDB"
+      ],
+      "youtube-id": "hA0Wp3KQYGU",
+      "title": "Racetrack ranking platform",
+      "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
+      "description": "<p>Web platform for browsing and reviewing different racetracks around the world. Backend was implemented with <e>Express.js</e>, and the data was persisted in <e>MongoDB</e> database. The user inteface was implemented in <e>HTML</e> and <e>CSS</e> with the <e>EJS</e> templating language. This website was created with <e>Responsive web design</e> approach, which ensures that the platform is displayed properly across all screen sizes.</p>"
+    },
+    "weather-app": {
+      "tags": ["HTML", "CSS", "JavaScript", "Axios", "REST API"],
+      "youtube-id": "hA0Wp3KQYGU",
+      "title": "Weather app",
+      "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
+      "description": "<p>Weather web app implemented in <e>React.js</e> inspired by iOS weather application. It utilizes <e>Axios</e> library to fetch data from <e>Visual Crossing weather data API</e>. The colors for daily temperature bars were implementing by manipulating the hue of <e>HSL</e> color model.</p>"
+    },
+    "commutely": {
+      "tags": ["Bootstrap", "HTML", "CSS", "JavaScript"],
+      "youtube-id": "hA0Wp3KQYGU",
+      "title": "Commutely",
+      "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
+      "description": "<p>Web calculator created with <e>Bootstrap</e>, <e>HTML</e>, <e>CSS</e> and <e>JavaScript</e>. It helps to inform people on the emissions that they produce while commuting to shool or work. Additionaly, it provides an estimate on how much money can be saved daily by using public transport.</p>"
+    }
+  }
 }

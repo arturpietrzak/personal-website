@@ -42,6 +42,7 @@
 
         transition-duration: 0.2s;
         transition-property: color;
+        text-wrap: nowrap;
 
         &:hover {
           color: rgb(235, 235, 235);

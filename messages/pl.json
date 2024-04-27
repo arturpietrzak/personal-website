@@ -1,1 +1,163 @@
-{}
+{
+  "Navigation": {
+    "home": "Strona główna",
+    "projects": "Projekty"
+  },
+  "Index": {
+    "title": "Inżynier informatyki i deweloper",
+    "about-me": "<p>Programista z ponad rocznym doświadczeniem w inżynierii oprogramowania. Móje podstawowe technologie to między innymi <t>React.js</t>, <t>Next.js</t>, <t>TypeScript</t>, <t>SCSS</t>, <t>MySQL</t> i <t>Prisma</t>. Dodatkowo na studiach oraz przy tworzeniu własnych projektów poznałem inne technologie, na przykład <t>C#</t>, <t>.NET</t>, <t>Java</t>, <t>Spring</t> i <t>React Native</t>.</p><p>Od niedawna zdobywam także wiedzę z zakresu sztucznej inteligencji i uczenia maszynowego, skupiając się na obszarze przetwarzania języka. Zdobyłem doświadczenie w technologiach takich jak <t>Python</t>, <t>PyTorch</t> i <t>Pandas</t> poprzez opracowanie chatbota obsługi klienta opartego na dużym modelu językowym <t>Llama 2</t>.</p>",
+    "experience": {
+      "header": "Doświadczenie",
+      "items": [
+        {
+          "company": "Paidwork",
+          "title": "Intern AI/ML Engineer",
+          "companyUrl": "https://www.paidwork.com/",
+          "companyImg": "/paidwork.png",
+          "location": "Zdalnie, Polska",
+          "achievements": [
+            "Wsparcie w budowaniu chatbota opartego o duże modele językowe stanowiącego pierwszą linię kontaktu dla użytkowników komunikujących się z działem obsługi klienta.",
+            "Tworzenie i opracowywanie zbiorów danych wykorzystywanych do treningu modeli na podstawie nieskategoryzowanych danych zebranych przez firmę."
+          ],
+          "startingDate": "Listopad 2023",
+          "endingDate": "Marzec 2024"
+        },
+        {
+          "company": "HTD Health",
+          "title": "Junior Web Developer",
+          "companyUrl": "https://htdhealth.com/",
+          "companyImg": "https://htdhealth.com/wp-content/themes/htd/assets/svg/logo-white.svg",
+          "location": "Łódź, Polska",
+          "achievements": [
+            "Wprowadzenie Sentry jako narzędzie do pomiaru wydajności i śledzenia błędów w projekcie, co pomogło w wykrywaniu i naprawianiu problemów, zwiększając niezawodność serwisu.",
+            "Sprototypowanie funkcjonalności automatycznego tworzenia, uzupełniania danych i wysyłania dokumentów do lekarzy za pomocą DocuSign API, co znacznie uprościło proces pozyskiwania dokumentacji przez pacjentów.",
+            "Opracowanie hooka ReactJS do zapisywania, wczytywania i sprawdzania poprawności danych przechowywanych w pamięci lokalnej, co poprawiło user experience poprzez zapamiętywanie informacji wprowadzonych do formularzy, nawet po przypadkowym zamknięciu strony internetowej.",
+            "Przeprowadzenie rewizji projektu w celu wdrożenia semantycznego HTML i CSS dla osób korzystających z czytników ekranu wraz z zapewnieniem zgodności z wytycznymi WCAG 2.1."
+          ],
+          "startingDate": "Październik 2022",
+          "endingDate": "Styczeń 2023"
+        },
+        {
+          "company": "HTD Health",
+          "title": "Intern Web Developer",
+          "companyUrl": "https://htdhealth.com/",
+          "companyImg": "https://htdhealth.com/wp-content/themes/htd/assets/svg/logo-white.svg",
+          "location": "Łódź, Polska",
+          "achievements": [
+            "Wsparcie zespołu programistów w utrzymaniu i rozwoju platformy (katalogu internetowego).",
+            "Zapewnianie przejrzystości, spójności i poprawności kodu poprzez regularne przeprowadzanie code review pull requestów utworzonych przez innych członków zespołu."
+          ],
+          "startingDate": "June 2022",
+          "endingDate": "September 2022"
+        }
+      ]
+    },
+    "most-recent-project": {
+      "header": "Najnowszy projekt",
+      "more-work": "Aby zobaczyć więcej moich prac kliknij tutaj:",
+      "portfolio-button": "Pełne portfolio"
+    },
+    "contact": {
+      "header": "Kontakt",
+      "email": "artur.pietrzak1@outlook.com",
+      "github": "/arturpietrzak",
+      "linkedin": "/artur-pietrzak-dev"
+    }
+  },
+  "Projects": [
+    {
+      "title": "Platforma do dzielenie się wiedzą",
+      "description": "Serwis społecznościowy inspirowany Twitterem, skupiający się na dłuższych, formatowalnych postach i dzieleniu się wiedzą.",
+      "id": "knowhow",
+      "imageUrl": "https://arturpietrzak.com/grumbler.webp",
+      "tags": ["React.js", "Next.js", "tRPC", "Prisma"]
+    },
+    {
+      "title": "Aplikacja do rozpoznawania cyfr",
+      "description": "System rozpoznawania cyfr przeszkolony przy użyciu bazy danych MNIST. Model wykorzystuje splotową sieć neuronową (CNN) z dokładnością około 98,84%.",
+      "id": "digit-recognition",
+      "imageUrl": "https://arturpietrzak.com/grumbler.webp",
+      "tags": ["TensorFlow 2.0", "Keras", "Flask", "React.js"]
+    },
+    {
+      "title": "Ta strona",
+      "description": "Strona osobista, która powstała jako portfolio, w którym mogę zaprezentować swoje prace i doświadczenia.",
+      "id": "personal-website",
+      "imageUrl": "https://arturpietrzak.com/grumbler.webp",
+      "tags": ["React.js", "Next.js", "Framer Motion"]
+    },
+    {
+      "title": "Ranking torów wyścigowych",
+      "description": "Platforma internetowa do przeglądania, komentowania i oceniania torów wyścigowych na całym świecie.",
+      "id": "racetrack-ranking",
+      "imageUrl": "https://arturpietrzak.com/grumbler.webp",
+      "tags": ["Express.js", "React.js"]
+    },
+    {
+      "title": "Aplikacja pogodowa",
+      "description": "Aplikacja internetowa pokazująca aktualną i przyszłą pogodę w miejscu wprowadzonym przez użytkownika. Wykorzystuje pogodowe API visualcrossing.com.",
+      "id": "weather-app",
+      "imageUrl": "https://arturpietrzak.com/grumbler.webp",
+      "tags": ["React.js", "Axios"]
+    },
+    {
+      "title": "Commutely",
+      "description": "Projekt stworzony z misją edukowania ludzi na temat prawdziwych kosztów transportu samochodowego, zarówno ekonomicznych, jak i środowiskowych.",
+      "id": "commutely",
+      "imageUrl": "https://arturpietrzak.com/grumbler.webp",
+      "tags": ["Bootstrap", "HTML", "CSS", "JS"]
+    }
+  ],
+  "ProjectPage": {
+    "knowhow": {
+      "tags": ["React.js", "Next.js", "tRPC", "Prisma"],
+      "youtube-id": "hA0Wp3KQYGU",
+      "title": "Platforma społecznościowa do dzielenia się wiedzą",
+      "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
+      "description": "<p>W pełni funkcjonalna platforma mediów społecznościowych zbudowana przy użyciu <e>T3 Stack</e> (<e>React.js</e>, <e>Next.js</e>, <e>tRPC</e>, <e>NextAuth.js</e> i <e>Prisma</e>). Baza danych została stworzona z użyciem <e>MySQL</e> i hostowana na <e>PlanetScale</e>. Interfejs użytkownika został stworzony za pomocą <e>MantineUI</e>. Platforma podzielona jest na dwie główne części – aplikację użytkownika oraz panel administracyjny.</p><p>Aplikacja użytkownika pozwala na przeglądanie wpisów utworzone przez innych przy użyciu różnych metod eksploracji treści - strony głównej (z najnowszymi wpisami), strony trendów, strony tematów i strony wyszukiwania. Użytkownik może również utworzyć konto i dostosować je, na przykład poprzez zmienianę opisu profilu lub ustawianie zdjęcia profilowego. Ta strona internetowa została stworzona z podejściem <e>Responsive web design</e>, co zapewnia prawidłowe wyświetlanie platformy na ekranach wszystkich rozmiarów.</p><p>Panel administracyjny umożliwia administratorowi zarządzanie treścią znajdującą się na platformie. Dostęp do niego ma tylko użytkownik posiadający określone uprawnienia i może on wykonywać szeroką gamę działań administracyjnych. Na przykład administrator może przeglądać zgłoszanie użytkowników i decydować, czy zgłaszana treść jest niezgodna z warunkami korzystania z platformy. Dodatkowo administrator może zarządzać użytkownikami, nakładać kary czasowe, lub całkowicie usunąć ich z platformy.</p>"
+    },
+    "digit-recognition": {
+      "tags": ["TensorFlow 2.0", "Keras", "Flask", "React.js"],
+      "youtube-id": "hA0Wp3KQYGU",
+      "title": "Digit recognition",
+      "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
+      "description": "<p>System rozpoznawania cyfr trenowany na bazie danych MNIST. Uczenie maszynowe zostało stworzone przy użyciu bibliotek <e>TensorFlow 2.0</e> i <e>Keras</e>. Model wykorzystuje one <e>Splotową Sieć Neuronową</e>. The model has achieved an accuracy of 98.84%.</p><p>Additionally, the model has been attached to simple <e>Flask</e> backend, which in combination with interactive <e>React.js</e> canvas allows anyone to test out the model with their own writing.</p>"
+    },
+    "personal-website": {
+      "tags": [],
+      "youtube-id": "hA0Wp3KQYGU",
+      "title": "Ta strona",
+      "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
+      "description": "<p>Ta strona internetowa powstała jako portfolio do prezentacji moich prac. Podstawą tego projektu jest <e>Next.js</e>, który oferuje wiele przydatnych funkcji, na przykład <e>Optymalizację dla wyszukiwarek internetowych</e> i <e>Server Side Rendering</e>. Style zostały stworzony z uż1yciem <e>SCSS modules</e>, a animacje zaimplementowno biblioteką <e>Framer Motion</e>. Dodatkowo ten projekt wykorzystuje bibliotekę <e>Next-intl</e>, co pozwoliło mi na realizację internacjonalizacji.</p>"
+    },
+    "racetrack-ranking": {
+      "tags": [
+        "Express.js",
+        "REST API",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "EJS",
+        "MongoDB"
+      ],
+      "youtube-id": "hA0Wp3KQYGU",
+      "title": "Racetrack ranking platform",
+      "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
+      "description": "<p>Platforma internetowa do przeglądania i recenzowania różnych torów wyścigowych na całym świecie. Backend został zaimplementowany za pomocą <e>Express.js</e>, a dane przechowywano w bazie danych <e>MongoDB</e>. Interfejs użytkownika został zaimplementowany w <e>HTMLu</e> i <e>CSSie</e> z użyciem języka szablonowego <e>EJS</e>. Ta strona internetowa została stworzona z podejściem <e>Responsive web design</e>, co zapewnia prawidłowe wyświetlanie platformy na ekranach wszystkich rozmiarów.</p>"
+    },
+    "weather-app": {
+      "tags": ["HTML", "CSS", "JavaScript", "Axios", "REST API"],
+      "youtube-id": "hA0Wp3KQYGU",
+      "title": "Aplikacja pogodowa",
+      "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
+      "description": "<p>Aplikacja internetowa pogodowa zaimplementowana w <e>React.js</e> inspirowana aplikacją pogodową na iOS. Wykorzystuje bibliotekę <e>Axios</e> do pobierania danych z <e>API pogodowego Visual Crossing</e>. Kolory słupków temperatury dziennej zaimplementowano poprzez manipulację modelu kolorów <e>HSL</e>.</p>"
+    },
+    "commutely": {
+      "tags": ["Bootstrap", "HTML", "CSS", "JavaScript"],
+      "youtube-id": "hA0Wp3KQYGU",
+      "title": "Commutely",
+      "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
+      "description": "<p>Kalkulator internetowy stworzony przy użyciu <e>Bootstrap</e>, <e>HTML</e>, <e>CSS</e> i <e>JavaScript</e>. Pomaga informować ludzi o emisjach gazów cieplarnianych wytwarzanych podczas dojazdów do szkoły lub pracy. Dodatkowo pozwala oszacować, ile pieniędzy można dziennie zaoszczędzić korzystając z transportu publicznego.</p>"
+    }
+  }
+}

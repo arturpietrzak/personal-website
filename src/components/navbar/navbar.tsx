@@ -2,16 +2,23 @@
 
 import styles from "./navbar.module.scss";
 import { motion } from "framer-motion";
-import { usePathname, useSelectedLayoutSegment } from "next/navigation";
+import { useSelectedLayoutSegment } from "next/navigation";
 import { Nunito } from "next/font/google";
-import { Link } from "@/navigation";
+import { Link, usePathname } from "@/navigation";
 
 const titillium = Nunito({
   weight: "700",
   subsets: ["latin"],
 });
 
-export default function Header() {
+export default function Navbar({
+  linkNames: { home, projects },
+}: {
+  linkNames: {
+    home: string;
+    projects: string;
+  };
+}) {
   const pathname = usePathname();
 
   return (
@@ -25,8 +32,8 @@ export default function Header() {
           <div className={styles.logoLink}>AP</div>
         </Link>
         <ul className={styles.linkList}>
-          <NavbarLink href="/">Home</NavbarLink>
-          <NavbarLink href="/projects">Projects</NavbarLink>
+          <NavbarLink href="/">{home}</NavbarLink>
+          <NavbarLink href="/projects">{projects}</NavbarLink>
         </ul>
       </motion.nav>
     </motion.nav>

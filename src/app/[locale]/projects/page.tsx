@@ -2,7 +2,7 @@ import styles from "@/app/page.module.scss";
 import ProjectLink from "@/components/projectLink/projectLink";
 import { useMessages, useTranslations } from "next-intl";
 
-export default function Home() {
+export default function Projects() {
   const t = useTranslations("Projects");
   const messages = useMessages();
 

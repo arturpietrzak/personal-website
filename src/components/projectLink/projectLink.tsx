@@ -1,6 +1,7 @@
-import Link from "next/link";
+import { Link } from "@/navigation";
 import styles from "./projectLink.module.scss";
 import Image from "next/image";
+import TagList from "../tagList/tagList";
 
 export default function ProjectLink({
   title,
@@ -16,16 +17,12 @@ export default function ProjectLink({
   tags: string[];
 }) {
   return (
-    <Link href={id} className={styles.projectLinkWrapper}>
+    <Link href={`/projects/${id}`} className={styles.projectLinkWrapper}>
       <div className={styles.projectLink}>
         <div className={styles.infoContainer}>
           <h3 className={styles.projectTitle}>{title}</h3>
           <p className={styles.description}>{description}</p>
-          <ul className={styles.technologiesList}>
-            {tags.map((tag, index) => (
-              <li key={index}>{tag}</li>
-            ))}
-          </ul>
+          <TagList tags={tags} />
         </div>
         <Image
           src={imageUrl}
