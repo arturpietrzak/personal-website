@@ -9,6 +9,7 @@ export default function Project({
   params: { projectid: string };
 }) {
   const t = useTranslations(`ProjectPage.${projectid}`);
+  const navT = useTranslations(`Navigation`);
   const messages = useMessages();
 
   /* @ts-ignore */
@@ -33,7 +34,7 @@ export default function Project({
           })}
         </div>
         <Link href="/projects" className={styles.allProjectsLink}>
-          ‹ All projects
+          ‹ {navT("all-projects")}
         </Link>
       </div>
     </main>

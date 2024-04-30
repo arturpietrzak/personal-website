@@ -1,7 +1,8 @@
 {
   "Navigation": {
     "home": "Home",
-    "projects": "Projects"
+    "projects": "Projects",
+    "all-projects": "All projects"
   },
   "Index": {
     "title": "IT engineer and developer",
@@ -51,6 +52,9 @@
           "endingDate": "September 2022"
         }
       ]
+    },
+    "technologies": {
+      "header": "Technologies"
     },
     "most-recent-project": {
       "header": "Most recent project",
