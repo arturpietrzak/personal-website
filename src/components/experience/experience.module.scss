@@ -1,0 +1,126 @@
+@import "src/app/variables";
+
+.experience {
+  .header {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: $text-emphasis;
+    margin-bottom: 2rem;
+  }
+}
+
+.experienceItem {
+  min-height: 200px;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  width: 100%;
+
+  &:last-of-type {
+    .description {
+      margin-bottom: 0;
+    }
+
+    .iconLine {
+      .line {
+        border-radius: 10rem;
+      }
+    }
+  }
+
+  .description {
+    background-color: $block-background-color;
+    border: $block-border;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 0.125rem;
+    flex: 1;
+
+    @media only screen and (max-width: $mobile-breakpoint) {
+      padding: 1rem;
+    }
+
+    &::before {
+      content: " ";
+      position: absolute;
+      top: 15px;
+      left: -13px;
+      width: 0;
+      height: 0;
+      border-top: 13px solid transparent;
+      border-bottom: 13px solid transparent;
+      border-right: 13px solid hsl(233, 35%, 25%);
+    }
+
+    &::after {
+      content: " ";
+      position: absolute;
+      top: 16px;
+      left: -11.5px;
+      width: 0;
+      height: 0;
+      border-top: 12px solid transparent;
+      border-bottom: 12px solid transparent;
+      border-right: 12px solid hsl(233, 35%, 15%);
+    }
+
+    .titleDateContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+
+      @media only screen and (max-width: $mobile-breakpoint) {
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+    }
+
+    ul {
+      list-style: circle outside;
+      box-sizing: border-box;
+      margin-left: 1rem;
+
+      li:not(:last-child) {
+        margin-bottom: 0.25rem;
+      }
+    }
+
+    .title {
+      color: $text-emphasis;
+      font-size: 1.125rem;
+      font-weight: 500;
+    }
+  }
+
+  .iconLine {
+    position: relative;
+    min-width: 4rem;
+    max-width: 4rem;
+    display: flex;
+    justify-content: center;
+
+    .icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: hsl(233, 35%, 15%);
+      border: 1px solid hsl(233, 35%, 25%);
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      width: 4rem;
+      height: 4rem;
+      box-sizing: border-box;
+    }
+
+    .line {
+      background-color: hsl(233, 35%, 18%);
+      width: 3px;
+    }
+  }
+}

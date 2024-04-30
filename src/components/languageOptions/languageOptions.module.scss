@@ -1,0 +1,83 @@
+@import "src/app/variables";
+
+.languageOptions {
+  position: fixed;
+  right: 1rem;
+  bottom: 1.1rem;
+  z-index: 2;
+  border-radius: 10rem;
+  height: 12rem;
+  width: 4rem;
+  overflow: hidden;
+
+  .showOptions {
+    background-color: hsla(233, 35%, 20%, 0.65);
+    backdrop-filter: blur(0.5rem);
+    padding: 1rem;
+    border-radius: 10rem;
+    transition: filter 0.2s;
+    transition: background-color 0.2s;
+    cursor: pointer;
+    border: none;
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0.1rem);
+
+    &.showOptionsExtended {
+      background-color: hsla(233, 35%, 30%, 0.65);
+
+      .icon {
+        filter: invert(96%) sepia(100%) saturate(0%) hue-rotate(208deg)
+          brightness(103%) contrast(101%);
+      }
+    }
+
+    .icon {
+      transition-duration: 0.2s;
+      transition-property: filter;
+      filter: invert(97%) sepia(0%) saturate(73%) hue-rotate(155deg)
+        brightness(85%) contrast(86%);
+    }
+
+    &:hover {
+      .icon {
+        filter: invert(96%) sepia(100%) saturate(0%) hue-rotate(208deg)
+          brightness(103%) contrast(101%);
+      }
+    }
+  }
+
+  .languageMenu {
+    position: absolute;
+    bottom: -6rem;
+    left: 50%;
+    background-color: hsla(233, 35%, 20%, 0.65);
+    list-style-type: none;
+    padding: 0.5rem;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-bottom: 2.5rem;
+    padding-top: 1rem;
+    border-radius: 2rem 2rem 0 0;
+    opacity: 0.1;
+    transition: bottom 0.3s ease-in-out, opacity 0.1s ease-in-out 0.2s;
+
+    &.languageMenuExtended {
+      bottom: 2rem;
+      transform: translateX(-50%);
+      opacity: 1;
+      transition: bottom 0.3s ease-in-out, opacity 0s ease-in-out 0s;
+      backdrop-filter: blur(0.5rem);
+    }
+
+    .flag {
+      display: block;
+      font-size: 2rem;
+      font-family: "Twemoji Country Flags", sans-serif;
+    }
+  }
+}
