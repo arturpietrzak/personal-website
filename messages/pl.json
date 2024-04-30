@@ -118,7 +118,7 @@
     },
     "digit-recognition": {
       "tags": ["TensorFlow 2.0", "Keras", "Flask", "React.js"],
-      "youtube-id": "hA0Wp3KQYGU",
+      "youtube-id": "9O2xwYOn2Fk",
       "title": "Digit recognition",
       "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
       "description": "<p>System rozpoznawania cyfr trenowany na bazie danych MNIST. Uczenie maszynowe zostało stworzone przy użyciu bibliotek <e>TensorFlow 2.0</e> i <e>Keras</e>. Model wykorzystuje one <e>Splotową Sieć Neuronową</e>. The model has achieved an accuracy of 98.84%.</p><p>Additionally, the model has been attached to simple <e>Flask</e> backend, which in combination with interactive <e>React.js</e> canvas allows anyone to test out the model with their own writing.</p>"
@@ -147,14 +147,14 @@
     },
     "weather-app": {
       "tags": ["HTML", "CSS", "JavaScript", "Axios", "REST API"],
-      "youtube-id": "hA0Wp3KQYGU",
+      "youtube-id": "V0cUO22DN4I",
       "title": "Aplikacja pogodowa",
       "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
       "description": "<p>Aplikacja internetowa pogodowa zaimplementowana w <e>React.js</e> inspirowana aplikacją pogodową na iOS. Wykorzystuje bibliotekę <e>Axios</e> do pobierania danych z <e>API pogodowego Visual Crossing</e>. Kolory słupków temperatury dziennej zaimplementowano poprzez manipulację modelu kolorów <e>HSL</e>.</p>"
     },
     "commutely": {
       "tags": ["Bootstrap", "HTML", "CSS", "JavaScript"],
-      "youtube-id": "hA0Wp3KQYGU",
+      "youtube-id": "Q0WIzLK-NCo",
       "title": "Commutely",
       "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
       "description": "<p>Kalkulator internetowy stworzony przy użyciu <e>Bootstrap</e>, <e>HTML</e>, <e>CSS</e> i <e>JavaScript</e>. Pomaga informować ludzi o emisjach gazów cieplarnianych wytwarzanych podczas dojazdów do szkoły lub pracy. Dodatkowo pozwala oszacować, ile pieniędzy można dziennie zaoszczędzić korzystając z transportu publicznego.</p>"

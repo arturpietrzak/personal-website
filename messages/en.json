@@ -118,7 +118,7 @@
     },
     "digit-recognition": {
       "tags": ["TensorFlow 2.0", "Keras", "Flask", "React.js"],
-      "youtube-id": "hA0Wp3KQYGU",
+      "youtube-id": "9O2xwYOn2Fk",
       "title": "Digit recognition",
       "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
       "description": "<p>Digit recognition system trained using MNIST database. The machine learning was built with <e>TensorFlow 2.0</e> and <e>Keras</e> libraries and it uses <e>Convolutional Neural Network</e>. The model has achieved an accuracy of 98.84%.</p><p>Additionally, the model has been attached to simple <e>Flask</e> backend, which in combination with interactive <e>React.js</e> canvas allows anyone to test out the model with their own writing.</p>"
@@ -147,14 +147,14 @@
     },
     "weather-app": {
       "tags": ["HTML", "CSS", "JavaScript", "Axios", "REST API"],
-      "youtube-id": "hA0Wp3KQYGU",
+      "youtube-id": "V0cUO22DN4I",
       "title": "Weather app",
       "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
       "description": "<p>Weather web app implemented in <e>React.js</e> inspired by iOS weather application. It utilizes <e>Axios</e> library to fetch data from <e>Visual Crossing weather data API</e>. The colors for daily temperature bars were implementing by manipulating the hue of <e>HSL</e> color model.</p>"
     },
     "commutely": {
       "tags": ["Bootstrap", "HTML", "CSS", "JavaScript"],
-      "youtube-id": "hA0Wp3KQYGU",
+      "youtube-id": "Q0WIzLK-NCo",
       "title": "Commutely",
       "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
       "description": "<p>Web calculator created with <e>Bootstrap</e>, <e>HTML</e>, <e>CSS</e> and <e>JavaScript</e>. It helps to inform people on the emissions that they produce while commuting to shool or work. Additionaly, it provides an estimate on how much money can be saved daily by using public transport.</p>"
