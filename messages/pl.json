@@ -1,7 +1,8 @@
 {
   "Navigation": {
     "home": "Strona główna",
-    "projects": "Projekty"
+    "projects": "Projekty",
+    "all-projects": "Wszystkie projekty"
   },
   "Index": {
     "title": "Inżynier informatyki i deweloper",
@@ -121,14 +122,14 @@
       "tags": ["TensorFlow 2.0", "Keras", "Flask", "React.js"],
       "youtube-id": "9O2xwYOn2Fk",
       "title": "Digit recognition",
-      "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
+      "github-link": "https://github.com/arturpietrzak/DigitRecognition",
       "description": "<p>System rozpoznawania cyfr trenowany na bazie danych MNIST. Uczenie maszynowe zostało stworzone przy użyciu bibliotek <e>TensorFlow 2.0</e> i <e>Keras</e>. Model wykorzystuje one <e>Splotową Sieć Neuronową</e>. The model has achieved an accuracy of 98.84%.</p><p>Additionally, the model has been attached to simple <e>Flask</e> backend, which in combination with interactive <e>React.js</e> canvas allows anyone to test out the model with their own writing.</p>"
     },
     "personal-website": {
       "tags": ["React.js", "Next.js", "Framer Motion"],
       "youtube-id": "963i356ORuA",
       "title": "Ta strona",
-      "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
+      "github-link": "https://github.com/arturpietrzak/personal-website",
       "description": "<p>Ta strona internetowa powstała jako portfolio do prezentacji moich prac. Podstawą tego projektu jest <e>Next.js</e>, który oferuje wiele przydatnych funkcji, na przykład <e>Optymalizację dla wyszukiwarek internetowych</e> i <e>Server Side Rendering</e>. Style zostały stworzony z uż1yciem <e>SCSS modules</e>, a animacje zaimplementowno biblioteką <e>Framer Motion</e>. Dodatkowo ten projekt wykorzystuje bibliotekę <e>Next-intl</e>, co pozwoliło mi na realizację internacjonalizacji.</p>"
     },
     "racetrack-ranking": {
@@ -142,22 +143,22 @@
         "MongoDB"
       ],
       "youtube-id": "quTyiQna948",
-      "title": "Racetrack ranking platform",
-      "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
+      "title": "Racetrack ranking",
+      "github-link": "https://github.com/arturpietrzak/RaceTrackRanking",
       "description": "<p>Platforma internetowa do przeglądania i recenzowania różnych torów wyścigowych na całym świecie. Backend został zaimplementowany za pomocą <e>Express.js</e>, a dane przechowywano w bazie danych <e>MongoDB</e>. Interfejs użytkownika został zaimplementowany w <e>HTMLu</e> i <e>CSSie</e> z użyciem języka szablonowego <e>EJS</e>. Ta strona internetowa została stworzona z podejściem <e>Responsive web design</e>, co zapewnia prawidłowe wyświetlanie platformy na ekranach wszystkich rozmiarów.</p>"
     },
     "weather-app": {
       "tags": ["HTML", "CSS", "JavaScript", "Axios", "REST API"],
       "youtube-id": "V0cUO22DN4I",
       "title": "Aplikacja pogodowa",
-      "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
+      "github-link": "https://github.com/arturpietrzak/react-weather-app",
       "description": "<p>Aplikacja internetowa pogodowa zaimplementowana w <e>React.js</e> inspirowana aplikacją pogodową na iOS. Wykorzystuje bibliotekę <e>Axios</e> do pobierania danych z <e>API pogodowego Visual Crossing</e>. Kolory słupków temperatury dziennej zaimplementowano poprzez manipulację modelu kolorów <e>HSL</e>.</p>"
     },
     "commutely": {
       "tags": ["Bootstrap", "HTML", "CSS", "JavaScript"],
       "youtube-id": "Q0WIzLK-NCo",
       "title": "Commutely",
-      "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
+      "github-link": "https://github.com/arturpietrzak/Commutely-webpage",
       "description": "<p>Kalkulator internetowy stworzony przy użyciu <e>Bootstrap</e>, <e>HTML</e>, <e>CSS</e> i <e>JavaScript</e>. Pomaga informować ludzi o emisjach gazów cieplarnianych wytwarzanych podczas dojazdów do szkoły lub pracy. Dodatkowo pozwala oszacować, ile pieniędzy można dziennie zaoszczędzić korzystając z transportu publicznego.</p>"
     }
   }
