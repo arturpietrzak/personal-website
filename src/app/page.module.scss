@@ -55,6 +55,19 @@
       }
     }
 
+    .link {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      color: $text-emphasis;
+      text-decoration: underline;
+
+      .icon {
+        filter: invert(96%) sepia(100%) saturate(0%) hue-rotate(208deg)
+          brightness(103%) contrast(101%);
+      }
+    }
+
     .allProjectsLink {
       position: fixed;
       left: 1rem;

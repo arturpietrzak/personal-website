@@ -2,6 +2,8 @@ import styles from "@/app/page.module.scss";
 import TagList from "@/components/tagList/tagList";
 import { Link } from "@/navigation";
 import { useMessages, useTranslations } from "next-intl";
+import githubIcon from "/public/icons/github.svg";
+import Image from "next/image";
 
 export default function Project({
   params: { projectid },
@@ -9,6 +11,7 @@ export default function Project({
   params: { projectid: string };
 }) {
   const t = useTranslations(`ProjectPage.${projectid}`);
+  const tGeneral = useTranslations(`ProjectPage`);
   const messages = useMessages();
 
   /* @ts-ignore */
@@ -32,6 +35,15 @@ export default function Project({
             e: (chunks) => <span className={styles.emphasis}>{chunks}</span>,
           })}
         </div>
+        <Link href={t("github-link")} className={styles.link}>
+          <Image
+            className={styles.icon}
+            priority
+            src={githubIcon}
+            alt="Github"
+          />
+          {tGeneral("view-project")}
+        </Link>
         <Link href="/projects" className={styles.allProjectsLink}>
           ‹ All projects
         </Link>

@@ -47,8 +47,8 @@
             "Wsparcie zespołu programistów w utrzymaniu i rozwoju platformy (katalogu internetowego).",
             "Zapewnianie przejrzystości, spójności i poprawności kodu poprzez regularne przeprowadzanie code review pull requestów utworzonych przez innych członków zespołu."
           ],
-          "startingDate": "June 2022",
-          "endingDate": "September 2022"
+          "startingDate": "Czerwiec 2022",
+          "endingDate": "Wrzesień 2022"
         }
       ]
     },
@@ -69,46 +69,47 @@
       "title": "Platforma do dzielenie się wiedzą",
       "description": "Serwis społecznościowy inspirowany Twitterem, skupiający się na dłuższych, formatowalnych postach i dzieleniu się wiedzą.",
       "id": "knowhow",
-      "imageUrl": "https://arturpietrzak.com/grumbler.webp",
+      "imageUrl": "/projects/knowhow.webp",
       "tags": ["React.js", "Next.js", "tRPC", "Prisma"]
     },
     {
       "title": "Aplikacja do rozpoznawania cyfr",
       "description": "System rozpoznawania cyfr przeszkolony przy użyciu bazy danych MNIST. Model wykorzystuje splotową sieć neuronową (CNN) z dokładnością około 98,84%.",
       "id": "digit-recognition",
-      "imageUrl": "https://arturpietrzak.com/grumbler.webp",
+      "imageUrl": "/projects/digit.webp",
       "tags": ["TensorFlow 2.0", "Keras", "Flask", "React.js"]
     },
     {
       "title": "Ta strona",
       "description": "Strona osobista, która powstała jako portfolio, w którym mogę zaprezentować swoje prace i doświadczenia.",
       "id": "personal-website",
-      "imageUrl": "https://arturpietrzak.com/grumbler.webp",
+      "imageUrl": "/projects/personal.webp",
       "tags": ["React.js", "Next.js", "Framer Motion"]
     },
     {
       "title": "Ranking torów wyścigowych",
       "description": "Platforma internetowa do przeglądania, komentowania i oceniania torów wyścigowych na całym świecie.",
       "id": "racetrack-ranking",
-      "imageUrl": "https://arturpietrzak.com/grumbler.webp",
+      "imageUrl": "/projects/racetrack.webp",
       "tags": ["Express.js", "React.js"]
     },
     {
       "title": "Aplikacja pogodowa",
       "description": "Aplikacja internetowa pokazująca aktualną i przyszłą pogodę w miejscu wprowadzonym przez użytkownika. Wykorzystuje pogodowe API visualcrossing.com.",
       "id": "weather-app",
-      "imageUrl": "https://arturpietrzak.com/grumbler.webp",
+      "imageUrl": "/projects/weather.webp",
       "tags": ["React.js", "Axios"]
     },
     {
       "title": "Commutely",
       "description": "Projekt stworzony z misją edukowania ludzi na temat prawdziwych kosztów transportu samochodowego, zarówno ekonomicznych, jak i środowiskowych.",
       "id": "commutely",
-      "imageUrl": "https://arturpietrzak.com/grumbler.webp",
+      "imageUrl": "/projects/commutely.webp",
       "tags": ["Bootstrap", "HTML", "CSS", "JS"]
     }
   ],
   "ProjectPage": {
+    "view-project": "Sprawdź kod źródłowy na Githubie",
     "knowhow": {
       "tags": ["React.js", "Next.js", "tRPC", "Prisma"],
       "youtube-id": "ATsU1MizZLM",
@@ -124,8 +125,8 @@
       "description": "<p>System rozpoznawania cyfr trenowany na bazie danych MNIST. Uczenie maszynowe zostało stworzone przy użyciu bibliotek <e>TensorFlow 2.0</e> i <e>Keras</e>. Model wykorzystuje one <e>Splotową Sieć Neuronową</e>. The model has achieved an accuracy of 98.84%.</p><p>Additionally, the model has been attached to simple <e>Flask</e> backend, which in combination with interactive <e>React.js</e> canvas allows anyone to test out the model with their own writing.</p>"
     },
     "personal-website": {
-      "tags": [],
-      "youtube-id": "hA0Wp3KQYGU",
+      "tags": ["React.js", "Next.js", "Framer Motion"],
+      "youtube-id": "963i356ORuA",
       "title": "Ta strona",
       "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
       "description": "<p>Ta strona internetowa powstała jako portfolio do prezentacji moich prac. Podstawą tego projektu jest <e>Next.js</e>, który oferuje wiele przydatnych funkcji, na przykład <e>Optymalizację dla wyszukiwarek internetowych</e> i <e>Server Side Rendering</e>. Style zostały stworzony z uż1yciem <e>SCSS modules</e>, a animacje zaimplementowno biblioteką <e>Framer Motion</e>. Dodatkowo ten projekt wykorzystuje bibliotekę <e>Next-intl</e>, co pozwoliło mi na realizację internacjonalizacji.</p>"
@@ -140,7 +141,7 @@
         "EJS",
         "MongoDB"
       ],
-      "youtube-id": "hA0Wp3KQYGU",
+      "youtube-id": "quTyiQna948",
       "title": "Racetrack ranking platform",
       "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
       "description": "<p>Platforma internetowa do przeglądania i recenzowania różnych torów wyścigowych na całym świecie. Backend został zaimplementowany za pomocą <e>Express.js</e>, a dane przechowywano w bazie danych <e>MongoDB</e>. Interfejs użytkownika został zaimplementowany w <e>HTMLu</e> i <e>CSSie</e> z użyciem języka szablonowego <e>EJS</e>. Ta strona internetowa została stworzona z podejściem <e>Responsive web design</e>, co zapewnia prawidłowe wyświetlanie platformy na ekranach wszystkich rozmiarów.</p>"

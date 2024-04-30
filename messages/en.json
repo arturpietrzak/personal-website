@@ -19,8 +19,8 @@
             "Assisted in building a chatbot based on Mistral LLM, which constituted the first line of support for users communicating with the customer service department.",
             "Created and processed datasets by using uncategorized data collected by the company."
           ],
-          "startingDate": "June 2022",
-          "endingDate": "September 2022"
+          "startingDate": "November 2023",
+          "endingDate": "March 2024"
         },
         {
           "company": "HTD Health",
@@ -34,8 +34,8 @@
             "Developed a ReactJS hook for saving, retrieving, and validating data stored in local storage, improving user experience by persisting form information, even after the website was closed.",
             "Refactored the project to implement accessible and semantic HTML and CSS to comply with WCAG 2.1."
           ],
-          "startingDate": "June 2022",
-          "endingDate": "September 2022"
+          "startingDate": "October 2022",
+          "endingDate": "January 2023"
         },
         {
           "company": "HTD Health",
@@ -69,46 +69,47 @@
       "title": "Knowledge sharing platform",
       "description": "A twitter-inspired social networking site with focus on longer, formattable posts and sharing knowledge.",
       "id": "knowhow",
-      "imageUrl": "https://arturpietrzak.com/grumbler.webp",
+      "imageUrl": "/projects/knowhow.webp",
       "tags": ["React.js", "Next.js", "tRPC", "Prisma"]
     },
     {
       "title": "Digit Recognition",
       "description": "Digit recognition system trained using MNIST database. Model uses Convolutional Neural Network with an accuracy of approximately 98.84%.",
       "id": "digit-recognition",
-      "imageUrl": "https://arturpietrzak.com/grumbler.webp",
+      "imageUrl": "/projects/digit.webp",
       "tags": ["TensorFlow 2.0", "Keras", "Flask", "React.js"]
     },
     {
       "title": "This personal website",
       "description": "Personal website was created as a portfolio to showcase my works and experience.",
       "id": "personal-website",
-      "imageUrl": "https://arturpietrzak.com/grumbler.webp",
+      "imageUrl": "/projects/personal.webp",
       "tags": ["React.js", "Next.js", "Framer Motion"]
     },
     {
       "title": "Racetrack Ranking",
       "description": "Web platform for viewing, commenting and rating race tracks all over the world.",
       "id": "racetrack-ranking",
-      "imageUrl": "https://arturpietrzak.com/grumbler.webp",
+      "imageUrl": "/projects/racetrack.webp",
       "tags": ["Express.js", "React.js"]
     },
     {
       "title": "Weather app",
       "description": "A web app for showing current and future weather in a place entered by the user. Utilizes visualcrossing.com weather API.",
       "id": "weather-app",
-      "imageUrl": "https://arturpietrzak.com/grumbler.webp",
+      "imageUrl": "/projects/weather.webp",
       "tags": ["React.js", "Axios"]
     },
     {
       "title": "Commutely",
       "description": "A project created with a mission to educate people on the true costs of car transport, both economic and environmental.",
       "id": "commutely",
-      "imageUrl": "https://arturpietrzak.com/grumbler.webp",
+      "imageUrl": "/projects/commutely.webp",
       "tags": ["Bootstrap", "HTML", "CSS", "JS"]
     }
   ],
   "ProjectPage": {
+    "view-project": "View source code on github",
     "knowhow": {
       "tags": ["React.js", "Next.js", "tRPC", "Prisma"],
       "youtube-id": "ATsU1MizZLM",
@@ -124,8 +125,8 @@
       "description": "<p>Digit recognition system trained using MNIST database. The machine learning was built with <e>TensorFlow 2.0</e> and <e>Keras</e> libraries and it uses <e>Convolutional Neural Network</e>. The model has achieved an accuracy of 98.84%.</p><p>Additionally, the model has been attached to simple <e>Flask</e> backend, which in combination with interactive <e>React.js</e> canvas allows anyone to test out the model with their own writing.</p>"
     },
     "personal-website": {
-      "tags": [],
-      "youtube-id": "hA0Wp3KQYGU",
+      "tags": ["React.js", "Next.js", "Framer Motion"],
+      "youtube-id": "963i356ORuA",
       "title": "This personal website",
       "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
       "description": "<p>This personal website was created as a portfolio to showcase my works. The backbone of this project is <e>Next.js</e>, which offers many useful features, such as <e>Search Engine Optimization</e> and <e>Server Side Rendering</e>. This website was styled using <e>SCSS modules</e> and the animations were implemented with <e>Framer Motion</e>. Additionally, this project utilizes <e>Next-intl</e> library, which enabled me to implement internationalization of the website.</p>"
@@ -140,7 +141,7 @@
         "EJS",
         "MongoDB"
       ],
-      "youtube-id": "hA0Wp3KQYGU",
+      "youtube-id": "quTyiQna948",
       "title": "Racetrack ranking platform",
       "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
       "description": "<p>Web platform for browsing and reviewing different racetracks around the world. Backend was implemented with <e>Express.js</e>, and the data was persisted in <e>MongoDB</e> database. The user inteface was implemented in <e>HTML</e> and <e>CSS</e> with the <e>EJS</e> templating language. This website was created with <e>Responsive web design</e> approach, which ensures that the platform is displayed properly across all screen sizes.</p>"
