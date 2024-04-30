@@ -1,6 +1,6 @@
 import styles from "@/app/page.module.scss";
 import TagList from "@/components/tagList/tagList";
-import { Link } from "@/navigation";
+import { Link, redirect } from "@/navigation";
 import { useMessages, useTranslations } from "next-intl";
 import githubIcon from "/public/icons/github.svg";
 import Image from "next/image";
@@ -11,9 +11,14 @@ export default function Project({
   params: { projectid: string };
 }) {
   const t = useTranslations(`ProjectPage.${projectid}`);
+
   const tGeneral = useTranslations(`ProjectPage`);
   const messages = useMessages();
 
+  /* @ts-ignore */
+  if (messages["ProjectPage"][projectid] === undefined) {
+    redirect("/projects");
+  }
   /* @ts-ignore */
   const tagKeys = Object.keys(messages["ProjectPage"][projectid]["tags"]);
   const tags = tagKeys.map((tk) => t(`tags.${tk}`));
