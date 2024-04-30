@@ -111,7 +111,7 @@
   "ProjectPage": {
     "knowhow": {
       "tags": ["React.js", "Next.js", "tRPC", "Prisma"],
-      "youtube-id": "hA0Wp3KQYGU",
+      "youtube-id": "ATsU1MizZLM",
       "title": "Knowledge-sharing social media platform",
       "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
       "description": "<p>Fully functional social media platform built using <e>T3 Stack</e> (<e>React.js</e>, <e>Next.js</e>, <e>tRPC</e>, <e>NextAuth.js</e> and <e>Prisma</e>). The database component was created using <e>MySQL</e> and hosted on <e>PlanetScale</e>. The UI was created with <e>MantineUI</e>. The platform is split into two main parts - the user application and administative panel.</p><p>The user application allows anyone to view post created by others using different content exploration methods - main page (with recent posts), trending page, topic page and search page. User can also create an account and customize it by changing the profile description, setting profile picture and more. This website was created with <e>Responsive web design</e> approach, which ensures that the platform is displayed properly across all screen sizes.</p><p>The admin panel allows the administrator to manage the content on the platform. Only user with specific permissions can access it, and such an account can perform a wide variety of different actions. For example, administrator can view user reports and decide, wether reported content is against platform’s terms of service. Additionally, the administrator can manage users, apply penalties, or fully remove them from the platform.</p>"
