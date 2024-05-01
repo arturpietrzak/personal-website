@@ -1,6 +1,5 @@
 import styles from "./technologies.module.scss";
-import Image from "next/image";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 const technologiesList = [
   "HTML",
@@ -28,9 +27,11 @@ const technologiesList = [
 ];
 
 export default function Technologies() {
+  const t = useTranslations("Index.technologies");
+
   return (
     <section className={styles.technologies}>
-      <h2 className={styles.header}>Technologies</h2>
+      <h2 className={styles.header}>{t("header")}</h2>
       <div className={styles.technologiesContainer}>
         {technologiesList.map((t) => (
           <TechnologyItem name={t} key={t} />

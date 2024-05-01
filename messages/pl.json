@@ -53,6 +53,9 @@
         }
       ]
     },
+    "technologies": {
+      "header": "Technologie"
+    },
     "most-recent-project": {
       "header": "Najnowszy projekt",
       "more-work": "Aby zobaczyć więcej moich prac kliknij tutaj:",
