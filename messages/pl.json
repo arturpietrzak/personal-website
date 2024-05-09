@@ -6,7 +6,7 @@
   },
   "Index": {
     "title": "Inżynier informatyki i deweloper",
-    "about-me": "<p>Programista z ponad rocznym doświadczeniem w inżynierii oprogramowania. Móje podstawowe technologie to między innymi <t>React.js</t>, <t>Next.js</t>, <t>TypeScript</t>, <t>SCSS</t>, <t>MySQL</t> i <t>Prisma</t>. Dodatkowo na studiach oraz przy tworzeniu własnych projektów poznałem inne technologie, na przykład <t>C#</t>, <t>.NET</t>, <t>Java</t>, <t>Spring</t> i <t>React Native</t>.</p><p>Od niedawna zdobywam także wiedzę z zakresu sztucznej inteligencji i uczenia maszynowego, skupiając się na obszarze przetwarzania języka naturalnego. Zdobyłem doświadczenie w technologiach takich jak <t>Python</t>, <t>PyTorch</t> i <t>Pandas</t> poprzez opracowanie chatbota obsługi klienta opartego na dużym modelu językowym <t>Llama 2</t>.</p>",
+    "about-me": "<p>Programista z ponad rocznym doświadczeniem w inżynierii oprogramowania, absolwent <t>Politechniki Łódzkiej/t> z tytułem <t>Inżynier Informatyk/t>. Móje podstawowe technologie to między innymi <t>React.js</t>, <t>Next.js</t>, <t>TypeScript</t>, <t>SCSS</t>, <t>MySQL</t> i <t>Prisma</t>. Dodatkowo na studiach oraz przy tworzeniu własnych projektów poznałem inne technologie, na przykład <t>C#</t>, <t>.NET</t>, <t>Java</t>, <t>Spring</t> i <t>React Native</t>.</p><p>Od niedawna zdobywam także wiedzę z zakresu sztucznej inteligencji i uczenia maszynowego, skupiając się na obszarze przetwarzania języka naturalnego. Zdobyłem doświadczenie w technologiach takich jak <t>Python</t>, <t>PyTorch</t> i <t>Pandas</t> poprzez opracowanie chatbota obsługi klienta opartego na dużym modelu językowym <t>Llama 2</t>.</p>",
     "experience": {
       "header": "Doświadczenie",
       "items": [

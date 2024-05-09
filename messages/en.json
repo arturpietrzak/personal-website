@@ -6,7 +6,7 @@
   },
   "Index": {
     "title": "IT engineer and developer",
-    "about-me": "<p>Web developer with over a year of experience in software engineering. My core stack consits of <t>React.js</t>, <t>Next.js</t>, <t>TypeScript</t>, <t>SCSS</t>, <t>MySQL</t> and <t>Prisma</t>. Additionally, during my studies and while creating personal projects I learned other technologies, such as <t>C#</t>, <t>.NET</t>, <t>Java</t>, <t>Spring</t> and <t>React Native</t>.</p><p>As of recentely, I have also been gaining knowledge in the field of artificial intelligence and machine learning, focusing on the domain of natural language processing. I gained experience in <t>Python</t>, <t>PyTorch</t> and <t>Pandas</t> by developing a customer service chatbot based on a Large Language Model called <t>Llama 2</t>.</p>",
+    "about-me": "<p>Web developer with over a year of experience in software engineering, graduate of <t>Łódź University of Technology/t> with the title of <t>IT Engineer/t>. My core stack consits of <t>React.js</t>, <t>Next.js</t>, <t>TypeScript</t>, <t>SCSS</t>, <t>MySQL</t> and <t>Prisma</t>. Additionally, during my studies and while creating personal projects I learned other technologies, such as <t>C#</t>, <t>.NET</t>, <t>Java</t>, <t>Spring</t> and <t>React Native</t>.</p><p>As of recentely, I have also been gaining knowledge in the field of artificial intelligence and machine learning, focusing on the domain of natural language processing. I gained experience in <t>Python</t>, <t>PyTorch</t> and <t>Pandas</t> by developing a customer service chatbot based on a Large Language Model called <t>Llama 2</t>.</p>",
     "experience": {
       "header": "Experience",
       "items": [
