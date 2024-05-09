@@ -23,6 +23,12 @@ export default function RootLayout({
 
   return (
     <html lang={locale}>
+      <link
+        rel="icon"
+        href="/icon?<generated>"
+        type="image/<generated>"
+        sizes="<generated>"
+      />
       <body className={inter.className}>
         <Navbar linkNames={{ home: t("home"), projects: t("projects") }} />
         {children}
