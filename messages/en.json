@@ -11,6 +11,20 @@
       "header": "Experience",
       "items": [
         {
+          "company": "Comarch",
+          "title": "Intern Software Engineer",
+          "companyUrl": "https://www.comarch.pl/",
+          "companyImg": "/comarch.png",
+          "location": "Łódź, Poland",
+          "achievements": [
+            "Helped maintain an existing corporate banking project.",
+            "Assisted the team with developing new features using Spring Framework and Angular.js.",
+            "Deploying new versions of the project modules to development and test environments."
+          ],
+          "startingDate": "July 2024",
+          "endingDate": "September 2024"
+        },
+        {
           "company": "Paidwork",
           "title": "Intern AI/ML Engineer",
           "companyUrl": "https://www.paidwork.com/",
