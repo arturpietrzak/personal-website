@@ -25,7 +25,7 @@ export default function ProjectLink({
         <div className={styles.infoContainer}>
           <h3 className={styles.projectTitle}>{title}</h3>
           <p className={styles.description}>{description}</p>
-          <a className={styles.link}>{t("read-more")}</a>
+          <div className={styles.link}>{t("read-more")}</div>
           <TagList tags={tags} />
         </div>
         <Image

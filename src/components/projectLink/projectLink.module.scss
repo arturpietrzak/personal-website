@@ -51,6 +51,12 @@
         background-color: unset;
       }
 
+      .link {
+        gap: 1rem;
+        color: $text-emphasis;
+        text-decoration: underline;
+      }
+
       .projectTitle {
         font-size: 1.125rem;
         font-weight: 500;
