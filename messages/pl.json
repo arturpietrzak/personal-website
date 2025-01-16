@@ -2,7 +2,8 @@
   "Navigation": {
     "home": "Strona główna",
     "projects": "Projekty",
-    "all-projects": "Wszystkie projekty"
+    "all-projects": "Wszystkie projekty",
+    "read-more": "Zobacz więcej na temat tego projektu"
   },
   "Index": {
     "title": "Inżynier informatyki i deweloper",
@@ -12,49 +13,50 @@
       "items": [
         {
           "company": "Comarch",
-          "title": "Intern Software Engineer",
+          "title": "Intern Frontend Software Engineer (Angular)",
           "companyUrl": "https://www.comarch.pl/",
           "companyImg": "/comarch.png",
           "location": "Łódź, Poland",
           "achievements": [
             "Wsparcie w usuwaniu błędów i utrzymaniu projektu w domenie bankowości korporacyjnej.",
-            "Rozwijanie nowych funkcjonalności przy użyciu Spring Framework i Angular.js.",
-            "Wdrażanie kolejnych wersji modułów projektu na środowiska deweloperskie i testowe."
+            "Rozwijanie nowych funkcjonalności przy użyciu Angular.js i wewnętrznego systemu projektowego."
           ],
           "startingDate": "Lipiec 2024",
           "endingDate": "Wrzesień 2024"
         },
         {
           "company": "Paidwork",
-          "title": "Intern AI/ML Engineer",
+          "title": "Intern AI/ML and Frontend Engineer (PyTorch/React.js)",
           "companyUrl": "https://www.paidwork.com/",
           "companyImg": "/paidwork.png",
           "location": "Zdalnie, Polska",
           "achievements": [
-            "Wsparcie w budowaniu chatbota opartego o duże modele językowe stanowiącego pierwszą linię kontaktu dla użytkowników komunikujących się z działem obsługi klienta.",
-            "Tworzenie i opracowywanie zbiorów danych wykorzystywanych do treningu modeli na podstawie nieskategoryzowanych danych zebranych przez firmę."
+            "Opracowanie interfejsu dla komputerów i urządzeń mobilnych do przesyłania i zarządzania prośbami o obsługę klienta",
+            "Wsparcie w tworzeniu chatbota do obsługi klienta w oparciu o duże modele językowe (Llama 2 i Mistral).",
+            "Stworzyenie modeli klasyfikacyjne do kategoryzacji wiadomości użytkowników za pomocą Pythona i PyTorch.",
+            "Praca z serwisem AWS SageMaker w celu fine-tuningu modelu w środowisku chmurowym."
           ],
           "startingDate": "Listopad 2023",
-          "endingDate": "Marzec 2024"
+          "endingDate": "KWiecień 2024"
         },
         {
           "company": "HTD Health",
-          "title": "Junior Web Developer",
+          "title": "Junior Frontend Software Developer (React.js/Next.js)",
           "companyUrl": "https://htdhealth.com/",
           "companyImg": "https://htdhealth.com/wp-content/themes/htd/assets/svg/logo-white.svg",
           "location": "Łódź, Polska",
           "achievements": [
-            "Wprowadzenie Sentry jako narzędzie do pomiaru wydajności i śledzenia błędów w projekcie, co pomogło w wykrywaniu i naprawianiu problemów, zwiększając niezawodność serwisu.",
-            "Sprototypowanie funkcjonalności automatycznego tworzenia, uzupełniania danych i wysyłania dokumentów do lekarzy za pomocą DocuSign API, co znacznie uprościło proces pozyskiwania dokumentacji przez pacjentów.",
             "Opracowanie hooka ReactJS do zapisywania, wczytywania i sprawdzania poprawności danych przechowywanych w pamięci lokalnej, co poprawiło user experience poprzez zapamiętywanie informacji wprowadzonych do formularzy, nawet po przypadkowym zamknięciu strony internetowej.",
-            "Przeprowadzenie rewizji projektu w celu wdrożenia semantycznego HTML i CSS dla osób korzystających z czytników ekranu wraz z zapewnieniem zgodności z wytycznymi WCAG 2.1."
+            "Pomoc amerykańskiemu klientowi w zebraniu wymagań dotyczących projektu w branży healthcare.",
+            "Przeprowadzenie rewizji projektu w celu wdrożenia semantycznego HTML i CSS dla osób korzystających z czytników ekranu wraz z zapewnieniem zgodności z wytycznymi WCAG 2.1.",
+            "Wdrożenie testy jednostkowe przy użyciu frameworka Jest."
           ],
           "startingDate": "Październik 2022",
           "endingDate": "Styczeń 2023"
         },
         {
           "company": "HTD Health",
-          "title": "Intern Web Developer",
+          "title": "Intern Frontend Software Developer (React.js)",
           "companyUrl": "https://htdhealth.com/",
           "companyImg": "https://htdhealth.com/wp-content/themes/htd/assets/svg/logo-white.svg",
           "location": "Łódź, Polska",

@@ -2,7 +2,8 @@
   "Navigation": {
     "home": "Home",
     "projects": "Projects",
-    "all-projects": "All projects"
+    "all-projects": "All projects",
+    "read-more": "Read more about this project"
   },
   "Index": {
     "title": "IT engineer and developer",
@@ -17,9 +18,8 @@
           "companyImg": "/comarch.png",
           "location": "Łódź, Poland",
           "achievements": [
-            "Helped maintain an existing corporate banking project.",
-            "Assisted the team with developing new features using Spring Framework and Angular.js.",
-            "Deploying new versions of the project modules to development and test environments."
+            "Helped maintain an established, long-term corporate banking project.",
+            "Assisted the team with developing new features using Angular and an internal design system."
           ],
           "startingDate": "July 2024",
           "endingDate": "September 2024"
@@ -31,11 +31,13 @@
           "companyImg": "/paidwork.png",
           "location": "Remote, Poland",
           "achievements": [
-            "Assisted in building a chatbot based on Mistral LLM, which constituted the first line of support for users communicating with the customer service department.",
-            "Created and processed datasets by using uncategorized data collected by the company."
+            "Developed a desktop and mobile interface for submitting and managing customer service requests.",
+            "Assisted in building a customer support chatbot based on Large Language Models (Llama 2 and Mistral).",
+            "Helped create classification models for categorizing user messages using Python and PyTorch.",
+            "Worked with AWS SageMaker to perform model fine-tuning in a cloud environment."
           ],
           "startingDate": "November 2023",
-          "endingDate": "March 2024"
+          "endingDate": "April 2024"
         },
         {
           "company": "HTD Health",
@@ -44,10 +46,10 @@
           "companyImg": "https://htdhealth.com/wp-content/themes/htd/assets/svg/logo-white.svg",
           "location": "Łódź, Poland",
           "achievements": [
-            "Introduced Sentry as a performance measuring and error-tracking tool for the project, which helped with detecting and fixing errors, making the website more reliable.",
-            "Prototyped a functionality of automatically creating, filling with data, and sending documents to doctors using DocuSign API, which greatly simplified the process of obtaining documentation for the user.",
-            "Developed a ReactJS hook for saving, retrieving, and validating data stored in local storage, improving user experience by persisting form information, even after the website was closed.",
-            "Refactored the project to implement accessible and semantic HTML and CSS to comply with WCAG 2.1."
+            "Developed a ReactJS hook for saving, retrieving, and validating data stored in local storage, improving user xperience by persisting form information, even after the website was closed.",
+            "Helped the US-based client with gathering and clarifying requirements for a healthcare project.",
+            "Refactored the project to implement accessible and semantic HTML and CSS to comply with WCAG 2.1.",
+            "Implemented unit tests with Jest framework."
           ],
           "startingDate": "October 2022",
           "endingDate": "January 2023"
