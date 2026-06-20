@@ -104,11 +104,6 @@ section {
 html {
   scroll-behavior: smooth;
   background-color: $bg-deep;
-  // Grid directly on html so iOS Safari extends it into overscroll/browser chrome areas
-  background-image: 
-    linear-gradient($grid-color 1px, transparent 1px),
-    linear-gradient(90deg, $grid-color 1px, transparent 1px);
-  background-size: 40px 40px;
 }
 
 body {
@@ -126,12 +121,30 @@ body {
     content: "";
     position: fixed;
     inset: 0;
-    z-index: -1;
+    z-index: -2;
     pointer-events: none;
     will-change: transform;
     background-image: 
+      linear-gradient(to bottom, $bg-deep 0%, transparent 3rem),
+      linear-gradient(to top, $bg-deep 0%, transparent 3rem),
       radial-gradient(circle at 50% 20%, rgba(59, 130, 246, 0.08) 0%, transparent 60%),
       radial-gradient(circle at 10% 80%, rgba(59, 130, 246, 0.03) 0%, transparent 40%);
+  }
+
+  // Grid pattern (fixed and bleeding past viewport by 200px to cover iOS overscroll)
+  &::after {
+    content: "";
+    position: fixed;
+    top: -200px;
+    bottom: -200px;
+    left: -200px;
+    right: -200px;
+    z-index: -1;
+    pointer-events: none;
+    background-image: 
+      linear-gradient($grid-color 1px, transparent 1px),
+      linear-gradient(90deg, $grid-color 1px, transparent 1px);
+    background-size: 40px 40px;
   }
 }
 
