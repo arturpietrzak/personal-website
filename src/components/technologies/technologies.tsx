@@ -1,8 +1,8 @@
 "use client";
 
+import React, { useRef, useState, useEffect, useCallback } from "react";
 import styles from "./technologies.module.scss";
 import { useTranslations } from "next-intl";
-import { motion } from "framer-motion";
 
 type TechItem = {
   name: string;
@@ -14,6 +14,13 @@ type TechItem = {
 
 export default function Technologies() {
   const t = useTranslations("Index.technologies");
+  const trackRef = useRef<HTMLDivElement>(null);
+  const overlayRefs = useRef<Map<number, HTMLDivElement>>(new Map());
+  const [isHovered, setIsHovered] = useState(false);
+  const [scrollPos, setScrollPos] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   const coreTechs: TechItem[] = [
     {
@@ -210,42 +217,216 @@ export default function Technologies() {
     },
   ];
 
+  // Double the array to allow for infinite scrolling
+  const marqueeItems = [...coreTechs, ...coreTechs, ...coreTechs];
+
+  // Auto-scroll loop using requestAnimationFrame for smooth manual + auto scrolling
+  useEffect(() => {
+    let animationFrameId: number;
+    let lastTime = performance.now();
+    
+    // speed in pixels per millisecond
+    const autoScrollSpeed = 0.05;
+
+    const render = (time: number) => {
+      const delta = time - lastTime;
+      lastTime = time;
+
+      if (!isHovered && !isDragging) {
+        setScrollPos((prev) => {
+          let nextPos = prev - autoScrollSpeed * delta;
+          
+          if (trackRef.current) {
+            const trackWidth = trackRef.current.scrollWidth / 3;
+            // Loop back when we scroll past one full set of items
+            if (nextPos <= -trackWidth) {
+              nextPos += trackWidth;
+            } else if (nextPos > 0) {
+              nextPos -= trackWidth;
+            }
+          }
+          return nextPos;
+        });
+      }
+
+      animationFrameId = requestAnimationFrame(render);
+    };
+
+    animationFrameId = requestAnimationFrame(render);
+    return () => cancelAnimationFrame(animationFrameId);
+  }, [isHovered, isDragging]);
+
+  const handleWheel = (e: React.WheelEvent) => {
+    // Only react to horizontal scroll (e.g. trackpad swipe), ignore vertical
+    if (Math.abs(e.deltaX) < 1) return;
+    
+    const scrollAmount = e.deltaX * 1.5;
+
+    setScrollPos((prev) => {
+      let nextPos = prev - scrollAmount;
+      if (trackRef.current) {
+        const trackWidth = trackRef.current.scrollWidth / 3;
+        if (nextPos <= -trackWidth) {
+          nextPos += trackWidth;
+        } else if (nextPos > 0) {
+          nextPos -= trackWidth;
+        }
+      }
+      return nextPos;
+    });
+  };
+
+  const handleDragStart = (e: React.MouseEvent | React.TouchEvent) => {
+    setIsDragging(true);
+    setStartX("touches" in e ? e.touches[0].clientX : e.clientX);
+  };
+
+  const handleDragMove = (e: React.MouseEvent | React.TouchEvent) => {
+    if (!isDragging) return;
+    
+    const currentX = "touches" in e ? e.touches[0].clientX : e.clientX;
+    const diff = currentX - startX;
+    
+    setScrollPos((prev) => {
+      let nextPos = prev + diff;
+      if (trackRef.current) {
+        const trackWidth = trackRef.current.scrollWidth / 3;
+        if (nextPos <= -trackWidth) {
+          nextPos += trackWidth;
+        } else if (nextPos > 0) {
+          nextPos -= trackWidth;
+        }
+      }
+      return nextPos;
+    });
+    
+    setStartX(currentX);
+  };
+
+  const handleDragEnd = () => {
+    setIsDragging(false);
+  };
+
+  const handleCardClick = (index: number) => {
+    // Only allow click-to-expand on mobile viewports to prevent conflicts with desktop hover
+    if (typeof window !== 'undefined' && window.innerWidth > 768) return;
+
+    if (expandedIndex === index) {
+      setExpandedIndex(null); // Toggle off if clicking same card
+      setIsHovered(false); // Resume auto-scroll on mobile (mouseenter sticks on touch devices)
+    } else {
+      setExpandedIndex(index);
+    }
+  };
+
+  // Subtle magnetic cursor-follow effect on hovered overlay cards
+  const handleCardMouseMove = useCallback((e: React.MouseEvent, index: number) => {
+    const overlay = overlayRefs.current.get(index);
+    if (!overlay) return;
+
+    const rect = overlay.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+
+    // How far cursor is from center, normalized to -1..1
+    const offsetX = (e.clientX - centerX) / (rect.width / 2);
+    const offsetY = (e.clientY - centerY) / (rect.height / 2);
+
+    // Subtle movement: max ±6px horizontal, ±4px vertical
+    const moveX = offsetX * 6;
+    const moveY = offsetY * 4;
+
+    overlay.style.transform = `translate(calc(-50% + ${moveX}px), calc(-10px + ${moveY}px))`;
+  }, []);
+
+  const handleCardMouseLeave = useCallback((index: number) => {
+    const overlay = overlayRefs.current.get(index);
+    if (!overlay) return;
+    // Reset to default hover position
+    overlay.style.transform = '';
+  }, []);
+
   return (
     <section id="technologies" className={styles.technologiesSection}>
       <div className={styles.sectionHeader}>
         <span className={styles.sectionBadge}>{t("header")}</span>
       </div>
 
-      <div className={styles.techGrid}>
-        {coreTechs.map((tech, index) => (
-          <motion.div
-            key={tech.name}
-            className={styles.techCard}
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ 
-              opacity: 1, 
-              scale: 1,
-              transition: { duration: 0.4, delay: index * 0.05 }
-            }}
-            viewport={{ once: true, margin: "-50px" }}
-            whileHover={{ 
-              y: -5,
-              borderColor: tech.color.replace("0.2", "0.6"),
-              boxShadow: `0 8px 30px ${tech.color}`,
-              transition: { duration: 0.2 }
-            }}
-          >
-            <div className={styles.cardHeader}>
-              <div className={styles.iconContainer} style={{ backgroundColor: tech.color }}>
-                {tech.icon}
-              </div>
-              <span className={styles.categoryBadge}>{tech.category}</span>
-            </div>
+      <div 
+        className={styles.marqueeContainer}
+        onWheel={handleWheel}
+        onMouseDown={handleDragStart}
+        onMouseMove={handleDragMove}
+        onMouseUp={handleDragEnd}
+        onMouseLeave={() => handleDragEnd()}
+        onTouchStart={handleDragStart}
+        onTouchMove={handleDragMove}
+        onTouchEnd={handleDragEnd}
+        style={{ cursor: isDragging ? "grabbing" : "grab" }}
+      >
+        <div 
+          className={styles.marqueeTrack}
+          ref={trackRef}
+          style={{ transform: `translate3d(${scrollPos}px, 0, 0)` }}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => {
+            setIsHovered(false);
+            setExpandedIndex(null);
+          }}
+        >
+          {marqueeItems.map((tech, index) => {
+            const isExpanded = expandedIndex === index;
             
-            <h3 className={styles.techName}>{tech.name}</h3>
-            <p className={styles.techDesc}>{tech.desc}</p>
-          </motion.div>
-        ))}
+            return (
+              <div 
+                key={`${tech.name}-${index}`}
+                className={styles.techCardContainer}
+                onClick={() => handleCardClick(index)}
+                onMouseMove={(e) => handleCardMouseMove(e, index)}
+                onMouseLeave={() => handleCardMouseLeave(index)}
+              >
+                {/* The main card that stays in the flex layout */}
+                <div 
+                  className={styles.techCardBase}
+                  style={{
+                    borderColor: isExpanded ? tech.color.replace("0.2", "0.6") : undefined,
+                    boxShadow: isExpanded ? `0 8px 30px ${tech.color}` : undefined,
+                    opacity: isExpanded ? 0 : undefined // Hide base content if overlay is active
+                  }}
+                >
+                  <div className={styles.cardHeader}>
+                    <div className={styles.iconContainer} style={{ backgroundColor: tech.color }}>
+                      {tech.icon}
+                    </div>
+                    <span className={styles.categoryBadge}>{tech.category}</span>
+                  </div>
+                  <h3 className={styles.techName}>{tech.name}</h3>
+                </div>
+
+                {/* The overlay card that pops up on hover (absolute positioned) */}
+                <div 
+                  ref={(el) => { if (el) overlayRefs.current.set(index, el); }}
+                  className={`${styles.techCardOverlay} ${isExpanded ? styles.expanded : ''}`}
+                  style={{
+                    borderColor: tech.color.replace("0.2", "0.6"),
+                    boxShadow: `0 8px 30px ${tech.color}`,
+                  }}
+                >
+                  <div className={styles.cardHeader}>
+                    <div className={styles.iconContainer} style={{ backgroundColor: tech.color }}>
+                      {tech.icon}
+                    </div>
+                    <span className={styles.categoryBadge}>{tech.category}</span>
+                  </div>
+                  <h3 className={styles.techName}>{tech.name}</h3>
+                  <div className={styles.cardDescWrapper}>
+                    <p className={styles.techDesc}>{tech.desc}</p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

@@ -1,10 +1,13 @@
 @import "../../app/variables";
 
 .technologiesSection {
-  max-width: 860px;
   width: 100%;
   margin: 0 auto;
-  padding: 4rem 1.5rem;
+  padding: 2rem 0;
+
+  @media (max-width: 768px) {
+    padding: 1.5rem 0;
+  }
 
   .sectionHeader {
     display: flex;
@@ -24,72 +27,232 @@
     }
   }
 
-  .techGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 1.25rem;
+  .marqueeContainer {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    overflow: hidden;
+    position: relative;
+    padding: 1rem 0 3.5rem 0;
+    user-select: none;
+    -webkit-user-select: none;
+    
+    // Edge fade with CSS mask-image
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 10%,
+      black 90%,
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 10%,
+      black 90%,
+      transparent 100%
+    );
 
-    @media only screen and (max-width: 550px) {
-      grid-template-columns: 1fr;
+    @media (max-width: 768px) {
+      mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 5%,
+        black 95%,
+        transparent 100%
+      );
+      -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 5%,
+        black 95%,
+        transparent 100%
+      );
     }
   }
 
-  .techCard {
-    background-color: $card-bg;
+  .marqueeTrack {
+    display: flex;
+    gap: 1.5rem;
+    width: max-content;
+    will-change: transform; // Optimize animation
+    padding-left: 1.5rem;
+  }
+
+  .techCardContainer {
+    position: relative;
+    width: 220px;
+    height: 120px; // Fixed height for base card
+    flex-shrink: 0;
+
+    @media (max-width: 768px) {
+      width: 200px;
+      height: 105px;
+    }
+
+    // Hover state (Desktop)
+    @media (hover: hover) and (pointer: fine) {
+      &:hover .techCardOverlay {
+        opacity: 1;
+        width: 300px;
+        transform: translate(-50%, -10px); // Pop up and center
+        pointer-events: auto;
+        
+        .cardDescWrapper {
+          grid-template-rows: 1fr;
+          
+          .techDesc {
+            opacity: 1;
+            padding-top: 0.75rem;
+            transition-delay: 0.1s;
+          }
+        }
+      }
+    }
+  }
+
+  .techCardBase {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(17, 18, 25, 0.6); // slightly transparent
     border: $card-border;
-    padding: 1.5rem;
+    padding: 1.25rem;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    transition: opacity 0.3s ease;
+    opacity: 0.7; // lesser opacity near edges/by default
+
+    @media (max-width: 768px) {
+      padding: 0.875rem;
+    }
+  }
+
+  .techCardOverlay {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: rgb(26, 27, 39);
+    border: $card-border;
+    padding: 1.25rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @media (max-width: 768px) {
+      padding: 0.875rem;
+    }
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-
-    .cardHeader {
+    opacity: 0;
+    pointer-events: none; // Let clicks pass through when hidden
+    z-index: 10;
+    
+    // Hide description initially
+    .cardDescWrapper {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
       width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1.5rem;
+      
+      .techDesc {
+        overflow: hidden;
+        margin: 0;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+        padding-top: 0;
+      }
+    }
 
-      .iconContainer {
-        width: 42px;
-        height: 42px;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 8px;
-
-        svg {
-          width: 100%;
-          height: 100%;
+    // Expanded state (Mobile Tap)
+    &.expanded {
+      opacity: 1;
+      width: 260px;
+      transform: translate(-50%, -10px);
+      pointer-events: auto;
+      
+      .cardDescWrapper {
+        grid-template-rows: 1fr;
+        
+        .techDesc {
+          opacity: 1;
+          padding-top: 0.75rem;
         }
       }
 
-      .categoryBadge {
-        font-size: 0.65rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        color: $text-muted;
-        background-color: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(255, 255, 255, 0.06);
-        padding: 0.25rem 0.5rem;
-        border-radius: 4px;
+      @media (max-width: 768px) {
+        width: 220px;
+      }
+    }
+  }
+
+  // Shared inner content styles
+  .cardHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    @media (max-width: 768px) {
+      margin-bottom: 0.625rem;
+    }
+
+    .iconContainer {
+      width: 42px;
+      height: 42px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+
+      @media (max-width: 768px) {
+        width: 36px;
+        height: 36px;
+        padding: 6px;
+      }
+
+      svg {
+        width: 100%;
+        height: 100%;
       }
     }
 
-    .techName {
-      font-size: 1.125rem;
+    .categoryBadge {
+      font-size: 0.65rem;
       font-weight: 700;
-      color: $text-emphasis;
-      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: $text-muted;
+      background-color: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
     }
+  }
 
-    .techDesc {
-      font-size: 0.875rem;
-      color: $text-normal;
-      line-height: 1.5;
+  .techName {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: $text-emphasis;
+    margin-bottom: 0;
+
+    @media (max-width: 768px) {
+      font-size: 0.9rem;
+    }
+  }
+
+  .techDesc {
+    font-size: 0.875rem;
+    color: $text-normal;
+    line-height: 1.5;
+
+    @media (max-width: 768px) {
+      font-size: 0.75rem;
+      line-height: 1.4;
     }
   }
 }

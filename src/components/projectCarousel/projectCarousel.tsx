@@ -2,7 +2,7 @@
 
 import { useMessages, useTranslations } from "next-intl";
 import { useState, useRef, useEffect } from "react";
-import { motion, useMotionValue } from "framer-motion";
+import { motion } from "framer-motion";
 import styles from "./projectCarousel.module.scss";
 import Image from "next/image";
 import { Link } from "@/navigation";
@@ -20,6 +20,12 @@ export default function ProjectCarousel() {
   const [containerWidth, setContainerWidth] = useState(0);
   const [stride, setStride] = useState(420);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  // Drag state
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragStartX, setDragStartX] = useState(0);
+  const [dragOffset, setDragOffset] = useState(0);
+  const dragDistanceRef = useRef(0);
 
   const maxIndex = containerWidth > 768 
     ? Math.max(0, projectKeys.length - 2) 
@@ -66,6 +72,47 @@ export default function ProjectCarousel() {
     }
   };
 
+  // Drag handlers
+  const handleDragStart = (e: React.MouseEvent | React.TouchEvent) => {
+    setIsDragging(true);
+    const clientX = "touches" in e ? e.touches[0].clientX : e.clientX;
+    setDragStartX(clientX);
+    setDragOffset(0);
+    dragDistanceRef.current = 0;
+  };
+
+  const handleDragMove = (e: React.MouseEvent | React.TouchEvent) => {
+    if (!isDragging) return;
+    const clientX = "touches" in e ? e.touches[0].clientX : e.clientX;
+    const diff = clientX - dragStartX;
+    setDragOffset(diff);
+    dragDistanceRef.current = Math.abs(diff);
+  };
+
+  const handleDragEnd = () => {
+    if (!isDragging) return;
+    setIsDragging(false);
+
+    // Snap threshold: if dragged more than 25% of stride, advance/go back
+    const threshold = stride * 0.25;
+
+    if (dragOffset < -threshold && currentIndex < maxIndex) {
+      setCurrentIndex((prev) => prev + 1);
+    } else if (dragOffset > threshold && currentIndex > 0) {
+      setCurrentIndex((prev) => prev - 1);
+    }
+
+    setDragOffset(0);
+    dragDistanceRef.current = 0;
+  };
+
+  const handleLinkClick = (e: React.MouseEvent) => {
+    // Prevent navigation if the user was dragging
+    if (dragDistanceRef.current > 5) {
+      e.preventDefault();
+    }
+  };
+
   return (
     <section id="projects" className={styles.projectsSection}>
       <div className={styles.sectionHeader}>
@@ -97,11 +144,26 @@ export default function ProjectCarousel() {
       <div 
         ref={containerRef} 
         className={styles.carouselViewport}
-        style={{ paddingLeft: containerWidth <= 768 ? `${mobilePaddingLeft}px` : undefined }}
+        style={{ 
+          paddingLeft: containerWidth <= 768 ? `${mobilePaddingLeft}px` : undefined,
+          cursor: isDragging ? "grabbing" : "grab",
+          userSelect: "none",
+          WebkitUserSelect: "none",
+        }}
+        onMouseDown={handleDragStart}
+        onMouseMove={handleDragMove}
+        onMouseUp={handleDragEnd}
+        onMouseLeave={handleDragEnd}
+        onTouchStart={handleDragStart}
+        onTouchMove={handleDragMove}
+        onTouchEnd={handleDragEnd}
       >
         <motion.div
-          animate={{ x: -currentIndex * stride }}
-          transition={{ type: "spring", stiffness: 300, damping: 30 }}
+          animate={{ x: -currentIndex * stride + dragOffset }}
+          transition={isDragging 
+            ? { type: "tween", duration: 0 } 
+            : { type: "spring", stiffness: 300, damping: 30 }
+          }
           className={styles.carouselTrack}
         >
           {projectKeys.map((pk, index) => {
@@ -121,7 +183,7 @@ export default function ProjectCarousel() {
                 whileHover={{ y: -5 }}
                 transition={{ duration: 0.2 }}
               >
-                <Link href={`/projects/${id}`} className={styles.cardLink}>
+                <Link href={`/projects/${id}`} className={styles.cardLink} onClick={handleLinkClick}>
                   <div className={styles.imageWrapper}>
                     <Image
                       alt={`${title} project`}
@@ -166,3 +228,4 @@ export default function ProjectCarousel() {
     </section>
   );
 }
+
