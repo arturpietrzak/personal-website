@@ -118,6 +118,8 @@ body {
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
+  // Extend content safely into iOS safe areas (viewport-fit=cover)
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
   
   // Glowing radial gradients (fixed to viewport)
   &::before {

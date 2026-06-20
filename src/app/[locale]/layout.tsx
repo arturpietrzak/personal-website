@@ -53,7 +53,7 @@ export default async function RootLayout({
           sizes="any"
         />
         <meta name="theme-color" content="#090a0f" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
       </head>
       <body className={inter.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>
