@@ -25,7 +25,7 @@
       "items": [
         {
           "company": "Atlassian",
-          "title": "Młodszy Inżynier Oprogramowania",
+          "title": "Inżynier Oprogramowania",
           "companyUrl": "https://www.atlassian.com/",
           "companyImg": "/icons/atlassian.svg",
           "location": "Gdańsk, Polska",
@@ -38,7 +38,7 @@
         },
         {
           "company": "Comarch",
-          "title": "Młodszy Inżynier Oprogramowania",
+          "title": "Inżynier Oprogramowania",
           "companyUrl": "https://www.comarch.pl/",
           "companyImg": "/comarch.png",
           "location": "Łódź, Polska",
@@ -48,7 +48,7 @@
             "Współpraca z zespołem przy tworzeniu nowych funkcji przy użyciu Angulara oraz wewnętrznego systemu projektowania."
           ],
           "startingDate": "Lipiec 2024",
-          "endingDate": "Marzec 2025"
+          "endingDate": "Wrzesień 2024"
         },
         {
           "company": "Paidwork",
@@ -69,7 +69,7 @@
           "company": "HTD Health",
           "title": "Młodszy Programista Webowy",
           "companyUrl": "https://htdhealth.com/",
-          "companyImg": "https://htdhealth.com/wp-content/themes/htd/assets/svg/logo-white.svg",
+          "companyImg": "/icons/htd.svg",
           "location": "Łódź, Polska",
           "achievements": [
             "Opracowanie hooka ReactJS do zapisywania, wczytywania i sprawdzania poprawności danych w pamięci lokalnej, co poprawiło user experience poprzez zachowanie informacji.",
@@ -78,19 +78,19 @@
             "Implementacja testów jednostkowych za pomocą biblioteki Jest."
           ],
           "startingDate": "Październik 2022",
-          "endingDate": "Styczeń 2023"
+          "endingDate": "Lipiec 2023"
         },
         {
           "company": "HTD Health",
           "title": "Stażysta Programista Webowy",
           "companyUrl": "https://htdhealth.com/",
-          "companyImg": "https://htdhealth.com/wp-content/themes/htd/assets/svg/logo-white.svg",
+          "companyImg": "/icons/htd.svg",
           "location": "Łódź, Polska",
           "achievements": [
             "Wsparcie zespołu programistów w utrzymaniu i rozwoju projektu katalogu internetowego.",
             "Zapewnianie spójności i poprawności kodu poprzez regularne przeprowadzanie code review pull requestów innych członków zespołu."
           ],
-          "startingDate": "Czerwiec 2022",
+          "startingDate": "Lipiec 2022",
           "endingDate": "Wrzesień 2022"
         }
       ]
@@ -100,6 +100,8 @@
       "items": [
         {
           "school": "Politechnika Łódzka",
+          "universityUrl": "https://p.lodz.pl/",
+          "universityImg": "/icons/lut.webp",
           "degree": "Informatyka - Magister Inżynier",
           "field": "Informatyka (Uczenie Maszynowe i Inżynieria Oprogramowania)",
           "location": "Łódź, Polska",
@@ -109,6 +111,8 @@
         },
         {
           "school": "Politechnika Łódzka",
+          "universityUrl": "https://p.lodz.pl/",
+          "universityImg": "/icons/lut.webp",
           "degree": "Informatyka - Inżynier",
           "field": "Informatyka",
           "location": "Łódź, Polska",

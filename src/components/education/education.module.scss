@@ -129,27 +129,40 @@
       margin-bottom: 1rem;
 
       @media only screen and (max-width: 450px) {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.75rem;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 0.5rem 0.75rem;
+        align-items: center;
       }
     }
 
-    .iconWrapper {
-      .iconInner {
+    .logoWrapper {
+      @media only screen and (max-width: 450px) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+      }
+
+      .logoInner {
         width: 44px;
         height: 44px;
         border-radius: 8px;
-        background-color: rgba(59, 130, 246, 0.08);
-        border: 1px solid rgba(59, 130, 246, 0.2);
+        overflow: hidden;
+        background-color: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 6px;
+        transition: border-color 0.2s ease;
 
-        .capIcon {
-          width: 24px;
-          height: 24px;
-          color: $primary-accent;
+        &:hover {
+          border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .logoImg {
+          object-fit: contain;
+          max-width: 100%;
+          max-height: 100%;
         }
       }
     }
@@ -157,11 +170,22 @@
     .titleInfo {
       flex: 1;
 
+      @media only screen and (max-width: 450px) {
+        display: contents;
+      }
+
       .degreeTitle {
         font-size: 1.125rem;
         font-weight: 700;
         color: $text-emphasis;
         margin-bottom: 0.25rem;
+
+        @media only screen and (max-width: 450px) {
+          font-size: 1rem;
+          grid-column: 2 / 3;
+          grid-row: 1 / 2;
+          margin-bottom: 0;
+        }
       }
 
       .schoolMeta {
@@ -171,9 +195,19 @@
         font-size: 0.875rem;
         color: $text-normal;
 
-        .schoolName {
-          color: $text-normal;
+        @media only screen and (max-width: 450px) {
+          grid-column: 1 / 3;
+          grid-row: 2 / 3;
+        }
+
+        .schoolLink {
+          color: $primary-accent;
           font-weight: 500;
+
+          &:hover {
+            color: $primary-accent-hover;
+            text-decoration: underline;
+          }
         }
 
         .bulletSeparator {
@@ -183,6 +217,26 @@
 
         .locationText {
           color: $text-muted;
+        }
+      }
+
+      .mobileDate {
+        display: none;
+        
+        @media only screen and (max-width: $mobile-breakpoint) {
+          display: block;
+          font-size: 0.75rem;
+          font-weight: 600;
+          text-transform: uppercase;
+          color: $text-muted;
+          margin-top: 0.35rem;
+          letter-spacing: 0.05em;
+        }
+
+        @media only screen and (max-width: 450px) {
+          grid-column: 1 / 3;
+          grid-row: 3 / 4;
+          margin-top: 0;
         }
       }
     }
@@ -197,18 +251,4 @@
   }
 }
 
-// Mobile Date representation inside Content Card
-@media only screen and (max-width: $mobile-breakpoint) {
-  .contentCard {
-    &::before {
-      content: attr(data-date);
-      display: block;
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      color: $text-muted;
-      margin-bottom: 0.5rem;
-      letter-spacing: 0.05em;
-    }
-  }
-}
+// End of file

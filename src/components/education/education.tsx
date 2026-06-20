@@ -3,6 +3,8 @@
 import { useMessages, useTranslations } from "next-intl";
 import styles from "./education.module.scss";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import { Link } from "@/navigation";
 
 export default function Education() {
   const t = useTranslations("Index");
@@ -27,6 +29,8 @@ export default function Education() {
           const notes = t(`education.items.${ek}.notes`);
           const startingDate = t(`education.items.${ek}.startingDate`);
           const endingDate = t(`education.items.${ek}.endingDate`);
+          const universityUrl = t(`education.items.${ek}.universityUrl`);
+          const universityImg = t(`education.items.${ek}.universityImg`);
 
           return (
             <motion.div 
@@ -56,32 +60,28 @@ export default function Education() {
                 data-date={`${startingDate} — ${endingDate}`}
               >
                 <div className={styles.cardHeader}>
-                  <div className={styles.iconWrapper}>
-                    <div className={styles.iconInner}>
-                      {/* Graduation Cap SVG */}
-                      <svg 
-                        className={styles.capIcon} 
-                        viewBox="0 0 24 24" 
-                        fill="none" 
-                        stroke="currentColor" 
-                        strokeWidth={2}
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        width={20}
-                        height={20}
-                        aria-hidden="true"
-                      >
-                        <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-                        <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
-                      </svg>
-                    </div>
+                  <div className={styles.logoWrapper}>
+                    <Link href={universityUrl} target="_blank" rel="noopener noreferrer" className={styles.logoInner}>
+                      <Image 
+                        src={universityImg} 
+                        alt={`${school} logo`} 
+                        width={44} 
+                        height={44} 
+                        className={styles.logoImg} 
+                      />
+                    </Link>
                   </div>
                   <div className={styles.titleInfo}>
                     <h3 className={styles.degreeTitle}>{degree}</h3>
                     <div className={styles.schoolMeta}>
-                      <span className={styles.schoolName}>{school}</span>
+                      <Link href={universityUrl} target="_blank" rel="noopener noreferrer" className={styles.schoolLink}>
+                        {school}
+                      </Link>
                       <span className={styles.bulletSeparator}>&#8226;</span>
                       <span className={styles.locationText}>{location}</span>
+                    </div>
+                    <div className={styles.mobileDate}>
+                      {startingDate} — {endingDate}
                     </div>
                   </div>
                 </div>

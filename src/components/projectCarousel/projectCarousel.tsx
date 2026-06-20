@@ -7,8 +7,6 @@ import styles from "./projectCarousel.module.scss";
 import Image from "next/image";
 import { Link } from "@/navigation";
 
-const DRAG_BUFFER = 50;
-
 export default function ProjectCarousel() {
   const t = useTranslations("Index");
   const tProjects = useTranslations("Projects");
@@ -20,38 +18,44 @@ export default function ProjectCarousel() {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [containerWidth, setContainerWidth] = useState(0);
+  const [stride, setStride] = useState(420);
   const containerRef = useRef<HTMLDivElement>(null);
-  const dragX = useMotionValue(0);
 
-  // Resize listener to compute layout width
+  const maxIndex = containerWidth > 768 
+    ? Math.max(0, projectKeys.length - 2) 
+    : Math.max(0, projectKeys.length - 1);
+
+  // Resize listener to compute layout width and exact card stride
   useEffect(() => {
-    if (containerRef.current) {
-      setContainerWidth(containerRef.current.offsetWidth);
-    }
-
     const handleResize = () => {
       if (containerRef.current) {
         setContainerWidth(containerRef.current.offsetWidth);
+
+        // Directly measure the exact CSS-rendered distance between cards to avoid scrollbar/vw math desync
+        const track = containerRef.current.querySelector(`.${styles.carouselTrack}`);
+        if (track && track.children.length > 1) {
+          const card1 = track.children[0] as HTMLElement;
+          const card2 = track.children[1] as HTMLElement;
+          const actualStride = card2.getBoundingClientRect().left - card1.getBoundingClientRect().left;
+          if (actualStride > 0) {
+            setStride(actualStride);
+          }
+        }
       }
     };
+
+    // Initial measurement
+    setTimeout(handleResize, 50);
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const handleDragEnd = () => {
-    const x = dragX.get();
-    
-    if (x <= -DRAG_BUFFER && currentIndex < projectKeys.length - 1) {
-      setCurrentIndex((prev) => prev + 1);
-    } else if (x >= DRAG_BUFFER && currentIndex > 0) {
-      setCurrentIndex((prev) => prev - 1);
-    }
-    dragX.set(0);
-  };
+  const mobileCardWidth = containerWidth > 0 ? Math.min(400, containerWidth * 0.85 - 16) : 0;
+  const mobilePaddingLeft = containerWidth > 0 ? (containerWidth - mobileCardWidth) / 2 : 0;
 
   const nextSlide = () => {
-    if (currentIndex < projectKeys.length - 1) {
+    if (currentIndex < maxIndex) {
       setCurrentIndex((prev) => prev + 1);
     }
   };
@@ -66,8 +70,10 @@ export default function ProjectCarousel() {
     <section id="projects" className={styles.projectsSection}>
       <div className={styles.sectionHeader}>
         <span className={styles.sectionBadge}>{t("most-recent-project.header")}</span>
-        
-        {/* Navigation arrows */}
+      </div>
+
+      {/* Navigation arrows */}
+      <div className={styles.carouselControls}>
         <div className={styles.carouselArrows}>
           <button 
             onClick={prevSlide} 
@@ -79,7 +85,7 @@ export default function ProjectCarousel() {
           </button>
           <button 
             onClick={nextSlide} 
-            disabled={currentIndex === projectKeys.length - 1}
+            disabled={currentIndex === maxIndex}
             className={styles.arrowBtn}
             aria-label="Next Project"
           >
@@ -88,14 +94,14 @@ export default function ProjectCarousel() {
         </div>
       </div>
 
-      <div ref={containerRef} className={styles.carouselViewport}>
+      <div 
+        ref={containerRef} 
+        className={styles.carouselViewport}
+        style={{ paddingLeft: containerWidth <= 768 ? `${mobilePaddingLeft}px` : undefined }}
+      >
         <motion.div
-          drag="x"
-          dragConstraints={{ left: 0, right: 0 }}
-          style={{ x: dragX }}
-          animate={{ x: -currentIndex * (containerWidth > 768 ? 420 : containerWidth * 0.88 + 16) }}
+          animate={{ x: -currentIndex * stride }}
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
-          onDragEnd={handleDragEnd}
           className={styles.carouselTrack}
         >
           {projectKeys.map((pk, index) => {
@@ -148,12 +154,12 @@ export default function ProjectCarousel() {
 
       {/* Progress indicators / Pagination dots */}
       <div className={styles.carouselDots}>
-        {projectKeys.map((_, index) => (
+        {Array.from({ length: maxIndex + 1 }).map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
             className={`${styles.dot} ${index === currentIndex ? styles.activeDot : ""}`}
-            aria-label={`Go to project ${index + 1}`}
+            aria-label={`Go to page ${index + 1}`}
           />
         ))}
       </div>

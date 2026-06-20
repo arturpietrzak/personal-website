@@ -82,6 +82,9 @@ export default function Experience() {
                       <span className={styles.bulletSeparator}>&#8226;</span>
                       <span className={styles.locationText}>{location}</span>
                     </div>
+                    <div className={styles.mobileDate}>
+                      {startingDate} — {endingDate}
+                    </div>
                   </div>
                 </div>
 

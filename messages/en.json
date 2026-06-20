@@ -25,7 +25,7 @@
       "items": [
         {
           "company": "Atlassian",
-          "title": "Junior Software Engineer",
+          "title": "Software Engineer",
           "companyUrl": "https://www.atlassian.com/",
           "companyImg": "/icons/atlassian.svg",
           "location": "Gdańsk, Poland",
@@ -38,7 +38,7 @@
         },
         {
           "company": "Comarch",
-          "title": "Junior Software Engineer",
+          "title": "Software Engineer",
           "companyUrl": "https://www.comarch.pl/",
           "companyImg": "/comarch.png",
           "location": "Łódź, Poland",
@@ -48,7 +48,7 @@
             "Assisted the team with developing new features using Angular and an internal design system."
           ],
           "startingDate": "July 2024",
-          "endingDate": "March 2025"
+          "endingDate": "September 2024"
         },
         {
           "company": "Paidwork",
@@ -69,7 +69,7 @@
           "company": "HTD Health",
           "title": "Junior Web Developer",
           "companyUrl": "https://htdhealth.com/",
-          "companyImg": "https://htdhealth.com/wp-content/themes/htd/assets/svg/logo-white.svg",
+          "companyImg": "/icons/htd.svg",
           "location": "Łódź, Poland",
           "achievements": [
             "Developed a ReactJS hook for saving, retrieving, and validating data stored in local storage, improving user experience by persisting form information, even after the website was closed.",
@@ -78,19 +78,19 @@
             "Implemented unit tests with Jest framework."
           ],
           "startingDate": "October 2022",
-          "endingDate": "January 2023"
+          "endingDate": "July 2023"
         },
         {
           "company": "HTD Health",
           "title": "Intern Web Developer",
           "companyUrl": "https://htdhealth.com/",
-          "companyImg": "https://htdhealth.com/wp-content/themes/htd/assets/svg/logo-white.svg",
+          "companyImg": "/icons/htd.svg",
           "location": "Łódź, Poland",
           "achievements": [
             "Assisted the engineering team in maintaining and developing a web catalog project.",
             "Ensured code clarity, consistency, and correctness by regularly performing code review of pull requests created by other team members."
           ],
-          "startingDate": "June 2022",
+          "startingDate": "July 2022",
           "endingDate": "September 2022"
         }
       ]
@@ -100,6 +100,8 @@
       "items": [
         {
           "school": "Łódź University of Technology",
+          "universityUrl": "https://p.lodz.pl/",
+          "universityImg": "/icons/lut.webp",
           "degree": "Computer Science - Master of Engineering",
           "field": "Computer Science (Machine Learning & Software Engineering)",
           "location": "Łódź, Poland",
@@ -109,6 +111,8 @@
         },
         {
           "school": "Łódź University of Technology",
+          "universityUrl": "https://p.lodz.pl/",
+          "universityImg": "/icons/lut.webp",
           "degree": "Computer science - Bachelor of Engineering",
           "field": "Computer Science",
           "location": "Łódź, Poland",
