@@ -1,6 +1,6 @@
 @import "../../app/variables";
 
-.experience {
+.education {
   max-width: 860px;
   width: 100%;
   margin: 0 auto;
@@ -43,8 +43,8 @@
 
   // Left Side Date (Desktop only)
   .dateContainer {
-    width: 155px;
-    min-width: 155px;
+    width: 180px;
+    min-width: 180px;
     text-align: right;
     padding-right: 1rem;
     padding-top: 1rem;
@@ -126,7 +126,7 @@
       display: flex;
       align-items: center;
       gap: 1rem;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1rem;
 
       @media only screen and (max-width: 450px) {
         flex-direction: column;
@@ -135,28 +135,21 @@
       }
     }
 
-    .logoWrapper {
-      .logoInner {
+    .iconWrapper {
+      .iconInner {
         width: 44px;
         height: 44px;
         border-radius: 8px;
-        overflow: hidden;
-        background-color: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(255, 255, 255, 0.08);
+        background-color: rgba(59, 130, 246, 0.08);
+        border: 1px solid rgba(59, 130, 246, 0.2);
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 6px;
-        transition: border-color 0.2s ease;
 
-        &:hover {
-          border-color: rgba(255, 255, 255, 0.2);
-        }
-
-        .logoImg {
-          object-fit: contain;
-          max-width: 100%;
-          max-height: 100%;
+        .capIcon {
+          width: 24px;
+          height: 24px;
+          color: $primary-accent;
         }
       }
     }
@@ -164,28 +157,23 @@
     .titleInfo {
       flex: 1;
 
-      .jobTitle {
+      .degreeTitle {
         font-size: 1.125rem;
         font-weight: 700;
         color: $text-emphasis;
         margin-bottom: 0.25rem;
       }
 
-      .companyMeta {
+      .schoolMeta {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
         font-size: 0.875rem;
         color: $text-normal;
 
-        .companyLink {
-          color: $primary-accent;
+        .schoolName {
+          color: $text-normal;
           font-weight: 500;
-
-          &:hover {
-            color: $primary-accent-hover;
-            text-decoration: underline;
-          }
         }
 
         .bulletSeparator {
@@ -199,22 +187,11 @@
       }
     }
 
-    // Achievements list
-    .achievementsList {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      padding-left: 1.25rem;
-
-      .achievementItem {
+    .description {
+      .notesText {
         font-size: 0.925rem;
         line-height: 1.5;
         color: $text-normal;
-        list-style-type: disc;
-
-        &::marker {
-          color: $primary-accent;
-        }
       }
     }
   }

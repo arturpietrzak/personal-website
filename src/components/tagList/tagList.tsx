@@ -1,5 +1,3 @@
-import { Link } from "@/navigation";
-import ProjectLink from "../projectLink/projectLink";
 import styles from "./tagList.module.scss";
 
 export default function TagList({ tags }: { tags: string[] }) {

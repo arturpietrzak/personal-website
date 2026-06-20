@@ -1,68 +1,163 @@
 {
   "Navigation": {
     "home": "Strona główna",
+    "about": "O mnie",
+    "experience": "Doświadczenie",
+    "education": "Edukacja",
     "projects": "Projekty",
-    "all-projects": "Wszystkie projekty"
+    "technologies": "Technologie",
+    "contact": "Kontakt",
+    "all-projects": "Wszystkie projekty",
+    "read-more": "Dowiedz się więcej o projekcie"
   },
   "Index": {
-    "title": "Inżynier informatyki i deweloper",
-    "about-me": "<p>Programista z ponad rocznym doświadczeniem w inżynierii oprogramowania. Moje podstawowe technologie to między innymi <t>React.js</t>, <t>Next.js</t>, <t>TypeScript</t>, <t>SCSS</t>, <t>MySQL</t> i <t>Prisma</t>. Dodatkowo na studiach oraz przy tworzeniu własnych projektów poznałem inne technologie, na przykład <t>C#</t>, <t>.NET</t>, <t>Java</t>, <t>Spring</t> i <t>React Native</t>.</p><p>Od niedawna zdobywam także wiedzę z zakresu sztucznej inteligencji i uczenia maszynowego, skupiając się na obszarze przetwarzania języka. Zdobyłem doświadczenie w technologiach takich jak <t>Python</t>, <t>PyTorch</t> i <t>Pandas</t> poprzez opracowanie chatbota obsługi klienta opartego na dużym modelu językowym <t>Llama 2</t>.</p>",
+    "hero": {
+      "badge": "Programista Fullstack",
+      "name": "Artur Pietrzak",
+      "title": "Programista Webowy",
+      "subtitle": "",
+      "learn-more": "Skontaktuj się ze mną",
+      "download-cv": "Pobierz CV"
+    },
+    "about-me": "<p>Programista z ponad rocznym doświadczeniem w inżynierii oprogramowania, absolwent <t>Politechniki Łódzkiej</t> z tytułem <t>Inżyniera Informatyka</t>. Moje podstawowe technologie to między innymi <t>React.js</t>, <t>Next.js</t>, <t>TypeScript</t>, <t>SCSS</t>, <t>MySQL</t> i <t>Prisma</t>. Dodatkowo na studiach oraz przy tworzeniu własnych projektów poznałem inne technologie, na przykład <t>C#</t>, <t>.NET</t>, <t>Java</t>, <t>Spring</t> i <t>React Native</t>.</p><p>Od niedawna zdobywam także wiedzę z zakresu sztucznej inteligencji i uczenia maszynowego, skupiając się na obszarze przetwarzania języka. Zdobyłem doświadczenie w technologiach takich jak <t>Python</t>, <t>PyTorch</t> i <t>Pandas</t> poprzez opracowanie chatbota obsługi klienta opartego na dużym modelu językowym <t>Llama 2</t>.</p>",
     "experience": {
       "header": "Doświadczenie",
       "items": [
         {
+          "company": "Atlassian",
+          "title": "Młodszy Inżynier Oprogramowania",
+          "companyUrl": "https://www.atlassian.com/",
+          "companyImg": "/icons/atlassian.svg",
+          "location": "Gdańsk, Polska",
+          "achievements": [
+            "Analiza planów wykonania SQL i eliminacja zidentyfikowanych wolnych operacji, skutkująca skróceniem czasu ładowania stron listowania o 95% dla kluczowych klientów.",
+            "Opracowanie dedykowanego serwera MCP (Model Context Protocol) dla projektu, co podniosło produktywność zespołu deweloperskiego poprzez rozszerzenie możliwości modeli LLM."
+          ],
+          "startingDate": "Maj 2025",
+          "endingDate": "Obecnie"
+        },
+        {
+          "company": "Comarch",
+          "title": "Młodszy Inżynier Oprogramowania",
+          "companyUrl": "https://www.comarch.pl/",
+          "companyImg": "/comarch.png",
+          "location": "Łódź, Polska",
+          "achievements": [
+            "Zaimplementowanie serwisu do cyklicznych przelewów bankowych, obsługującego ~20 000 zaplanowanych operacji miesięcznie.",
+            "Wsparcie w utrzymaniu dojrzałego, długoterminowego projektu bankowości korporacyjnej.",
+            "Współpraca z zespołem przy tworzeniu nowych funkcji przy użyciu Angulara oraz wewnętrznego systemu projektowania."
+          ],
+          "startingDate": "Lipiec 2024",
+          "endingDate": "Marzec 2025"
+        },
+        {
           "company": "Paidwork",
-          "title": "Intern AI/ML Engineer",
+          "title": "Praktykant Inżynier AI/ML",
           "companyUrl": "https://www.paidwork.com/",
           "companyImg": "/paidwork.png",
           "location": "Zdalnie, Polska",
           "achievements": [
-            "Wsparcie w budowaniu chatbota opartego o duże modele językowe stanowiącego pierwszą linię kontaktu dla użytkowników komunikujących się z działem obsługi klienta.",
-            "Tworzenie i opracowywanie zbiorów danych wykorzystywanych do treningu modeli na podstawie nieskategoryzowanych danych zebranych przez firmę."
+            "Opracowanie interfejsu stacjonarnego i mobilnego do przesyłania i zarządzania zgłoszeniami obsługi klienta.",
+            "Wsparcie w budowaniu chatbota opartego o duże modele językowe (Llama 2 i Mistral) stanowiącego pierwszą linię kontaktu dla użytkowników.",
+            "Wsparcie w tworzeniu modeli klasyfikacyjnych do kategoryzacji wiadomości użytkowników za pomocą Pythona i PyTortha.",
+            "Praca z AWS SageMaker w celu dostrajania modeli w środowisku chmurowym."
           ],
           "startingDate": "Listopad 2023",
-          "endingDate": "Marzec 2024"
+          "endingDate": "Kwiecień 2024"
         },
         {
           "company": "HTD Health",
-          "title": "Junior Web Developer",
+          "title": "Młodszy Programista Webowy",
           "companyUrl": "https://htdhealth.com/",
           "companyImg": "https://htdhealth.com/wp-content/themes/htd/assets/svg/logo-white.svg",
           "location": "Łódź, Polska",
           "achievements": [
-            "Wprowadzenie Sentry jako narzędzie do pomiaru wydajności i śledzenia błędów w projekcie, co pomogło w wykrywaniu i naprawianiu problemów, zwiększając niezawodność serwisu.",
-            "Sprototypowanie funkcjonalności automatycznego tworzenia, uzupełniania danych i wysyłania dokumentów do lekarzy za pomocą DocuSign API, co znacznie uprościło proces pozyskiwania dokumentacji przez pacjentów.",
-            "Opracowanie hooka ReactJS do zapisywania, wczytywania i sprawdzania poprawności danych przechowywanych w pamięci lokalnej, co poprawiło user experience poprzez zapamiętywanie informacji wprowadzonych do formularzy, nawet po przypadkowym zamknięciu strony internetowej.",
-            "Przeprowadzenie rewizji projektu w celu wdrożenia semantycznego HTML i CSS dla osób korzystających z czytników ekranu wraz z zapewnieniem zgodności z wytycznymi WCAG 2.1."
+            "Opracowanie hooka ReactJS do zapisywania, wczytywania i sprawdzania poprawności danych w pamięci lokalnej, co poprawiło user experience poprzez zachowanie informacji.",
+            "Współpraca z klientem z USA przy zbieraniu i doprecyzowywaniu wymagań projektu medycznego.",
+            "Refaktoryzacja projektu w celu wdrożenia dostępnego i semantycznego HTML/CSS zgodnego z WCAG 2.1.",
+            "Implementacja testów jednostkowych za pomocą biblioteki Jest."
           ],
           "startingDate": "Październik 2022",
           "endingDate": "Styczeń 2023"
         },
         {
           "company": "HTD Health",
-          "title": "Intern Web Developer",
+          "title": "Stażysta Programista Webowy",
           "companyUrl": "https://htdhealth.com/",
           "companyImg": "https://htdhealth.com/wp-content/themes/htd/assets/svg/logo-white.svg",
           "location": "Łódź, Polska",
           "achievements": [
-            "Wsparcie zespołu programistów w utrzymaniu i rozwoju platformy (katalogu internetowego).",
-            "Zapewnianie przejrzystości, spójności i poprawności kodu poprzez regularne przeprowadzanie code review pull requestów utworzonych przez innych członków zespołu."
+            "Wsparcie zespołu programistów w utrzymaniu i rozwoju projektu katalogu internetowego.",
+            "Zapewnianie spójności i poprawności kodu poprzez regularne przeprowadzanie code review pull requestów innych członków zespołu."
           ],
-          "startingDate": "June 2022",
-          "endingDate": "September 2022"
+          "startingDate": "Czerwiec 2022",
+          "endingDate": "Wrzesień 2022"
+        }
+      ]
+    },
+    "education": {
+      "header": "Edukacja",
+      "items": [
+        {
+          "school": "Politechnika Łódzka",
+          "degree": "Informatyka - Magister Inżynier",
+          "field": "Informatyka (Uczenie Maszynowe i Inżynieria Oprogramowania)",
+          "location": "Łódź, Polska",
+          "notes": "Specjalizacja: Uczenie Maszynowe i Inżynieria Oprogramowania. Udział w badaniach naukowych nad benchmarkingiem i porównaniem modeli językowych (LLM).",
+          "startingDate": "Marzec 2024",
+          "endingDate": "Lipiec 2025"
+        },
+        {
+          "school": "Politechnika Łódzka",
+          "degree": "Informatyka - Inżynier",
+          "field": "Informatyka",
+          "location": "Łódź, Polska",
+          "notes": "Uzyskanie tytułu inżyniera informatyki. Praca dyplomowa dotyczyła stworzenia platformy społecznościowej do dzielenia się wiedzą.",
+          "startingDate": "Październik 2020",
+          "endingDate": "Luty 2024"
         }
       ]
     },
     "technologies": {
-      "header": "Technologie"
+      "header": "Technologie",
+      "categories": {
+        "frontend": "Frontend",
+        "language": "Język",
+        "backend": "Backend",
+        "database": "Bazy danych",
+        "data-science": "Analiza danych",
+        "ai-ml": "AI / ML",
+        "devops": "DevOps"
+      },
+      "items": {
+        "react": "Komponentowa biblioteka interfejsów użytkownika",
+        "next": "Kompleksowy framework React (Full-stack)",
+        "typescript": "Bezpieczny typowo nadzbiór języka JavaScript",
+        "dotnet": "Aplikacje backendowe i systemy korporacyjne",
+        "python": "Programowanie AI i skryptowanie danych",
+        "sql": "Relacyjne zapytania i projektowanie baz danych",
+        "prisma": "Nowoczesny ORM dla TypeScript i Node.js",
+        "pandas": "Biblioteka do struktur i analizy danych",
+        "tensorflow": "Uczenie maszynowe i sieci neuronowe",
+        "pytorch": "Głębokie uczenie i modele NLP",
+        "html": "Semantyczna struktura dokumentów webowych",
+        "css-scss": "Responsywne stylowanie i preprocesory",
+        "tailwind": "Narzędziowy framework CSS",
+        "docker": "Konteneryzacja i wdrażanie aplikacji",
+        "git": "Rozproszony system kontroli wersji"
+      }
     },
     "most-recent-project": {
-      "header": "Najnowszy projekt",
+      "header": "Projekty",
       "more-work": "Aby zobaczyć więcej moich prac kliknij tutaj:",
       "portfolio-button": "Pełne portfolio"
     },
     "contact": {
       "header": "Kontakt",
+      "cta": "Stwórzmy coś razem",
+      "cta-sub": "",
+      "copy-email": "Skopiuj adres e-mail",
+      "copied": "Skopiowano!",
       "email": "artur.pietrzak1@outlook.com",
       "github": "/arturpietrzak",
       "linkedin": "/artur-pietrzak-dev"
@@ -70,69 +165,93 @@
   },
   "Projects": [
     {
-      "title": "Platforma do dzielenie się wiedzą",
+      "title": "Platforma do dzielenia się wiedzą",
       "description": "Serwis społecznościowy inspirowany Twitterem, skupiający się na dłuższych, formatowalnych postach i dzieleniu się wiedzą.",
       "id": "knowhow",
-      "imageUrl": "https://arturpietrzak.com/grumbler.webp",
-      "tags": ["React.js", "Next.js", "tRPC", "Prisma"]
-    },
-    {
-      "title": "Aplikacja do rozpoznawania cyfr",
-      "description": "System rozpoznawania cyfr przeszkolony przy użyciu bazy danych MNIST. Model wykorzystuje splotową sieć neuronową (CNN) z dokładnością około 98,84%.",
-      "id": "digit-recognition",
-      "imageUrl": "https://arturpietrzak.com/grumbler.webp",
-      "tags": ["TensorFlow 2.0", "Keras", "Flask", "React.js"]
-    },
-    {
-      "title": "Ta strona",
-      "description": "Strona osobista, która powstała jako portfolio, w którym mogę zaprezentować swoje prace i doświadczenia.",
-      "id": "personal-website",
-      "imageUrl": "https://arturpietrzak.com/grumbler.webp",
-      "tags": ["React.js", "Next.js", "Framer Motion"]
+      "imageUrl": "/projects/knowhow.webp",
+      "year": "2022",
+      "tags": [
+        "React.js",
+        "Next.js",
+        "tRPC",
+        "Prisma"
+      ]
     },
     {
       "title": "Ranking torów wyścigowych",
       "description": "Platforma internetowa do przeglądania, komentowania i oceniania torów wyścigowych na całym świecie.",
       "id": "racetrack-ranking",
-      "imageUrl": "https://arturpietrzak.com/grumbler.webp",
-      "tags": ["Express.js", "React.js"]
-    },
-    {
-      "title": "Aplikacja pogodowa",
-      "description": "Aplikacja internetowa pokazująca aktualną i przyszłą pogodę w miejscu wprowadzonym przez użytkownika. Wykorzystuje pogodowe API visualcrossing.com.",
-      "id": "weather-app",
-      "imageUrl": "https://arturpietrzak.com/grumbler.webp",
-      "tags": ["React.js", "Axios"]
+      "imageUrl": "/projects/racetrack.webp",
+      "year": "2022",
+      "tags": [
+        "Express.js",
+        "React.js"
+      ]
     },
     {
       "title": "Commutely",
       "description": "Projekt stworzony z misją edukowania ludzi na temat prawdziwych kosztów transportu samochodowego, zarówno ekonomicznych, jak i środowiskowych.",
       "id": "commutely",
-      "imageUrl": "https://arturpietrzak.com/grumbler.webp",
-      "tags": ["Bootstrap", "HTML", "CSS", "JS"]
+      "imageUrl": "/projects/commutely.webp",
+      "year": "2022",
+      "tags": [
+        "Bootstrap",
+        "HTML",
+        "CSS",
+        "JS"
+      ]
+    },
+    {
+      "title": "Rozpoznawanie cyfr",
+      "description": "System rozpoznawania cyfr przeszkolony przy użyciu bazy danych MNIST. Model wykorzystuje splotową sieć neuronową (CNN) z dokładnością około 98,84%.",
+      "id": "digit-recognition",
+      "imageUrl": "/projects/digit.webp",
+      "year": "2022",
+      "tags": [
+        "TensorFlow 2.0",
+        "Keras",
+        "Flask",
+        "React.js"
+      ]
+    },
+    {
+      "title": "Aplikacja pogodowa",
+      "description": "Aplikacja internetowa pokazująca aktualną i przyszłą pogodę w miejscu wprowadzonym przez użytkownika. Wykorzystuje pogodowe API visualcrossing.com.",
+      "id": "weather-app",
+      "imageUrl": "/projects/weather.webp",
+      "year": "2022",
+      "tags": [
+        "React.js",
+        "Axios"
+      ]
     }
   ],
   "ProjectPage": {
+    "view-project": "Zobacz kod źródłowy na GitHubie",
+    "back": "Wróć",
     "knowhow": {
-      "tags": ["React.js", "Next.js", "tRPC", "Prisma"],
-      "youtube-id": "hA0Wp3KQYGU",
+      "tags": [
+        "React.js",
+        "Next.js",
+        "tRPC",
+        "Prisma"
+      ],
+      "youtube-id": "ATsU1MizZLM",
       "title": "Platforma społecznościowa do dzielenia się wiedzą",
       "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
-      "description": "<p>W pełni funkcjonalna platforma mediów społecznościowych zbudowana przy użyciu <e>T3 Stack</e> (<e>React.js</e>, <e>Next.js</e>, <e>tRPC</e>, <e>NextAuth.js</e> i <e>Prisma</e>). Baza danych została stworzona z użyciem <e>MySQL</e> i hostowana na <e>PlanetScale</e>. Interfejs użytkownika został stworzony za pomocą <e>MantineUI</e>. Platforma podzielona jest na dwie główne części – aplikację użytkownika oraz panel administracyjny.</p><p>Aplikacja użytkownika pozwala na przeglądanie wpisów utworzone przez innych przy użyciu różnych metod eksploracji treści - strony głównej (z najnowszymi wpisami), strony trendów, strony tematów i strony wyszukiwania. Użytkownik może również utworzyć konto i dostosować je, na przykład poprzez zmienianę opisu profilu lub ustawianie zdjęcia profilowego. Ta strona internetowa została stworzona z podejściem <e>Responsive web design</e>, co zapewnia prawidłowe wyświetlanie platformy na ekranach wszystkich rozmiarów.</p><p>Panel administracyjny umożliwia administratorowi zarządzanie treścią znajdującą się na platformie. Dostęp do niego ma tylko użytkownik posiadający określone uprawnienia i może on wykonywać szeroką gamę działań administracyjnych. Na przykład administrator może przeglądać zgłoszanie użytkowników i decydować, czy zgłaszana treść jest niezgodna z warunkami korzystania z platformy. Dodatkowo administrator może zarządzać użytkownikami, nakładać kary czasowe, lub całkowicie usunąć ich z platformy.</p>"
+      "description": "<p>W pełni funkcjonalna platforma mediów społecznościowych zbudowana przy użyciu <e>T3 Stack</e> (<e>React.js</e>, <e>Next.js</e>, <e>tRPC</e>, <e>NextAuth.js</e> i <e>Prisma</e>). Baza danych została stworzona z użyciem <e>MySQL</e> i hostowana na <e>PlanetScale</e>. Interfejs użytkownika został stworzony za pomocą <e>MantineUI</e>. Platforma podzielona jest na dwie główne części – aplikację użytkownika oraz panel administracyjny.</p><p>Aplikacja użytkownika pozwala na przeglądanie wpisów utworzonych przez innych przy użyciu różnych metod eksploracji treści - strony głównej (z najnowszymi wpisami), strony trendów, strony tematów i strony wyszukiwania. Użytkownik może również utworzyć konto i dostosować je, na przykład poprzez zmianę opisu profilu lub ustawienie zdjęcia profilowego. Ta strona internetowa została stworzona z podejściem <e>Responsive web design</e>, co zapewnia prawidłowe wyświetlanie platformy na ekranach wszystkich rozmiarów.</p><p>Panel administracyjny umożliwia administratorowi zarządzanie treścią znajdującą się na platformie. Dostęp do niego ma tylko użytkownik posiadający określone uprawnienia i może on wykonywać szeroką gamę działań administracyjnych. Na przykład administrator może przeglądać zgłoszenia użytkowników i decydować, czy zgłaszana treść jest niezgodna z warunkami korzystania z platformy. Dodatkowo administrator może zarządzać użytkownikami, nakładać kary czasowe lub całkowicie usunąć ich z platformy.</p>"
     },
     "digit-recognition": {
-      "tags": ["TensorFlow 2.0", "Keras", "Flask", "React.js"],
-      "youtube-id": "hA0Wp3KQYGU",
-      "title": "Digit recognition",
-      "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
-      "description": "<p>System rozpoznawania cyfr trenowany na bazie danych MNIST. Uczenie maszynowe zostało stworzone przy użyciu bibliotek <e>TensorFlow 2.0</e> i <e>Keras</e>. Model wykorzystuje one <e>Splotową Sieć Neuronową</e>. The model has achieved an accuracy of 98.84%.</p><p>Additionally, the model has been attached to simple <e>Flask</e> backend, which in combination with interactive <e>React.js</e> canvas allows anyone to test out the model with their own writing.</p>"
-    },
-    "personal-website": {
-      "tags": [],
-      "youtube-id": "hA0Wp3KQYGU",
-      "title": "Ta strona",
-      "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
-      "description": "<p>Ta strona internetowa powstała jako portfolio do prezentacji moich prac. Podstawą tego projektu jest <e>Next.js</e>, który oferuje wiele przydatnych funkcji, na przykład <e>Optymalizację dla wyszukiwarek internetowych</e> i <e>Server Side Rendering</e>. Style zostały stworzony z uż1yciem <e>SCSS modules</e>, a animacje zaimplementowno biblioteką <e>Framer Motion</e>. Dodatkowo ten projekt wykorzystuje bibliotekę <e>Next-intl</e>, co pozwoliło mi na realizację internacjonalizacji.</p>"
+      "tags": [
+        "TensorFlow 2.0",
+        "Keras",
+        "Flask",
+        "React.js"
+      ],
+      "youtube-id": "9O2xwYOn2Fk",
+      "title": "Rozpoznawanie cyfr",
+      "github-link": "https://github.com/arturpietrzak/DigitRecognition",
+      "description": "<p>System rozpoznawania cyfr trenowany na bazie danych MNIST. Uczenie maszynowe zostało stworzone przy użyciu bibliotek <e>TensorFlow 2.0</e> i <e>Keras</e>. Model wykorzystuje <e>Splotową Sieć Neuronową</e> i osiągnął dokładność około 98.84%.</p><p>Dodatkowo model został połączony z prostym backendem w <e>Flask</e>, co w połączeniu z interaktywnym płótnem w <e>React.js</e> pozwala każdemu na przetestowanie modelu za pomocą własnego pisma.</p>"
     },
     "racetrack-ranking": {
       "tags": [
@@ -144,23 +263,34 @@
         "EJS",
         "MongoDB"
       ],
-      "youtube-id": "hA0Wp3KQYGU",
-      "title": "Racetrack ranking platform",
-      "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
+      "youtube-id": "quTyiQna948",
+      "title": "Ranking torów wyścigowych",
+      "github-link": "https://github.com/arturpietrzak/RaceTrackRanking",
       "description": "<p>Platforma internetowa do przeglądania i recenzowania różnych torów wyścigowych na całym świecie. Backend został zaimplementowany za pomocą <e>Express.js</e>, a dane przechowywano w bazie danych <e>MongoDB</e>. Interfejs użytkownika został zaimplementowany w <e>HTMLu</e> i <e>CSSie</e> z użyciem języka szablonowego <e>EJS</e>. Ta strona internetowa została stworzona z podejściem <e>Responsive web design</e>, co zapewnia prawidłowe wyświetlanie platformy na ekranach wszystkich rozmiarów.</p>"
     },
     "weather-app": {
-      "tags": ["HTML", "CSS", "JavaScript", "Axios", "REST API"],
-      "youtube-id": "hA0Wp3KQYGU",
+      "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Axios",
+        "REST API"
+      ],
+      "youtube-id": "V0cUO22DN4I",
       "title": "Aplikacja pogodowa",
-      "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
+      "github-link": "https://github.com/arturpietrzak/react-weather-app",
       "description": "<p>Aplikacja internetowa pogodowa zaimplementowana w <e>React.js</e> inspirowana aplikacją pogodową na iOS. Wykorzystuje bibliotekę <e>Axios</e> do pobierania danych z <e>API pogodowego Visual Crossing</e>. Kolory słupków temperatury dziennej zaimplementowano poprzez manipulację modelu kolorów <e>HSL</e>.</p>"
     },
     "commutely": {
-      "tags": ["Bootstrap", "HTML", "CSS", "JavaScript"],
-      "youtube-id": "hA0Wp3KQYGU",
+      "tags": [
+        "Bootstrap",
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "youtube-id": "Q0WIzLK-NCo",
       "title": "Commutely",
-      "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
+      "github-link": "https://github.com/arturpietrzak/Commutely-webpage",
       "description": "<p>Kalkulator internetowy stworzony przy użyciu <e>Bootstrap</e>, <e>HTML</e>, <e>CSS</e> i <e>JavaScript</e>. Pomaga informować ludzi o emisjach gazów cieplarnianych wytwarzanych podczas dojazdów do szkoły lub pracy. Dodatkowo pozwala oszacować, ile pieniędzy można dziennie zaoszczędzić korzystając z transportu publicznego.</p>"
     }
   }

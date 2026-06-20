@@ -1,15 +1,55 @@
 {
   "Navigation": {
     "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "education": "Education",
     "projects": "Projects",
-    "all-projects": "All projects"
+    "technologies": "Technologies",
+    "contact": "Contact",
+    "all-projects": "All projects",
+    "read-more": "Read more about this project"
   },
   "Index": {
-    "title": "IT engineer and developer",
-    "about-me": "<p>Web developer with over a year of experience in software engineering. My core stack consits of <t>React.js</t>, <t>Next.js</t>, <t>TypeScript</t>, <t>SCSS</t>, <t>MySQL</t> and <t>Prisma</t>. Additionally, during my studies and while creating personal projects I learned other technologies, such as <t>C#</t>, <t>.NET</t>, <t>Java</t>, <t>Spring</t> and <t>React Native</t>.</p><p>As of recentely, I have also been gaining knowledge in the field of artificial intelligence and machine learning, focusing on the domain of language processing. I gained experience in <t>Python</t>, <t>PyTorch</t> and <t>Pandas</t> by developing a customer service chatbot based on a Large Language Model called <t>Llama 2</t>.</p>",
+    "hero": {
+      "badge": "Poland-Based Fullstack Engineer",
+      "name": "Artur Pietrzak",
+      "title": "Web Developer",
+      "subtitle": "",
+      "learn-more": "Get in touch",
+      "download-cv": "Download CV"
+    },
+    "about-me": "<p>Web developer with over a year of experience in software engineering, graduate of <t>Łódź University of Technology</t> with the title of <t>IT Engineer</t>. My core stack consists of <t>React.js</t>, <t>Next.js</t>, <t>TypeScript</t>, <t>SCSS</t>, <t>MySQL</t> and <t>Prisma</t>. Additionally, during my studies and while creating personal projects I learned other technologies, such as <t>C#</t>, <t>.NET</t>, <t>Java</t>, <t>Spring</t> and <t>React Native</t>.</p><p>As of recently, I have also been gaining knowledge in the field of artificial intelligence and machine learning, focusing on the domain of natural language processing. I gained experience in <t>Python</t>, <t>PyTorch</t> and <t>Pandas</t> by developing a customer service chatbot based on a Large Language Model called <t>Llama 2</t>.</p>",
     "experience": {
       "header": "Experience",
       "items": [
+        {
+          "company": "Atlassian",
+          "title": "Junior Software Engineer",
+          "companyUrl": "https://www.atlassian.com/",
+          "companyImg": "/icons/atlassian.svg",
+          "location": "Gdańsk, Poland",
+          "achievements": [
+            "Analyzed complex SQL execution plans and resolved database bottlenecks, accelerating listing page load times by 95% for enterprise-scale customers.",
+            "Developed a custom Model Context Protocol (MCP) server, boosting developer productivity by expanding internal LLM integration and capabilities."
+          ],
+          "startingDate": "May 2025",
+          "endingDate": "Present"
+        },
+        {
+          "company": "Comarch",
+          "title": "Junior Software Engineer",
+          "companyUrl": "https://www.comarch.pl/",
+          "companyImg": "/comarch.png",
+          "location": "Łódź, Poland",
+          "achievements": [
+            "Implemented recurring bank transfers service, handling ~20,000 scheduled operations every month.",
+            "Helped maintain an established, long-term corporate banking project.",
+            "Assisted the team with developing new features using Angular and an internal design system."
+          ],
+          "startingDate": "July 2024",
+          "endingDate": "March 2025"
+        },
         {
           "company": "Paidwork",
           "title": "Intern AI/ML Engineer",
@@ -17,11 +57,13 @@
           "companyImg": "/paidwork.png",
           "location": "Remote, Poland",
           "achievements": [
-            "Assisted in building a chatbot based on Mistral LLM, which constituted the first line of support for users communicating with the customer service department.",
-            "Created and processed datasets by using uncategorized data collected by the company."
+            "Developed a desktop and mobile interface for submitting and managing customer service requests.",
+            "Assisted in building a customer support chatbot based on Large Language Models (Llama 2 and Mistral).",
+            "Helped create classification models for categorizing user messages using Python and PyTorch.",
+            "Worked with AWS SageMaker to perform model fine-tuning in a cloud environment."
           ],
-          "startingDate": "June 2022",
-          "endingDate": "September 2022"
+          "startingDate": "November 2023",
+          "endingDate": "April 2024"
         },
         {
           "company": "HTD Health",
@@ -30,13 +72,13 @@
           "companyImg": "https://htdhealth.com/wp-content/themes/htd/assets/svg/logo-white.svg",
           "location": "Łódź, Poland",
           "achievements": [
-            "Introduced Sentry as a performance measuring and error-tracking tool for the project, which helped with detecting and fixing errors, making the website more reliable.",
-            "Prototyped a functionality of automatically creating, filling with data, and sending documents to doctors using DocuSign API, which greatly simplified the process of obtaining documentation for the user.",
             "Developed a ReactJS hook for saving, retrieving, and validating data stored in local storage, improving user experience by persisting form information, even after the website was closed.",
-            "Refactored the project to implement accessible and semantic HTML and CSS to comply with WCAG 2.1."
+            "Helped the US-based client with gathering and clarifying requirements for a healthcare project.",
+            "Refactored the project to implement accessible and semantic HTML and CSS to comply with WCAG 2.1.",
+            "Implemented unit tests with Jest framework."
           ],
-          "startingDate": "June 2022",
-          "endingDate": "September 2022"
+          "startingDate": "October 2022",
+          "endingDate": "January 2023"
         },
         {
           "company": "HTD Health",
@@ -53,16 +95,69 @@
         }
       ]
     },
+    "education": {
+      "header": "Education",
+      "items": [
+        {
+          "school": "Łódź University of Technology",
+          "degree": "Computer Science - Master of Engineering",
+          "field": "Computer Science (Machine Learning & Software Engineering)",
+          "location": "Łódź, Poland",
+          "notes": "Specialization in Machine Learning and Software Engineering. Participated in research on benchmarking a set of Large Language Models (LLMs).",
+          "startingDate": "March 2024",
+          "endingDate": "September 2025"
+        },
+        {
+          "school": "Łódź University of Technology",
+          "degree": "Computer science - Bachelor of Engineering",
+          "field": "Computer Science",
+          "location": "Łódź, Poland",
+          "notes": "Graduated with the title of IT Engineer. Thesis focused on development of a knowledge-sharing social media platform.",
+          "startingDate": "October 2020",
+          "endingDate": "February 2024"
+        }
+      ]
+    },
     "technologies": {
-      "header": "Technologies"
+      "header": "Technologies",
+      "categories": {
+        "frontend": "Frontend",
+        "language": "Language",
+        "backend": "Backend",
+        "database": "Database",
+        "data-science": "Data Science",
+        "ai-ml": "AI / ML",
+        "devops": "DevOps"
+      },
+      "items": {
+        "react": "Component-based UI Library",
+        "next": "Full-stack React Framework",
+        "typescript": "Type-safe JavaScript Layer",
+        "dotnet": "Enterprise Backend & Desktop Apps",
+        "python": "AI Development & Data Scripting",
+        "sql": "Relational Querying & Schema Design",
+        "prisma": "Next-generation TypeScript ORM",
+        "pandas": "Data Structures & Analysis Library",
+        "tensorflow": "Machine Learning & Neural Networks",
+        "pytorch": "Deep Learning & NLP Models",
+        "html": "Semantic Web Document Structure",
+        "css-scss": "Responsive Styling & Preprocessing",
+        "tailwind": "Utility-first Styling Framework",
+        "docker": "App Containerization & Deployment",
+        "git": "Distributed Version Control System"
+      }
     },
     "most-recent-project": {
-      "header": "Most recent project",
+      "header": "Projects",
       "more-work": "To see more of my work, click here:",
       "portfolio-button": "Full portfolio"
     },
     "contact": {
       "header": "Contact",
+      "cta": "Lets connect",
+      "cta-sub": "",
+      "copy-email": "Copy email address",
+      "copied": "Copied!",
       "email": "artur.pietrzak1@outlook.com",
       "github": "/arturpietrzak",
       "linkedin": "/artur-pietrzak-dev"
@@ -73,66 +168,90 @@
       "title": "Knowledge sharing platform",
       "description": "A twitter-inspired social networking site with focus on longer, formattable posts and sharing knowledge.",
       "id": "knowhow",
-      "imageUrl": "https://arturpietrzak.com/grumbler.webp",
-      "tags": ["React.js", "Next.js", "tRPC", "Prisma"]
-    },
-    {
-      "title": "Digit Recognition",
-      "description": "Digit recognition system trained using MNIST database. Model uses Convolutional Neural Network with an accuracy of approximately 98.84%.",
-      "id": "digit-recognition",
-      "imageUrl": "https://arturpietrzak.com/grumbler.webp",
-      "tags": ["TensorFlow 2.0", "Keras", "Flask", "React.js"]
-    },
-    {
-      "title": "This personal website",
-      "description": "Personal website was created as a portfolio to showcase my works and experience.",
-      "id": "personal-website",
-      "imageUrl": "https://arturpietrzak.com/grumbler.webp",
-      "tags": ["React.js", "Next.js", "Framer Motion"]
+      "imageUrl": "/projects/knowhow.webp",
+      "year": "2022",
+      "tags": [
+        "React.js",
+        "Next.js",
+        "tRPC",
+        "Prisma"
+      ]
     },
     {
       "title": "Racetrack Ranking",
       "description": "Web platform for viewing, commenting and rating race tracks all over the world.",
       "id": "racetrack-ranking",
-      "imageUrl": "https://arturpietrzak.com/grumbler.webp",
-      "tags": ["Express.js", "React.js"]
-    },
-    {
-      "title": "Weather app",
-      "description": "A web app for showing current and future weather in a place entered by the user. Utilizes visualcrossing.com weather API.",
-      "id": "weather-app",
-      "imageUrl": "https://arturpietrzak.com/grumbler.webp",
-      "tags": ["React.js", "Axios"]
+      "imageUrl": "/projects/racetrack.webp",
+      "year": "2022",
+      "tags": [
+        "Express.js",
+        "React.js"
+      ]
     },
     {
       "title": "Commutely",
       "description": "A project created with a mission to educate people on the true costs of car transport, both economic and environmental.",
       "id": "commutely",
-      "imageUrl": "https://arturpietrzak.com/grumbler.webp",
-      "tags": ["Bootstrap", "HTML", "CSS", "JS"]
+      "imageUrl": "/projects/commutely.webp",
+      "year": "2022",
+      "tags": [
+        "Bootstrap",
+        "HTML",
+        "CSS",
+        "JS"
+      ]
+    },
+    {
+      "title": "Digit Recognition",
+      "description": "Digit recognition system trained using MNIST database. Model uses Convolutional Neural Network with an accuracy of approximately 98.84%.",
+      "id": "digit-recognition",
+      "imageUrl": "/projects/digit.webp",
+      "year": "2022",
+      "tags": [
+        "TensorFlow 2.0",
+        "Keras",
+        "Flask",
+        "React.js"
+      ]
+    },
+    {
+      "title": "Weather app",
+      "description": "A web app for showing current and future weather in a place entered by the user. Utilizes visualcrossing.com weather API.",
+      "id": "weather-app",
+      "imageUrl": "/projects/weather.webp",
+      "year": "2022",
+      "tags": [
+        "React.js",
+        "Axios"
+      ]
     }
   ],
   "ProjectPage": {
+    "view-project": "View source code on github",
+    "back": "Back",
     "knowhow": {
-      "tags": ["React.js", "Next.js", "tRPC", "Prisma"],
-      "youtube-id": "hA0Wp3KQYGU",
+      "tags": [
+        "React.js",
+        "Next.js",
+        "tRPC",
+        "Prisma"
+      ],
+      "youtube-id": "ATsU1MizZLM",
       "title": "Knowledge-sharing social media platform",
       "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
-      "description": "<p>Fully functional social media platform built using <e>T3 Stack</e> (<e>React.js</e>, <e>Next.js</e>, <e>tRPC</e>, <e>NextAuth.js</e> and <e>Prisma</e>). The database component was created using <e>MySQL</e> and hosted on <e>PlanetScale</e>. The UI was created with <e>MantineUI</e>. The platform is split into two main parts - the user application and administative panel.</p><p>The user application allows anyone to view post created by others using different content exploration methods - main page (with recent posts), trending page, topic page and search page. User can also create an account and customize it by changing the profile description, setting profile picture and more. This website was created with <e>Responsive web design</e> approach, which ensures that the platform is displayed properly across all screen sizes.</p><p>The admin panel allows the administrator to manage the content on the platform. Only user with specific permissions can access it, and such an account can perform a wide variety of different actions. For example, administrator can view user reports and decide, wether reported content is against platform’s terms of service. Additionally, the administrator can manage users, apply penalties, or fully remove them from the platform.</p>"
+      "description": "<p>Fully functional social media platform built using <e>T3 Stack</e> (<e>React.js</e>, <e>Next.js</e>, <e>tRPC</e>, <e>NextAuth.js</e> and <e>Prisma</e>). The database component was created using <e>MySQL</e> and hosted on <e>PlanetScale</e>. The UI was created with <e>MantineUI</e>. The platform is split into two main parts - the user application and administrative panel.</p><p>The user application allows anyone to view posts created by others using different content exploration methods - main page (with recent posts), trending page, topic page and search page. User can also create an account and customize it by changing the profile description, setting profile picture and more. This website was created with <e>Responsive web design</e> approach, which ensures that the platform is displayed properly across all screen sizes.</p><p>The admin panel allows the administrator to manage the content on the platform. Only user with specific permissions can access it, and such an account can perform a wide variety of different actions. For example, administrator can view user reports and decide, whether reported content is against platform's terms of service. Additionally, the administrator can manage users, apply penalties, or fully remove them from the platform.</p>"
     },
     "digit-recognition": {
-      "tags": ["TensorFlow 2.0", "Keras", "Flask", "React.js"],
-      "youtube-id": "hA0Wp3KQYGU",
+      "tags": [
+        "TensorFlow 2.0",
+        "Keras",
+        "Flask",
+        "React.js"
+      ],
+      "youtube-id": "9O2xwYOn2Fk",
       "title": "Digit recognition",
-      "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
-      "description": "<p>Digit recognition system trained using MNIST database. The machine learning was built with <e>TensorFlow 2.0</e> and <e>Keras</e> libraries and it uses <e>Convolutional Neural Network</e>. The model has achieved an accuracy of 98.84%.</p><p>Additionally, the model has been attached to simple <e>Flask</e> backend, which in combination with interactive <e>React.js</e> canvas allows anyone to test out the model with their own writing.</p>"
-    },
-    "personal-website": {
-      "tags": [],
-      "youtube-id": "hA0Wp3KQYGU",
-      "title": "This personal website",
-      "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
-      "description": "<p>This personal website was created as a portfolio to showcase my works. The backbone of this project is <e>Next.js</e>, which offers many useful features, such as <e>Search Engine Optimization</e> and <e>Server Side Rendering</e>. This website was styled using <e>SCSS modules</e> and the animations were implemented with <e>Framer Motion</e>. Additionally, this project utilizes <e>Next-intl</e> library, which enabled me to implement internationalization of the website.</p>"
+      "github-link": "https://github.com/arturpietrzak/DigitRecognition",
+      "description": "<p>Digit recognition system trained using MNIST database. The machine learning model was built with <e>TensorFlow 2.0</e> and <e>Keras</e> libraries and it uses <e>Convolutional Neural Network</e>. The model has achieved an accuracy of 98.84%.</p><p>Additionally, the model has been attached to simple <e>Flask</e> backend, which in combination with interactive <e>React.js</e> canvas allows anyone to test out the model with their own writing.</p>"
     },
     "racetrack-ranking": {
       "tags": [
@@ -144,24 +263,35 @@
         "EJS",
         "MongoDB"
       ],
-      "youtube-id": "hA0Wp3KQYGU",
-      "title": "Racetrack ranking platform",
-      "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
-      "description": "<p>Web platform for browsing and reviewing different racetracks around the world. Backend was implemented with <e>Express.js</e>, and the data was persisted in <e>MongoDB</e> database. The user inteface was implemented in <e>HTML</e> and <e>CSS</e> with the <e>EJS</e> templating language. This website was created with <e>Responsive web design</e> approach, which ensures that the platform is displayed properly across all screen sizes.</p>"
+      "youtube-id": "quTyiQna948",
+      "title": "Racetrack ranking",
+      "github-link": "https://github.com/arturpietrzak/RaceTrackRanking",
+      "description": "<p>Web platform for browsing and reviewing different racetracks around the world. Backend was implemented with <e>Express.js</e>, and the data was persisted in <e>MongoDB</e> database. The user interface was implemented in <e>HTML</e> and <e>CSS</e> with the <e>EJS</e> templating language. This website was created with <e>Responsive web design</e> approach, which ensures that the platform is displayed properly across all screen sizes.</p>"
     },
     "weather-app": {
-      "tags": ["HTML", "CSS", "JavaScript", "Axios", "REST API"],
-      "youtube-id": "hA0Wp3KQYGU",
+      "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Axios",
+        "REST API"
+      ],
+      "youtube-id": "V0cUO22DN4I",
       "title": "Weather app",
-      "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
+      "github-link": "https://github.com/arturpietrzak/react-weather-app",
       "description": "<p>Weather web app implemented in <e>React.js</e> inspired by iOS weather application. It utilizes <e>Axios</e> library to fetch data from <e>Visual Crossing weather data API</e>. The colors for daily temperature bars were implementing by manipulating the hue of <e>HSL</e> color model.</p>"
     },
     "commutely": {
-      "tags": ["Bootstrap", "HTML", "CSS", "JavaScript"],
-      "youtube-id": "hA0Wp3KQYGU",
+      "tags": [
+        "Bootstrap",
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "youtube-id": "Q0WIzLK-NCo",
       "title": "Commutely",
-      "github-link": "https://github.com/arturpietrzak/EngineeringThesis",
-      "description": "<p>Web calculator created with <e>Bootstrap</e>, <e>HTML</e>, <e>CSS</e> and <e>JavaScript</e>. It helps to inform people on the emissions that they produce while commuting to shool or work. Additionaly, it provides an estimate on how much money can be saved daily by using public transport.</p>"
+      "github-link": "https://github.com/arturpietrzak/Commutely-webpage",
+      "description": "<p>Web calculator created with <e>Bootstrap</e>, <e>HTML</e>, <e>CSS</e> and <e>JavaScript</e>. It helps to inform people on the emissions that they produce while commuting to school or work. Additionally, it provides an estimate on how much money can be saved daily by using public transport.</p>"
     }
   }
 }

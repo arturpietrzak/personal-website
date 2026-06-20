@@ -1,4 +1,4 @@
-@import "src/app/variables";
+@import "../../app/variables";
 
 .tagList {
   display: flex;
@@ -7,10 +7,13 @@
   gap: 0.5rem;
 
   li {
-    background-color: hsl(233, 35%, 25%);
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     display: inline-block;
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.25rem;
-    color: $text-emphasis;
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: $text-normal;
   }
 }

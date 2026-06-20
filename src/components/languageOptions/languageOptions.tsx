@@ -2,59 +2,96 @@
 
 import Image from "next/image";
 import styles from "./languageOptions.module.scss";
-import languageIcon from "/public/icons/language.svg";
+import languageIcon from "../../../public/icons/language.svg";
 import { Link, usePathname } from "@/navigation";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+import { motion } from "framer-motion";
+import { useLocale } from "next-intl";
 
 export default function LanguageOptions() {
   const pathname = usePathname();
-  const [extended, setExtended] = useState(false);
+  const currentLocale = useLocale();
+  const [isOpen, setIsOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  // Close menu when clicking outside of it
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const localesList = [
+    { code: "en", flag: "🇺🇸" },
+    { code: "pl", flag: "🇵🇱" },
+  ] as const;
 
   return (
-    <div className={styles.languageOptions}>
+    <motion.div
+      className={styles.languagePill}
+      ref={containerRef}
+      animate={{
+        height: isOpen ? "9.5rem" : "3rem",
+      }}
+      transition={{ type: "spring", stiffness: 350, damping: 30 }}
+    >
+      {/* Flags container shown when isOpen */}
+      <div 
+        className={styles.flagsWrapper}
+        style={{ pointerEvents: isOpen ? "auto" : "none" }}
+      >
+        {localesList.map((loc) => {
+          const isActive = currentLocale === loc.code;
+          return (
+            <motion.div
+              key={loc.code}
+              initial={{ opacity: 0, y: -10 }}
+              animate={{
+                opacity: isOpen ? 1 : 0,
+                y: isOpen ? 0 : -10,
+                scale: isOpen ? 1 : 0.8,
+              }}
+              transition={{ duration: 0.2, delay: isOpen ? 0.05 : 0 }}
+              className={styles.flagItem}
+            >
+              <Link
+                locale={loc.code}
+                href={pathname}
+                onClick={() => setIsOpen(false)}
+                className={styles.flagLink}
+              >
+                <span className={styles.flagEmoji}>{loc.flag}</span>
+                {isActive && (
+                  <motion.div
+                    className={styles.activeIndicator}
+                    layoutId="activeLocaleDot"
+                    transition={{ type: "spring", stiffness: 300, damping: 25 }}
+                  />
+                )}
+              </Link>
+            </motion.div>
+          );
+        })}
+      </div>
+
+      {/* Trigger Button at the bottom */}
       <button
-        className={`${styles.showOptions} ${
-          extended ? styles.showOptionsExtended : ""
-        }`}
-        onClick={() => {
-          setExtended(!extended);
-        }}
+        className={`${styles.triggerButton} ${isOpen ? styles.triggerButtonActive : ""}`}
+        onClick={() => setIsOpen(!isOpen)}
+        aria-label="Toggle language menu"
       >
         <Image
-          className={styles.icon}
-          priority
+          className={styles.globeIcon}
           src={languageIcon}
-          alt="language"
+          alt="language switcher"
         />
       </button>
-      <menu
-        className={`${styles.languageMenu} ${
-          extended ? styles.languageMenuExtended : ""
-        }`}
-      >
-        <li>
-          <LanguageOption locale="en" pathname={pathname} flag="🇺🇸" />
-        </li>
-        <li>
-          <LanguageOption locale="pl" pathname={pathname} flag="🇵🇱" />
-        </li>
-      </menu>
-    </div>
-  );
-}
-
-function LanguageOption({
-  locale,
-  pathname,
-  flag,
-}: {
-  locale: "en" | "pl";
-  flag: string;
-  pathname: string;
-}) {
-  return (
-    <Link locale={locale} href={pathname} className={styles.flag}>
-      {flag}
-    </Link>
+    </motion.div>
   );
 }

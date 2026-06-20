@@ -1,0 +1,288 @@
+@import "../../app/variables";
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 1.5rem 4rem 1.5rem;
+  overflow: hidden;
+
+  .heroContent {
+    max-width: 960px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+  }
+
+  .profileContainer {
+    position: relative;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 15px 50px -10px rgba(0, 0, 0, 0.8), 0 0 50px rgba(59, 130, 246, 0.15);
+    background-color: rgba(255, 255, 255, 0.02);
+
+    @media only screen and (max-width: $mobile-breakpoint) {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 2rem;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(59, 130, 246, 0.25);
+      mix-blend-mode: color;
+      transition: opacity 0.5s ease;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    &:hover {
+      &::after {
+        opacity: 0;
+      }
+
+      .profileImage {
+        filter: grayscale(0%) saturate(100%) contrast(1.0);
+        transform: scale(1.05);
+      }
+    }
+
+    .profileImage {
+      object-fit: cover;
+      filter: grayscale(25%) saturate(110%) contrast(1.05);
+      transition: all 0.5s ease;
+    }
+
+    .imageOverlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      pointer-events: none;
+      background: linear-gradient(to bottom, rgba(9, 10, 15, 0) 60%, rgba(9, 10, 15, 0.8) 100%);
+    }
+  }
+
+  .badge {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: $primary-accent;
+    background-color: rgba(59, 130, 246, 0.08);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    padding: 0.5rem 1.25rem;
+    border-radius: 9999px;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.05);
+
+    @media only screen and (max-width: 480px) {
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      padding: 0.4rem 1rem;
+    }
+
+    @media only screen and (max-width: 360px) {
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      padding: 0.35rem 0.8rem;
+    }
+  }
+
+  .name {
+    font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    color: $text-emphasis;
+    margin-bottom: 2.5rem;
+
+    @media only screen and (max-width: $mobile-breakpoint) {
+      margin-bottom: 2rem;
+    }
+
+    .gradientTitle {
+      background: linear-gradient(135deg, $primary-accent 30%, #60a5fa 90%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 30px rgba(59, 130, 246, 0.15);
+    }
+  }
+
+  .subtitle {
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: $text-normal;
+    max-width: 600px;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+
+    @media only screen and (max-width: $mobile-breakpoint) {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .actions {
+    display: flex;
+    gap: 1.25rem;
+    margin-bottom: 3.5rem;
+
+    @media only screen and (max-width: 500px) {
+      flex-direction: column;
+      width: 100%;
+      gap: 0.875rem;
+      padding: 0 1rem;
+    }
+
+    .primaryBtn, .secondaryBtn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.9rem 2rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      border-radius: 9999px;
+      transition: all 0.25s ease;
+      cursor: pointer;
+
+      @media only screen and (max-width: 500px) {
+        width: 100%;
+      }
+    }
+
+    .primaryBtn {
+      background-color: $primary-accent;
+      color: $text-emphasis;
+      box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+      border: none;
+      outline: none;
+
+      &:hover {
+        background-color: $primary-accent-hover;
+        box-shadow: 0 6px 25px rgba(59, 130, 246, 0.5);
+        transform: translateY(-2px);
+      }
+    }
+
+    .secondaryBtn {
+      background-color: rgba(255, 255, 255, 0.02);
+      color: $text-emphasis;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      gap: 0.5rem;
+
+      .downloadIcon {
+        width: 1.1rem;
+        height: 1.1rem;
+        color: $text-normal;
+        transition: transform 0.25s ease;
+      }
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.05);
+        border-color: rgba(255, 255, 255, 0.25);
+        transform: translateY(-2px);
+
+        .downloadIcon {
+          transform: translateY(1px);
+          color: $text-emphasis;
+        }
+      }
+    }
+  }
+
+  .brandRow {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .brandSubtitle {
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: $text-muted;
+    }
+
+    .avatars {
+      display: flex;
+      align-items: center;
+
+      .avatarCircle {
+        width: 1.75rem;
+        height: 1.75rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: $text-emphasis;
+        border: 2px solid $bg-deep;
+        margin-left: -0.45rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+
+      .comarch {
+        background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+      }
+      
+      .paidwork {
+        background: linear-gradient(135deg, #10b981, #047857);
+      }
+      
+      .htd {
+        background: linear-gradient(135deg, #f59e0b, #b45309);
+      }
+    }
+  }
+
+  .scrollIndicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.6;
+
+    .mouse {
+      width: 20px;
+      height: 35px;
+      border: 2px solid $text-muted;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      padding-top: 5px;
+
+      .wheel {
+        width: 3px;
+        height: 6px;
+        background-color: $text-normal;
+        border-radius: 3px;
+      }
+    }
+  }
+}

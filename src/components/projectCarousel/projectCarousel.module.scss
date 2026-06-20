@@ -1,0 +1,211 @@
+@import "../../app/variables";
+
+.projectsSection {
+  max-width: 860px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  overflow: hidden;
+
+  .sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+
+    .sectionBadge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: $text-emphasis;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background-color: rgba(255, 255, 255, 0.02);
+      padding: 0.5rem 1.25rem;
+      border-radius: 9999px;
+    }
+
+    .carouselArrows {
+      display: flex;
+      gap: 0.5rem;
+
+      .arrowBtn {
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: $text-emphasis;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover:not(:disabled) {
+          border-color: $primary-accent;
+          background-color: rgba(59, 130, 246, 0.1);
+          color: $primary-accent-hover;
+        }
+
+        &:disabled {
+          opacity: 0.3;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+
+  .carouselViewport {
+    width: 100%;
+    overflow: visible;
+    cursor: grab;
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+
+  .carouselTrack {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+  }
+
+  .projectCard {
+    width: 400px;
+    flex-shrink: 0;
+    background-color: $card-bg;
+    border: $card-border;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+    @media only screen and (max-width: $mobile-breakpoint) {
+      // Dynamic width on mobile
+      width: calc(85vw - 16px);
+      max-width: 400px;
+    }
+
+    &:hover {
+      border-color: rgba(59, 130, 246, 0.25);
+      box-shadow: 0 10px 30px rgba(59, 130, 246, 0.08);
+    }
+
+    .cardLink {
+      display: block;
+      height: 100%;
+    }
+
+    .imageWrapper {
+      position: relative;
+      width: 100%;
+      height: 220px;
+      background-color: rgba(255, 255, 255, 0.02);
+      overflow: hidden;
+
+      @media only screen and (max-width: 450px) {
+        height: 180px;
+      }
+
+      .projectImage {
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .yearBadge {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background-color: rgba(59, 130, 246, 0.9);
+        backdrop-filter: blur(4px);
+        color: #ffffff;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        padding: 0.25rem 0.6rem;
+        border-radius: 6px;
+        z-index: 2;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    &:hover .projectImage {
+      transform: scale(1.03);
+    }
+
+    .cardContent {
+      padding: 1.5rem;
+
+      .projectTitle {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: $text-emphasis;
+        margin-bottom: 0.75rem;
+        transition: color 0.2s ease;
+      }
+
+      .projectDesc {
+        font-size: 0.875rem;
+        color: $text-normal;
+        line-height: 1.5;
+        margin-bottom: 1.25rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        height: 4.5rem; // Fixed height to keep cards aligned
+      }
+
+      .tagsContainer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+
+        .tagBadge {
+          font-size: 0.75rem;
+          font-weight: 500;
+          color: $text-normal;
+          background-color: rgba(255, 255, 255, 0.03);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          padding: 0.2rem 0.5rem;
+          border-radius: 4px;
+        }
+      }
+    }
+
+    &:hover .projectTitle {
+      color: $primary-accent-hover;
+    }
+  }
+
+  .carouselDots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2.5rem;
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.2);
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      transition: all 0.25s ease;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.4);
+      }
+    }
+
+    .activeDot {
+      background-color: $primary-accent;
+      width: 16px;
+      border-radius: 4px;
+      box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+    }
+  }
+}
