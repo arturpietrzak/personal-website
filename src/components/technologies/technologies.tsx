@@ -232,7 +232,7 @@ export default function Technologies() {
       const delta = time - lastTime;
       lastTime = time;
 
-      if (!isHovered && !isDragging) {
+      if (!isHovered && !isDragging && expandedIndex === null) {
         setScrollPos((prev) => {
           let nextPos = prev - autoScrollSpeed * delta;
           
@@ -254,7 +254,7 @@ export default function Technologies() {
 
     animationFrameId = requestAnimationFrame(render);
     return () => cancelAnimationFrame(animationFrameId);
-  }, [isHovered, isDragging]);
+  }, [isHovered, isDragging, expandedIndex]);
 
   const handleWheel = (e: React.WheelEvent) => {
     // Only react to horizontal scroll (e.g. trackpad swipe), ignore vertical
