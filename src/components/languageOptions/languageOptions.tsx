@@ -36,6 +36,7 @@ export default function LanguageOptions() {
     <motion.div
       className={styles.languagePill}
       ref={containerRef}
+      initial={{ height: "3rem" }}
       animate={{
         height: isOpen ? "9.5rem" : "3rem",
       }}

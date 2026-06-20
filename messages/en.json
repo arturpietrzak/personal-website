@@ -31,7 +31,7 @@
           "location": "Gdańsk, Poland",
           "achievements": [
             "Analyzed complex SQL execution plans and resolved database bottlenecks, accelerating listing page load times by 95% for enterprise-scale customers.",
-            "Developed a custom Model Context Protocol (MCP) server, boosting developer productivity by expanding internal LLM integration and capabilities."
+            "Developed a custom Model Context Protocol (MCP) server, expanding internal LLM capabilities and accelerating developer workflows across the engineering team."
           ],
           "startingDate": "May 2025",
           "endingDate": "Present"
@@ -44,8 +44,8 @@
           "location": "Łódź, Poland",
           "achievements": [
             "Implemented recurring bank transfers service, handling ~20,000 scheduled operations every month.",
-            "Helped maintain an established, long-term corporate banking project.",
-            "Assisted the team with developing new features using Angular and an internal design system."
+            "Maintained and stabilized a legacy corporate banking application, resolving bugs and ensuring high availability for enterprise clients.",
+            "Developed and shipped front-end features using Angular, adhering to an internal design system to ensure UI consistency."
           ],
           "startingDate": "July 2024",
           "endingDate": "September 2024"
@@ -57,10 +57,10 @@
           "companyImg": "/paidwork.png",
           "location": "Remote, Poland",
           "achievements": [
-            "Developed a desktop and mobile interface for submitting and managing customer service requests.",
-            "Assisted in building a customer support chatbot based on Large Language Models (Llama 2 and Mistral).",
-            "Helped create classification models for categorizing user messages using Python and PyTorch.",
-            "Worked with AWS SageMaker to perform model fine-tuning in a cloud environment."
+            "Co-developed a customer support chatbot utilizing Llama 2 and Mistral, reducing manual ticket routing and improving response times.",
+            "Trained and evaluated classification models for categorizing user messages using Python and PyTorch.",
+            "Fine-tuned Large Language Models using AWS SageMaker to optimize performance in a scalable cloud environment.",
+            "Engineered a responsive desktop and mobile interface for submitting and managing customer service requests."
           ],
           "startingDate": "November 2023",
           "endingDate": "April 2024"
@@ -72,10 +72,10 @@
           "companyImg": "/icons/htd.svg",
           "location": "Łódź, Poland",
           "achievements": [
-            "Developed a ReactJS hook for saving, retrieving, and validating data stored in local storage, improving user experience by persisting form information, even after the website was closed.",
-            "Helped the US-based client with gathering and clarifying requirements for a healthcare project.",
-            "Refactored the project to implement accessible and semantic HTML and CSS to comply with WCAG 2.1.",
-            "Implemented unit tests with Jest framework."
+            "Engineered a custom ReactJS hook for local storage data validation and persistence, preventing data loss and improving user experience.",
+            "Partnered directly with a US-based client to gather requirements, clarify technical constraints, and translate business needs into actionable engineering tasks.",
+            "Refactored the project to implement accessible and semantic HTML and CSS, ensuring full compliance with WCAG 2.1 standards.",
+            "Implemented comprehensive unit testing using the Jest framework, increasing code coverage and helping reduce customer-reported bugs by ~20%."
           ],
           "startingDate": "October 2022",
           "endingDate": "July 2023"
@@ -87,8 +87,8 @@
           "companyImg": "/icons/htd.svg",
           "location": "Łódź, Poland",
           "achievements": [
-            "Assisted the engineering team in maintaining and developing a web catalog project.",
-            "Ensured code clarity, consistency, and correctness by regularly performing code review of pull requests created by other team members."
+            "Contributed to the development and maintenance of a web catalog project by resolving front-end UI bugs and implementing new features.",
+            "Ensured code clarity, consistency, and correctness by regularly performing code reviews of pull requests created by other team members."
           ],
           "startingDate": "July 2022",
           "endingDate": "September 2022"
@@ -105,7 +105,7 @@
           "degree": "Computer Science - Master of Engineering",
           "field": "Computer Science (Machine Learning & Software Engineering)",
           "location": "Łódź, Poland",
-          "notes": "Specialization in Machine Learning and Software Engineering. Participated in research on benchmarking a set of Large Language Models (LLMs).",
+          "notes": "Conducted research benchmarking various Large Language Models (LLMs) to evaluate performance metrics and technical capabilities in customer service domain.",
           "startingDate": "March 2024",
           "endingDate": "September 2025"
         },
@@ -116,7 +116,7 @@
           "degree": "Computer science - Bachelor of Engineering",
           "field": "Computer Science",
           "location": "Łódź, Poland",
-          "notes": "Graduated with the title of IT Engineer. Thesis focused on development of a knowledge-sharing social media platform.",
+          "notes": "Engineered a full-stack knowledge-sharing social media platform as a capstone engineering thesis project.",
           "startingDate": "October 2020",
           "endingDate": "February 2024"
         }

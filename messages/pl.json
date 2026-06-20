@@ -12,7 +12,7 @@
   },
   "Index": {
     "hero": {
-      "badge": "Programista Fullstack",
+      "badge": "Programista fullstack z Polski",
       "name": "Artur Pietrzak",
       "title": "Programista Webowy",
       "subtitle": "",
@@ -31,7 +31,7 @@
           "location": "Gdańsk, Polska",
           "achievements": [
             "Analiza planów wykonania SQL i eliminacja zidentyfikowanych wolnych operacji, skutkująca skróceniem czasu ładowania stron listowania o 95% dla kluczowych klientów.",
-            "Opracowanie dedykowanego serwera MCP (Model Context Protocol) dla projektu, co podniosło produktywność zespołu deweloperskiego poprzez rozszerzenie możliwości modeli LLM."
+            "Opracowanie dedykowanego serwera MCP (Model Context Protocol), poszerzającego wewnętrzne możliwości modeli LLM i przyspieszającego pracę deweloperów w całym zespole inżynieryjnym."
           ],
           "startingDate": "Maj 2025",
           "endingDate": "Obecnie"
@@ -44,8 +44,8 @@
           "location": "Łódź, Polska",
           "achievements": [
             "Zaimplementowanie serwisu do cyklicznych przelewów bankowych, obsługującego ~20 000 zaplanowanych operacji miesięcznie.",
-            "Wsparcie w utrzymaniu dojrzałego, długoterminowego projektu bankowości korporacyjnej.",
-            "Współpraca z zespołem przy tworzeniu nowych funkcji przy użyciu Angulara oraz wewnętrznego systemu projektowania."
+            "Utrzymanie i stabilizacja starszej aplikacji bankowości korporacyjnej, rozwiązywanie błędów i zapewnienie wysokiej dostępności dla klientów korporacyjnych.",
+            "Rozwój i wdrażanie funkcjonalności frontendowych przy użyciu Angulara, z zachowaniem zgodności z wewnętrznym systemem projektowania w celu zapewnienia spójności interfejsu (UI)."
           ],
           "startingDate": "Lipiec 2024",
           "endingDate": "Wrzesień 2024"
@@ -57,10 +57,10 @@
           "companyImg": "/paidwork.png",
           "location": "Zdalnie, Polska",
           "achievements": [
-            "Opracowanie interfejsu stacjonarnego i mobilnego do przesyłania i zarządzania zgłoszeniami obsługi klienta.",
-            "Wsparcie w budowaniu chatbota opartego o duże modele językowe (Llama 2 i Mistral) stanowiącego pierwszą linię kontaktu dla użytkowników.",
-            "Wsparcie w tworzeniu modeli klasyfikacyjnych do kategoryzacji wiadomości użytkowników za pomocą Pythona i PyTortha.",
-            "Praca z AWS SageMaker w celu dostrajania modeli w środowisku chmurowym."
+            "Współtworzenie chatbota wsparcia klienta opartego na modelach Llama 2 i Mistral, co zmniejszyło potrzebę ręcznego kierowania zgłoszeń i poprawiło czasy reakcji.",
+            "Trenowanie i ewaluacja modeli klasyfikacyjnych do kategoryzacji wiadomości użytkowników przy pomocy języka Python i biblioteki PyTorch.",
+            "Dostrajanie (fine-tuning) dużych modeli językowych przy użyciu AWS SageMaker w celu optymalizacji wydajności w skalowalnym środowisku chmurowym.",
+            "Zaprojektowanie responsywnego interfejsu na komputery i urządzenia mobilne do przesyłania i zarządzania zgłoszeniami obsługi klienta."
           ],
           "startingDate": "Listopad 2023",
           "endingDate": "Kwiecień 2024"
@@ -72,10 +72,10 @@
           "companyImg": "/icons/htd.svg",
           "location": "Łódź, Polska",
           "achievements": [
-            "Opracowanie hooka ReactJS do zapisywania, wczytywania i sprawdzania poprawności danych w pamięci lokalnej, co poprawiło user experience poprzez zachowanie informacji.",
-            "Współpraca z klientem z USA przy zbieraniu i doprecyzowywaniu wymagań projektu medycznego.",
-            "Refaktoryzacja projektu w celu wdrożenia dostępnego i semantycznego HTML/CSS zgodnego z WCAG 2.1.",
-            "Implementacja testów jednostkowych za pomocą biblioteki Jest."
+            "Opracowanie dedykowanego hooka ReactJS do walidacji i utrwalania danych w pamięci lokalnej (local storage), zapobiegającego utracie danych i poprawiającego doświadczenia użytkownika.",
+            "Bezpośrednia współpraca z klientem z USA w celu zbierania wymagań, doprecyzowywania ograniczeń technicznych i przekładania potrzeb biznesowych na wykonalne zadania inżynieryjne.",
+            "Refaktoryzacja projektu poprzez wdrożenie dostępnego i semantycznego kodu HTML oraz CSS, zapewniająca pełną zgodność ze standardami WCAG 2.1.",
+            "Implementacja kompleksowych testów jednostkowych przy użyciu frameworka Jest, zwiększająca pokrycie kodu i pomagająca zmniejszyć liczbę błędów zgłaszanych przez klientów o około 20%."
           ],
           "startingDate": "Październik 2022",
           "endingDate": "Lipiec 2023"
@@ -87,8 +87,8 @@
           "companyImg": "/icons/htd.svg",
           "location": "Łódź, Polska",
           "achievements": [
-            "Wsparcie zespołu programistów w utrzymaniu i rozwoju projektu katalogu internetowego.",
-            "Zapewnianie spójności i poprawności kodu poprzez regularne przeprowadzanie code review pull requestów innych członków zespołu."
+            "Udział w rozwoju i utrzymaniu projektu katalogu internetowego poprzez rozwiązywanie błędów interfejsu (UI) i wdrażanie nowych funkcjonalności.",
+            "Zapewnianie czytelności, spójności i poprawności kodu poprzez regularne przeprowadzanie code review pull requestów (PR) tworzonych przez innych członków zespołu."
           ],
           "startingDate": "Lipiec 2022",
           "endingDate": "Wrzesień 2022"
@@ -105,7 +105,7 @@
           "degree": "Informatyka - Magister Inżynier",
           "field": "Informatyka (Uczenie Maszynowe i Inżynieria Oprogramowania)",
           "location": "Łódź, Polska",
-          "notes": "Specjalizacja: Uczenie Maszynowe i Inżynieria Oprogramowania. Udział w badaniach naukowych nad benchmarkingiem i porównaniem modeli językowych (LLM).",
+          "notes": "Prowadzenie badań polegających na benchmarkingu różnych dużych modeli językowych (LLM) w celu oceny metryk wydajności i możliwości technicznych w domenie obsługi klienta.",
           "startingDate": "Marzec 2024",
           "endingDate": "Lipiec 2025"
         },
@@ -116,7 +116,7 @@
           "degree": "Informatyka - Inżynier",
           "field": "Informatyka",
           "location": "Łódź, Polska",
-          "notes": "Uzyskanie tytułu inżyniera informatyki. Praca dyplomowa dotyczyła stworzenia platformy społecznościowej do dzielenia się wiedzą.",
+          "notes": "Zaprojektowanie i wdrożenie platformy społecznościowej full-stack do dzielenia się wiedzą w ramach inżynierskiego projektu dyplomowego.",
           "startingDate": "Październik 2020",
           "endingDate": "Luty 2024"
         }
@@ -173,7 +173,7 @@
       "description": "Serwis społecznościowy inspirowany Twitterem, skupiający się na dłuższych, formatowalnych postach i dzieleniu się wiedzą.",
       "id": "knowhow",
       "imageUrl": "/projects/knowhow.webp",
-      "year": "2022",
+      "year": "2024",
       "tags": [
         "React.js",
         "Next.js",
@@ -210,7 +210,7 @@
       "description": "System rozpoznawania cyfr przeszkolony przy użyciu bazy danych MNIST. Model wykorzystuje splotową sieć neuronową (CNN) z dokładnością około 98,84%.",
       "id": "digit-recognition",
       "imageUrl": "/projects/digit.webp",
-      "year": "2022",
+      "year": "2023",
       "tags": [
         "TensorFlow 2.0",
         "Keras",
