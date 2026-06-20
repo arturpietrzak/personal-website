@@ -103,7 +103,8 @@ export default function ProjectCarousel() {
     }
 
     setDragOffset(0);
-    dragDistanceRef.current = 0;
+    // Don't reset dragDistanceRef here — click fires AFTER mouseup,
+    // so handleLinkClick needs to read the distance
   };
 
   const handleLinkClick = (e: React.MouseEvent) => {
@@ -150,6 +151,7 @@ export default function ProjectCarousel() {
           userSelect: "none",
           WebkitUserSelect: "none",
         }}
+        onDragStart={(e) => e.preventDefault()}
         onMouseDown={handleDragStart}
         onMouseMove={handleDragMove}
         onMouseUp={handleDragEnd}
