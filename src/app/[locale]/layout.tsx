@@ -59,6 +59,8 @@ export default async function RootLayout({
           type="image/svg+xml"
           sizes="any"
         />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       </head>
       <body className={inter.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>
