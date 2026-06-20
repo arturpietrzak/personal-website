@@ -145,7 +145,8 @@
     @media (max-width: 768px) {
       padding: 0.875rem;
     }
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: opacity 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     opacity: 0;
     pointer-events: none; // Let clicks pass through when hidden
     z-index: 10;
