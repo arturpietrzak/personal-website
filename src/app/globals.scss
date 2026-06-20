@@ -103,10 +103,10 @@ section {
 
 html {
   scroll-behavior: smooth;
+  background-color: $bg-deep;
 }
 
 body {
-  background-color: $bg-deep;
   color: $text-normal;
   font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.6;
@@ -114,23 +114,33 @@ body {
   position: relative;
   overflow-x: hidden;
   
-  // Custom grid background with top glowing radial gradient
+  // Glowing radial gradients (fixed to viewport)
   &::before {
     content: "";
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
+    inset: 0;
+    z-index: -2;
     pointer-events: none;
     will-change: transform;
     background-image: 
       radial-gradient(circle at 50% 20%, rgba(59, 130, 246, 0.08) 0%, transparent 60%),
-      radial-gradient(circle at 10% 80%, rgba(59, 130, 246, 0.03) 0%, transparent 40%),
+      radial-gradient(circle at 10% 80%, rgba(59, 130, 246, 0.03) 0%, transparent 40%);
+  }
+
+  // Grid pattern (extended past viewport to cover iOS overscroll rubber-banding)
+  &::after {
+    content: "";
+    position: fixed;
+    top: -50vh;
+    left: -50vw;
+    right: -50vw;
+    bottom: -50vh;
+    z-index: -1;
+    pointer-events: none;
+    background-image: 
       linear-gradient($grid-color 1px, transparent 1px),
       linear-gradient(90deg, $grid-color 1px, transparent 1px);
-    background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+    background-size: 40px 40px, 40px 40px;
   }
 }
 
