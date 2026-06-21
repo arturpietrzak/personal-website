@@ -42,17 +42,6 @@
     }
   }
 
-  .headerBadge {
-    position: relative;
-    z-index: 1;
-    font-size: 0.725rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: $primary-accent;
-    margin-bottom: 1.5rem;
-  }
-
   .ctaTitle {
     position: relative;
     z-index: 1;
@@ -117,41 +106,18 @@
       }
     }
 
-    .cvBtn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      background-color: rgba(255, 255, 255, 0.04);
+    .cvBtnOverride {
+      // Overrides for DownloadCvBtn when inside contact
+      margin-top: 0;
       border: 1px solid rgba(255, 255, 255, 0.12);
-      color: $text-emphasis;
-      font-weight: 600;
-      font-size: 0.875rem;
-      padding: 0.8rem 1.5rem;
-      border-radius: 9999px;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      text-decoration: none;
-
-      @media only screen and (max-width: 550px) {
-        width: 100%;
-      }
-
-      .downloadIcon {
-        width: 1.1rem;
-        height: 1.1rem;
-        color: $text-normal;
-        transition: transform 0.25s ease;
-      }
-
+      background-color: rgba(255, 255, 255, 0.04);
+      
       &:hover {
         border-color: $primary-accent;
         background-color: rgba(59, 130, 246, 0.08);
         color: $primary-accent-hover;
-        transform: translateY(-2px);
-
-        .downloadIcon {
-          transform: translateY(1px);
+        
+        svg {
           color: $primary-accent-hover;
         }
       }

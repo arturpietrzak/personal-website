@@ -8,6 +8,8 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { useRef, useEffect, useCallback } from "react";
+import SectionBadge from "../ui/sectionBadge/sectionBadge";
+import DownloadCvBtn from "../ui/downloadCvBtn/downloadCvBtn";
 
 // ── Meteor animation types ──────────────────────────────────────────
 interface Meteor {
@@ -231,14 +233,7 @@ export default function Contact() {
       <div ref={cardRef} className={styles.contactCard}>
         <canvas ref={canvasRef} className={styles.meteorCanvas} />
 
-        <motion.span 
-          className={styles.headerBadge}
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-        >
-          {t("header")}
-        </motion.span>
+        <SectionBadge title={t("header")} />
 
         <motion.h2 
           className={styles.ctaTitle}
@@ -262,26 +257,7 @@ export default function Contact() {
             {t("email")}
           </a>
 
-          <a 
-            href="/Artur_Pietrzak_CV.pdf" 
-            download="Artur_Pietrzak_CV.pdf" 
-            className={styles.cvBtn}
-            aria-label="Download Artur Pietrzak's CV as PDF"
-          >
-            <svg 
-              className={styles.downloaodIcon} 
-              fill="none" 
-              viewBox="0 0 24 24" 
-              stroke="currentColor" 
-              strokeWidth={2}
-              width={18}
-              height={18}
-              aria-hidden="true"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-            </svg>
-            {tHero("download-cv")}
-          </a>
+          <DownloadCvBtn label={tHero("download-cv")} className={styles.cvBtnOverride} />
         </motion.div>
 
         {/* Social Icons row */}

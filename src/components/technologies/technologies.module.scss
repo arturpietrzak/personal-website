@@ -9,24 +9,6 @@
     padding: 1.5rem 0;
   }
 
-  .sectionHeader {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 4rem;
-
-    .sectionBadge {
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: $text-emphasis;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      background-color: rgba(255, 255, 255, 0.02);
-      padding: 0.5rem 1.25rem;
-      border-radius: 9999px;
-    }
-  }
-
   .marqueeContainer {
     width: 100vw;
     margin-left: calc(-50vw + 50%);

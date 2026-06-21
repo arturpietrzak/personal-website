@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import styles from "./projectCarousel.module.scss";
 import Image from "next/image";
 import { Link } from "@/navigation";
+import SectionBadge from "../ui/sectionBadge/sectionBadge";
 
 export default function ProjectCarousel() {
   const t = useTranslations("Index");
@@ -116,9 +117,7 @@ export default function ProjectCarousel() {
 
   return (
     <section id="projects" className={styles.projectsSection}>
-      <div className={styles.sectionHeader}>
-        <span className={styles.sectionBadge}>{t("most-recent-project.header")}</span>
-      </div>
+      <SectionBadge title={t("most-recent-project.header")} className={styles.carouselBadge} />
 
       {/* Navigation arrows */}
       <div className={styles.carouselControls}>

@@ -3,6 +3,7 @@
 import React, { useRef, useState, useEffect, useCallback } from "react";
 import styles from "./technologies.module.scss";
 import { useTranslations } from "next-intl";
+import SectionBadge from "../ui/sectionBadge/sectionBadge";
 
 type TechItem = {
   name: string;
@@ -348,9 +349,7 @@ export default function Technologies() {
 
   return (
     <section id="technologies" className={styles.technologiesSection}>
-      <div className={styles.sectionHeader}>
-        <span className={styles.sectionBadge}>{t("header")}</span>
-      </div>
+      <SectionBadge title={t("header")} />
 
       <div 
         className={styles.marqueeContainer}
