@@ -18,10 +18,26 @@ export default function Technologies() {
   const trackRef = useRef<HTMLDivElement>(null);
   const overlayRefs = useRef<Map<number, HTMLDivElement>>(new Map());
   const [isHovered, setIsHovered] = useState(false);
-  const [scrollPos, setScrollPos] = useState(0);
+  const scrollPosRef = useRef(0);
+  const trackWidthRef = useRef(0);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+
+  const updateScrollPos = useCallback((newPos: number) => {
+    const trackWidth = trackWidthRef.current;
+    if (trackWidth > 0) {
+      if (newPos <= -trackWidth) {
+        newPos += trackWidth;
+      } else if (newPos > 0) {
+        newPos -= trackWidth;
+      }
+    }
+    scrollPosRef.current = newPos;
+    if (trackRef.current) {
+      trackRef.current.style.transform = `translate3d(${newPos}px, 0, 0)`;
+    }
+  }, []);
 
   const coreTechs: TechItem[] = [
     {
@@ -229,52 +245,40 @@ export default function Technologies() {
     // speed in pixels per millisecond
     const autoScrollSpeed = 0.05;
 
+    const updateTrackWidth = () => {
+      if (trackRef.current) {
+        trackWidthRef.current = trackRef.current.scrollWidth / 3;
+      }
+    };
+    
+    updateTrackWidth();
+    window.addEventListener("resize", updateTrackWidth);
+
     const render = (time: number) => {
       const delta = time - lastTime;
       lastTime = time;
 
       if (!isHovered && !isDragging && expandedIndex === null) {
-        setScrollPos((prev) => {
-          let nextPos = prev - autoScrollSpeed * delta;
-          
-          if (trackRef.current) {
-            const trackWidth = trackRef.current.scrollWidth / 3;
-            // Loop back when we scroll past one full set of items
-            if (nextPos <= -trackWidth) {
-              nextPos += trackWidth;
-            } else if (nextPos > 0) {
-              nextPos -= trackWidth;
-            }
-          }
-          return nextPos;
-        });
+        const nextPos = scrollPosRef.current - autoScrollSpeed * delta;
+        updateScrollPos(nextPos);
       }
 
       animationFrameId = requestAnimationFrame(render);
     };
 
     animationFrameId = requestAnimationFrame(render);
-    return () => cancelAnimationFrame(animationFrameId);
-  }, [isHovered, isDragging, expandedIndex]);
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+      window.removeEventListener("resize", updateTrackWidth);
+    };
+  }, [isHovered, isDragging, expandedIndex, updateScrollPos]);
 
   const handleWheel = (e: React.WheelEvent) => {
     // Only react to horizontal scroll (e.g. trackpad swipe), ignore vertical
     if (Math.abs(e.deltaX) < 1) return;
     
     const scrollAmount = e.deltaX * 1.5;
-
-    setScrollPos((prev) => {
-      let nextPos = prev - scrollAmount;
-      if (trackRef.current) {
-        const trackWidth = trackRef.current.scrollWidth / 3;
-        if (nextPos <= -trackWidth) {
-          nextPos += trackWidth;
-        } else if (nextPos > 0) {
-          nextPos -= trackWidth;
-        }
-      }
-      return nextPos;
-    });
+    updateScrollPos(scrollPosRef.current - scrollAmount);
   };
 
   const handleDragStart = (e: React.MouseEvent | React.TouchEvent) => {
@@ -288,19 +292,7 @@ export default function Technologies() {
     const currentX = "touches" in e ? e.touches[0].clientX : e.clientX;
     const diff = currentX - startX;
     
-    setScrollPos((prev) => {
-      let nextPos = prev + diff;
-      if (trackRef.current) {
-        const trackWidth = trackRef.current.scrollWidth / 3;
-        if (nextPos <= -trackWidth) {
-          nextPos += trackWidth;
-        } else if (nextPos > 0) {
-          nextPos -= trackWidth;
-        }
-      }
-      return nextPos;
-    });
-    
+    updateScrollPos(scrollPosRef.current + diff);
     setStartX(currentX);
   };
 
@@ -366,7 +358,6 @@ export default function Technologies() {
         <div 
           className={styles.marqueeTrack}
           ref={trackRef}
-          style={{ transform: `translate3d(${scrollPos}px, 0, 0)` }}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => {
             setIsHovered(false);
