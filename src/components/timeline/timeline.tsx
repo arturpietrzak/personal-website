@@ -68,7 +68,7 @@ export default function Timeline({
               {/* Left Side: Date */}
               <div className={styles.dateContainer}>
                 <span className={styles.dateText}>
-                  {startingDate} — {endingDate}
+                  {startingDate} - {endingDate}
                 </span>
               </div>
 
@@ -79,7 +79,7 @@ export default function Timeline({
               </div>
 
               {/* Right Side: Content Card */}
-              <div className={styles.contentCard} data-date={`${startingDate} — ${endingDate}`}>
+              <div className={styles.contentCard} data-date={`${startingDate} - ${endingDate}`}>
                 <div className={styles.cardHeader}>
                   <div className={styles.logoWrapper}>
                     <Link href={url} target="_blank" rel="noopener noreferrer">
@@ -105,7 +105,7 @@ export default function Timeline({
                       <span className={styles.locationText}>{location}</span>
                     </div>
                     <div className={styles.mobileDate}>
-                      {startingDate} — {endingDate}
+                      {startingDate} - {endingDate}
                     </div>
                   </div>
                 </div>

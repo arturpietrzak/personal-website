@@ -27,9 +27,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary",
     title: "Artur Pietrzak | IT Engineer & Web Developer",
-    description: "Personal portfolio of Artur Pietrzak — React, Next.js, TypeScript, AI/ML.",
+    description: "Personal portfolio of Artur Pietrzak - React, Next.js, TypeScript, AI/ML.",
   },
-};
+}
 
 export const viewport: Viewport = {
   width: 'device-width',

@@ -104,7 +104,7 @@ export default function ProjectCarousel() {
     }
 
     setDragOffset(0);
-    // Don't reset dragDistanceRef here — click fires AFTER mouseup,
+    // Don't reset dragDistanceRef here - click fires AFTER mouseup,
     // so handleLinkClick needs to read the distance
   };
 

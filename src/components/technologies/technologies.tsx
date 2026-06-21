@@ -16,12 +16,13 @@ type TechItem = {
 export default function Technologies() {
   const t = useTranslations("Index.technologies");
   const trackRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const overlayRefs = useRef<Map<number, HTMLDivElement>>(new Map());
-  const [isHovered, setIsHovered] = useState(false);
+  const isHoveredRef = useRef(false);
   const scrollPosRef = useRef(0);
   const trackWidthRef = useRef(0);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
+  const isDraggingRef = useRef(false);
+  const startXRef = useRef(0);
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   const updateScrollPos = useCallback((newPos: number) => {
@@ -39,7 +40,7 @@ export default function Technologies() {
     }
   }, []);
 
-  const coreTechs: TechItem[] = [
+  const coreTechs: TechItem[] = React.useMemo(() => [
     {
       name: "ReactJS",
       desc: t("items.react"),
@@ -232,10 +233,10 @@ export default function Technologies() {
         </svg>
       ),
     },
-  ];
+  ], [t]);
 
   // Double the array to allow for infinite scrolling
-  const marqueeItems = [...coreTechs, ...coreTechs, ...coreTechs];
+  const marqueeItems = React.useMemo(() => [...coreTechs, ...coreTechs, ...coreTechs], [coreTechs]);
 
   // Auto-scroll loop using requestAnimationFrame for smooth manual + auto scrolling
   useEffect(() => {
@@ -258,7 +259,7 @@ export default function Technologies() {
       const delta = time - lastTime;
       lastTime = time;
 
-      if (!isHovered && !isDragging && expandedIndex === null) {
+      if (!isHoveredRef.current && !isDraggingRef.current && expandedIndex === null) {
         const nextPos = scrollPosRef.current - autoScrollSpeed * delta;
         updateScrollPos(nextPos);
       }
@@ -271,7 +272,7 @@ export default function Technologies() {
       cancelAnimationFrame(animationFrameId);
       window.removeEventListener("resize", updateTrackWidth);
     };
-  }, [isHovered, isDragging, expandedIndex, updateScrollPos]);
+  }, [expandedIndex, updateScrollPos]);
 
   const handleWheel = (e: React.WheelEvent) => {
     // Only react to horizontal scroll (e.g. trackpad swipe), ignore vertical
@@ -282,22 +283,28 @@ export default function Technologies() {
   };
 
   const handleDragStart = (e: React.MouseEvent | React.TouchEvent) => {
-    setIsDragging(true);
-    setStartX("touches" in e ? e.touches[0].clientX : e.clientX);
+    isDraggingRef.current = true;
+    startXRef.current = "touches" in e ? e.touches[0].clientX : e.clientX;
+    if (containerRef.current) {
+      containerRef.current.style.cursor = "grabbing";
+    }
   };
 
   const handleDragMove = (e: React.MouseEvent | React.TouchEvent) => {
-    if (!isDragging) return;
+    if (!isDraggingRef.current) return;
     
     const currentX = "touches" in e ? e.touches[0].clientX : e.clientX;
-    const diff = currentX - startX;
+    const diff = currentX - startXRef.current;
     
     updateScrollPos(scrollPosRef.current + diff);
-    setStartX(currentX);
+    startXRef.current = currentX;
   };
 
   const handleDragEnd = () => {
-    setIsDragging(false);
+    isDraggingRef.current = false;
+    if (containerRef.current) {
+      containerRef.current.style.cursor = "grab";
+    }
   };
 
   const handleCardClick = (index: number) => {
@@ -306,7 +313,7 @@ export default function Technologies() {
 
     if (expandedIndex === index) {
       setExpandedIndex(null); // Toggle off if clicking same card
-      setIsHovered(false); // Resume auto-scroll on mobile (mouseenter sticks on touch devices)
+      isHoveredRef.current = false; // Resume auto-scroll on mobile (mouseenter sticks on touch devices)
     } else {
       setExpandedIndex(index);
     }
@@ -345,6 +352,7 @@ export default function Technologies() {
 
       <div 
         className={styles.marqueeContainer}
+        ref={containerRef}
         onWheel={handleWheel}
         onMouseDown={handleDragStart}
         onMouseMove={handleDragMove}
@@ -353,15 +361,15 @@ export default function Technologies() {
         onTouchStart={handleDragStart}
         onTouchMove={handleDragMove}
         onTouchEnd={handleDragEnd}
-        style={{ cursor: isDragging ? "grabbing" : "grab" }}
+        style={{ cursor: "grab" }}
       >
         <div 
           className={styles.marqueeTrack}
           ref={trackRef}
-          onMouseEnter={() => setIsHovered(true)}
+          onMouseEnter={() => { isHoveredRef.current = true; }}
           onMouseLeave={() => {
-            setIsHovered(false);
-            setExpandedIndex(null);
+            isHoveredRef.current = false;
+            if (expandedIndex !== null) setExpandedIndex(null);
           }}
         >
           {marqueeItems.map((tech, index) => {
